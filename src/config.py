@@ -19,6 +19,10 @@ CHAT_MODEL = os.getenv("NEBIUS_CHAT_MODEL", "")  # exact ID from the Nebius play
 CHAT_EXTRA_BODY = os.getenv("NEBIUS_CHAT_EXTRA_BODY", "")      # JSON, e.g. {"chat_template_kwargs": {"thinking": false}}
 REASONING_EFFORT = os.getenv("NEBIUS_REASONING_EFFORT", "")    # e.g. low
 
+# --- Eval judge: a different model family from the answer model, so answers aren't graded by their own author.
+JUDGE_PROVIDER = os.getenv("JUDGE_PROVIDER", "openai" if os.getenv("OPENAI_API_KEY") else "nebius")
+JUDGE_MODEL = os.getenv("JUDGE_MODEL", "gpt-4.1-mini")   # any OpenAI chat model ID your key can use
+
 # --- Retrieval defaults (Day 2). Tune RELEVANCE_THRESHOLD on the eval set. ---
 CANDIDATES_K = 10           # per retriever (dense and BM25) before fusion
 RRF_K = 60                  # reciprocal-rank-fusion constant

@@ -22,7 +22,7 @@ import re
 import statistics
 from collections import defaultdict
 
-from src.config import ROOT, STRATEGIES
+from src.config import JUDGE_MODEL, JUDGE_PROVIDER, ROOT, STRATEGIES
 from src import graph
 from src.graph import ask, format_context
 
@@ -128,8 +128,29 @@ ANSWER: {answer}
 Return only JSON: {{"score": <0, 0.5 or 1>, "reason": "<one sentence>"}}"""
 
 
+_JUDGE = None
+
+
+def judge_llm():
+    """OpenAI judge when configured (independent of the DeepSeek answer model), else Nebius."""
+    global _JUDGE
+    if _JUDGE is None:
+        if JUDGE_PROVIDER == "openai":
+            from langchain_openai import ChatOpenAI
+            reasoning = JUDGE_MODEL.startswith(("gpt-5", "o1", "o3", "o4"))
+            _JUDGE = (ChatOpenAI(model=JUDGE_MODEL, reasoning_effort="low") if reasoning
+                      else ChatOpenAI(model=JUDGE_MODEL, temperature=0))
+        else:
+            _JUDGE = graph._llm()
+    return _JUDGE
+
+
+def judge_label():
+    return f"{JUDGE_PROVIDER}:{JUDGE_MODEL}" if JUDGE_PROVIDER == "openai" else "nebius:answer-model"
+
+
 def _judge(prompt: str) -> dict:
-    text = graph._llm().invoke([("human", prompt)]).content or ""
+    text = judge_llm().invoke([("human", prompt)]).content or ""
     m = re.search(r"\{.*\}", text, re.S)
     try:
         return json.loads(m.group(0)) if m else {}
@@ -183,7 +204,7 @@ def summarize(rows):
         by_cfg[r["config"]].append(r)
     fmt = lambda v: "–" if v is None else (f"{v:.2f}" if isinstance(v, float) else str(v))
     lines = ["# Evaluation summary", "",
-             f"{len({r['id'] for r in rows})} questions × {len(by_cfg)} configurations. "
+             f"{len({r['id'] for r in rows})} questions × {len(by_cfg)} configurations. Judge: {judge_label()}. "
              "Scores are means over the questions where the metric applies.", "",
              "## Overall", "",
              "| Config | Retrieval hit | Refusal correct | Faithfulness | Correctness | Latency p50 (s) | p95 (s) | ≤5s |",
@@ -222,6 +243,11 @@ def main():
     if a.limit:
         examples = examples[:a.limit]
 
+    print(f"Judge: {judge_label()}")
+    probe = _judge('Return only JSON: {"score": 1, "reason": "ok"}')  # fail fast on a bad key or model ID
+    if probe.get("score") != 1:
+        raise SystemExit(f"Judge check failed (got {probe!r}). Check OPENAI_API_KEY / JUDGE_MODEL.")
+
     graph.GRAPH = graph.build_graph()  # build once before threads start
     for s in STRATEGIES:
         _store(s); _bm25(s)
@@ -235,7 +261,8 @@ def main():
         print(f"\n=== {label(cfg)} ({len(examples)} questions) ===")
         res = evaluate(make_target(s, r, rr), data=examples, evaluators=EVALUATORS,
                        experiment_prefix=f"{s}-{r}-{'rr' if rr else 'norr'}",
-                       metadata={"strategy": s, "retriever": r, "rerank": rr, "dataset": name},
+                       metadata={"strategy": s, "retriever": r, "rerank": rr, "dataset": name,
+                                 "judge": judge_label()},
                        max_concurrency=a.concurrency)
         for item in res:
             ex, run = item["example"], item["run"]

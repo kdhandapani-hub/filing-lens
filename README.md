@@ -61,7 +61,7 @@ Metrics: retrieval_hit (expected company + Item retrieved), refusal_correct, fai
 Results: `eval/results/eval_summary.md`, `eval/results/eval_rows.csv`.
 
 Core matrix: `fixed`, `section`, `table_aware` with hybrid+rerank (chunking comparison), plus `table_aware` with dense/bm25/hybrid, rerank on/off (retrieval ablation).
-Judge caveat: the same model family judges and answers; scores are indicative, and expected answers are human-verified.
+Judge: an OpenAI model (`JUDGE_MODEL`, default `gpt-4.1-mini`) grades faithfulness and correctness, so answers from DeepSeek are not graded by the same model family. Expected answers are human-verified.
 
 ## Chat UI (bonus)
 
@@ -99,3 +99,4 @@ Record every change and its effect here; it becomes the "iterations + learnings"
 - Day 3 fixes: BM25 stopwords incl. question-framing words; comparison questions now send each company a focused sub-query with the other firm's name removed (`focus_query`), e.g. "Raymond James ... net revenues ... fiscal year". Plural folding kept (harmless, helps advisor/advisors).
 - C02 after fixes: BM25-only still misses the consolidated revenue tables (numbers-heavy, few matching words) but rerank scores rose 0.21 -> 0.66 and it now lands in Results of Operations; hybrid answers it (`eval/results/c02_hybrid_v2.txt`) -> ablation finding: keyword search alone fails table lookups, dense recovers them. New issue: the answer named LPL as higher while admitting RJF's company-wide total was not in context (only segment tables retrieved). Fix: prompt rule to compare only when both figures are present for comparable periods, and to flag differing fiscal year-ends (RJF Sep 30, LPL Dec 31).
 - C02 root cause confirmed: RJF's consolidated table exists (`RJF-table_aware-7-0036`, EXECUTIVE OVERVIEW > Summary results of operations) but RJF has 6 tables with a "Net revenues" row (consolidated + 5 segments); with 3 slots per company the segment tables outranked it -> ranking miss, not a chunking bug. Fix: comparison context budget of ~10 chunks shared across firms (2 firms: 5 each; 4 firms: 3 each) instead of a fixed 3 per firm.
+- Eval judge: switched from the answer model (DeepSeek) to an independent OpenAI judge to avoid self-grading bias; judge identity recorded in each LangSmith experiment's metadata and in the summary.

@@ -5,6 +5,7 @@ langchain-text-splitters
 langgraph
 langchain-nebius
 langchain-pinecone
+langchain-openai
 pinecone
 langsmith
 python-dotenv
@@ -13,3 +14,4 @@ beautifulsoup4
 lxml
 tiktoken
 rank_bm25
+streamlit
