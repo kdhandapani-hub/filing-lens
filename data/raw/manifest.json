@@ -1,0 +1,42 @@
+{
+  "RJF": {
+    "name": "Raymond James Financial",
+    "cik": "720005",
+    "accession": "0000720005-25-000093",
+    "primary_doc": "rjf-20250930.htm",
+    "filing_date": "2025-11-25",
+    "report_date": "2025-09-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/720005/000072000525000093/rjf-20250930.htm",
+    "file": "RJF_10K_2025-09-30.html"
+  },
+  "SCHW": {
+    "name": "Charles Schwab",
+    "cik": "316709",
+    "accession": "0000316709-26-000009",
+    "primary_doc": "schw-20251231.htm",
+    "filing_date": "2026-02-25",
+    "report_date": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/316709/000031670926000009/schw-20251231.htm",
+    "file": "SCHW_10K_2025-12-31.html"
+  },
+  "LPLA": {
+    "name": "LPL Financial Holdings",
+    "cik": "1397911",
+    "accession": "0001628280-26-010705",
+    "primary_doc": "lpla-20251231.htm",
+    "filing_date": "2026-02-23",
+    "report_date": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1397911/000162828026010705/lpla-20251231.htm",
+    "file": "LPLA_10K_2025-12-31.html"
+  },
+  "SF": {
+    "name": "Stifel Financial",
+    "cik": "720672",
+    "accession": "0001193125-26-067130",
+    "primary_doc": "sf-20251231.htm",
+    "filing_date": "2026-02-24",
+    "report_date": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/720672/000119312526067130/sf-20251231.htm",
+    "file": "SF_10K_2025-12-31.html"
+  }
+}

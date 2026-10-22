@@ -1,19 +1,33 @@
-"""Step 4: build one Chroma collection (dense) + one BM25 corpus (sparse) per chunking strategy.
+"""Step 4: embed each chunking strategy into its own Pinecone namespace (dense)
+and save the chunks locally for BM25 (sparse).
 
 Usage:  python -m src.index            # all strategies
         python -m src.index fixed      # just one
-Re-running is safe: each collection is dropped and rebuilt.
+Re-running is safe: each namespace is cleared and rebuilt.
 """
 import json
 import pickle
 import statistics
 import sys
+import time
 
-from langchain_chroma import Chroma
 from langchain_nebius import NebiusEmbeddings
+from langchain_pinecone import PineconeVectorStore
+from pinecone import Pinecone, ServerlessSpec
 
 from src.chunking import STRATEGY_FNS
-from src.config import CHROMA_DIR, DATA_PROC, DATA_RAW, EMBED_MODEL, STRATEGIES
+from src.config import (DATA_PROC, DATA_RAW, EMBED_DIM, EMBED_MODEL, PINECONE_CLOUD,
+                        PINECONE_INDEX, PINECONE_REGION, STRATEGIES)
+
+
+def get_index():
+    pc = Pinecone()  # reads PINECONE_API_KEY
+    if PINECONE_INDEX not in pc.list_indexes().names():
+        pc.create_index(name=PINECONE_INDEX, dimension=EMBED_DIM, metric="cosine",
+                        spec=ServerlessSpec(cloud=PINECONE_CLOUD, region=PINECONE_REGION))
+        while not pc.describe_index(PINECONE_INDEX).status["ready"]:
+            time.sleep(2)
+    return pc.Index(PINECONE_INDEX)
 
 
 def load_chunks(strategy: str):
@@ -25,15 +39,18 @@ def load_chunks(strategy: str):
     return docs
 
 
-def build(strategy: str, embeddings):
+def build(strategy: str, index, embeddings):
     docs = load_chunks(strategy)
     toks = [d.metadata["tokens"] for d in docs]
     print(f"[{strategy}] {len(docs)} chunks | tokens median {statistics.median(toks):.0f}, "
           f"max {max(toks)} | tables {sum(d.metadata['kind'] == 'table' for d in docs)}")
 
-    store = Chroma(collection_name=strategy, embedding_function=embeddings,
-                   persist_directory=str(CHROMA_DIR))
-    store.reset_collection()
+    try:
+        index.delete(delete_all=True, namespace=strategy)
+    except Exception:
+        pass  # namespace doesn't exist yet on first run
+
+    store = PineconeVectorStore(index=index, embedding=embeddings, namespace=strategy)
     for i in range(0, len(docs), 64):  # batch to stay within API payload limits
         batch = docs[i:i + 64]
         store.add_documents(batch, ids=[d.metadata["chunk_id"] for d in batch])
@@ -44,9 +61,11 @@ def build(strategy: str, embeddings):
 
 
 def main():
+    index = get_index()
     embeddings = NebiusEmbeddings(model=EMBED_MODEL)
     for s in (sys.argv[1:] or STRATEGIES):
-        build(s, embeddings)
+        build(s, index, embeddings)
+    print(index.describe_index_stats())
 
 
 if __name__ == "__main__":

@@ -9,13 +9,19 @@ load_dotenv()
 ROOT = Path(__file__).resolve().parents[1]
 DATA_RAW = ROOT / "data" / "raw"
 DATA_PROC = ROOT / "data" / "processed"
-CHROMA_DIR = ROOT / "data" / "chroma"
-for p in (DATA_RAW, DATA_PROC, CHROMA_DIR):
+for p in (DATA_RAW, DATA_PROC):
     p.mkdir(parents=True, exist_ok=True)
 
 # --- Models (Nebius Token Factory) ---
 EMBED_MODEL = os.getenv("NEBIUS_EMBED_MODEL", "Qwen/Qwen3-Embedding-8B")  # 4096-dim
 CHAT_MODEL = os.getenv("NEBIUS_CHAT_MODEL", "")  # set in .env on Day 2 (from Nebius models page)
+
+# --- Vector store (Pinecone serverless): one index, one namespace per chunking strategy ---
+PINECONE_INDEX = os.getenv("PINECONE_INDEX", "week2-financial-rag")
+PINECONE_CLOUD = os.getenv("PINECONE_CLOUD", "aws")
+PINECONE_REGION = os.getenv("PINECONE_REGION", "us-east-1")
+EMBED_DIM = int(os.getenv("EMBED_DIM", "4096"))  # must match EMBED_MODEL
+RERANK_MODEL = os.getenv("PINECONE_RERANK_MODEL", "bge-reranker-v2-m3")
 
 # SEC requires a descriptive User-Agent: "Your Name your@email.com"
 SEC_USER_AGENT = os.getenv("SEC_USER_AGENT", "")

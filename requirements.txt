@@ -4,7 +4,8 @@ langchain-community
 langchain-text-splitters
 langgraph
 langchain-nebius
-langchain-chroma
+langchain-pinecone
+pinecone
 langsmith
 python-dotenv
 requests
@@ -12,4 +13,3 @@ beautifulsoup4
 lxml
 tiktoken
 rank_bm25
-sentence-transformers
