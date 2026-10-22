@@ -34,7 +34,8 @@ def main():
             print("  reranked top-3:")
             for r in rr.data:
                 m = hits[r.index][0].metadata
-                print(f"    {r.score:.3f} | {m['ticker']} Item {m['item']} | {m['kind']} | {m['heading'][:45]}")
+                print(f"    {r.score:.3f} | {m['ticker']} Item {m['item']} | {m['kind']} | {m['heading'][:45]} | "
+                      f"{hits[r.index][0].page_content[:80]!r}")
 
 
 if __name__ == "__main__":

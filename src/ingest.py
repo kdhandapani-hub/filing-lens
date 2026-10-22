@@ -48,15 +48,52 @@ def table_to_md(table) -> str | None:
     return "\n".join(lines)
 
 
+EMPH_STYLE = re.compile(r"font-weight:\s*(bold|[6-9]00)|font-style:\s*italic", re.I)
+
+
+def emphasis_ratio(el) -> float:
+    """Share of the element's text that is bold or italic (tags or inline CSS)."""
+    total = len(norm(el.get_text(" ")))
+    if not total:
+        return 0.0
+    emph = 0
+    for node in el.find_all(string=True):
+        t = len(norm(str(node)))
+        if not t:
+            continue
+        for anc in [node.parent, *node.parents]:
+            if anc is el.parent:
+                break
+            if anc.name in ("b", "strong", "i", "em") or EMPH_STYLE.search(anc.get("style") or ""):
+                emph += t
+                break
+    return emph / total
+
+
 def is_heading(el, text: str) -> bool:
     if el.name and el.name.startswith("h"):
         return True
-    if len(text) > 120 or text.endswith("."):
-        return False
-    bold = el.find(["b", "strong"]) or re.search(
-        r"font-weight:\s*(bold|700)", (el.get("style") or "") + str(el.find("span") or "")
-    )
-    return bool(bold) and len(text.split()) <= 14
+    # Short labels ("Credit Risk") and full-sentence risk-factor titles, which 10-Ks
+    # set in bold/italic and often end with a period, are both headings when the
+    # whole block is emphasized. Ordinary prose with a bold phrase is not.
+    return len(text) <= 400 and emphasis_ratio(el) >= 0.85
+
+
+def is_category(text: str) -> bool:
+    """ALL-CAPS group headings like 'RISKS RELATED TO OUR REGULATORY ENVIRONMENT'."""
+    letters = [c for c in text if c.isalpha()]
+    return len(letters) >= 8 and sum(c.isupper() for c in letters) / len(letters) > 0.9
+
+
+PAGE_ARTIFACT = re.compile(r"(page\s*)?[-–—]?\s*\d{1,3}\s*[-–—]?|table of contents", re.I)
+
+
+def drop_running_headers(blocks: list[dict]) -> list[dict]:
+    """Remove page numbers and short lines repeated on many pages (running headers)."""
+    from collections import Counter
+    counts = Counter(b["text"] for b in blocks if b["type"] != "table" and len(b["text"]) < 120)
+    return [b for b in blocks if b["type"] == "table" or
+            not (PAGE_ARTIFACT.fullmatch(b["text"]) or counts[b["text"]] >= 5)]
 
 
 def linearize(html: str) -> list[dict]:
@@ -77,15 +114,17 @@ def linearize(html: str) -> list[dict]:
             continue  # container; its children will be visited
         seen.add(id(el))
         text = norm(el.get_text(" "))
-        if not text or re.fullmatch(r"(page )?\d{1,3}|table of contents", text, re.I):
-            continue  # page numbers / running headers
+        if not text:
+            continue
         blocks.append({"type": "heading" if is_heading(el, text) else "text", "text": text})
-    return blocks
+    return drop_running_headers(blocks)
 
 
 def extract_sections(blocks: list[dict]) -> list[dict]:
     """Keep blocks inside each in-scope Item. Table of Contents entries also match the
-    start pattern, so we take the LAST start whose span holds real content."""
+    start pattern; a TOC span always contains other 'Item N' lines, a real section never
+    does, so we keep the largest span with no other Item heading inside it."""
+    any_item = re.compile(r"^\s*item\s+\d{1,2}[a-c]?(?![0-9a-z])", re.I)
     out = []
     for item, spec in SECTIONS.items():
         starts = [i for i, b in enumerate(blocks)
@@ -95,16 +134,22 @@ def extract_sections(blocks: list[dict]) -> list[dict]:
             e = next((j for j in range(s + 1, len(blocks))
                       if blocks[j]["type"] != "table" and re.match(spec["end"], blocks[j]["text"], re.I)),
                      len(blocks))
-            size = sum(len(b["text"]) for b in blocks[s + 1:e])
-            if size >= 2000:
-                best = (s, e, size)  # keep overwriting -> last qualifying start wins
+            inner = blocks[s + 1:e]
+            if any(b["type"] != "table" and any_item.match(b["text"]) for b in inner):
+                continue  # TOC span: runs across other Items
+            size = sum(len(b["text"]) for b in inner)
+            if size >= 500 and (best is None or size > best[2]):
+                best = (s, e, size)
         if not best:
             print(f"  WARN: Item {item} not found or too short")
             continue
-        heading = spec["title"]
+        category, heading = "", spec["title"]
         for b in blocks[best[0] + 1: best[1]]:
             if b["type"] == "heading":
-                heading = b["text"]
+                if is_category(b["text"]):
+                    category, heading = b["text"], b["text"]
+                else:
+                    heading = f"{category} > {b['text']}" if category else b["text"]
             out.append({**b, "item": item, "heading": heading})
     return out
 

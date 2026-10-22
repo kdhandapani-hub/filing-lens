@@ -1,0 +1,37 @@
+
+Q: What does Raymond James say about interest rate risk?
+   tickers=['RJF'] | max_rerank=0.26095408 | refused=False | total 12.276s (retrieve 4.681s, generate 7.518s)
+
+
+
+Q: What were Schwab's net revenues by segment?
+   tickers=['SCHW'] | max_rerank=0.9439706 | refused=False | total 12.001s (retrieve 5.32s, generate 6.675s)
+
+Schwab reports net revenues by segment as follows [3]:
+
+- **Investor Services total net revenues:** $18,999 in 2025, $15,558 in 2024, and $14,650 in 2023; percent change 2025–2024: 22% [3].
+- **Advisor Services total net revenues:** $4,922 in 2025, $4,048 in 2024, and $4,187 in 2023; percent change 2025–2024: 22% [3].
+- **Total (both segments):** $23,921 in 2025, $19,606 in 2024, and $18,837 in 2023; percent change 2025–2024: 22% [3].
+
+Total net revenues increased by 22% for both Investor Services and Advisor Services in 2025 compared to 2024 [4].
+   [3] SCHW-table_aware-7-0056 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Information
+   [4] SCHW-table_aware-7-0060 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Net Revenues
+
+Q: Compare how Raymond James and Stifel describe competition for financial advisors.
+   tickers=['RJF', 'SF'] | max_rerank=0.37250522 | refused=False | total 14.487s (retrieve 5.305s, generate 9.169s)
+
+**Raymond James (RJF):** Describes a competitive labor market with competition for talent "across all aspects of our business," including non-traditional firms such as technology companies [1]. It notes other firms offer "guaranteed contracts, upfront payments, and increased compensation," and that recruiting costs may negatively affect earnings [1]. RJF highlights an industry-wide trend of advisors departing traditional firms to form independent RIAs or join third-party RIAs, "some of which are backed by private equity investors," creating a "highly competitive recruiting environment" [1]. Advisors may also leave due to retirement or exiting the industry, and retiring advisors without a successor may sell practices to unaffiliated third parties [1].
+
+**Stifel (SF):** States its Global Wealth Management success depends on attracting, retaining, and motivating a sufficient number of associates, facing competition "from major financial services companies, including other brokerage firms, insurance companies, banking institutions, and discount brokerage firms" [3]. SF quantifies its response: it paid "$228.5 million in the form of upfront notes to financial advisors for transition pay" during the year ended December 31, 2025, and may devote more significant resources as competition increases [
+   [1] RJF-table_aware-1A-0009 | RJF Item 1A | RISKS RELATED TO OUR BUSINESS AND INDUSTRY > Our ability to attract an
+   [3] SF-table_aware-7-0056 | SF Item 7 | SEGMENT ANALYSIS
+
+Q: What were Morgan Stanley's wealth management revenues?
+   tickers=[] | max_rerank=0.8576489 | refused=True (not_in_context) | total 6.454s (retrieve 5.05s, generate 1.394s)
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+
+Q: What is Raymond James' stock price target for next year?
+   tickers=['RJF'] | max_rerank=0.56973296 | refused=True (not_in_context) | total 11.712s (retrieve 10.551s, generate 1.149s)
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).

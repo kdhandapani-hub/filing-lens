@@ -60,9 +60,9 @@ def section(blocks, meta, strategy="section", tables_separate=False) -> list[Doc
             if b["type"] == "heading":
                 if ntok("\n\n".join(buf)) >= SECTION_MIN_TOKENS:
                     flush()
-                    heading = b["text"]
+                    heading = b["heading"]  # full "CATEGORY > title" path from ingest
                 elif not buf:
-                    heading = b["text"]
+                    heading = b["heading"]
                 else:  # previous section too small to stand alone: merge, keep heading inline
                     buf.append(b["text"])
             elif b["type"] == "table" and tables_separate:

@@ -1,0 +1,97 @@
+((.venv) ) MacBook-Pro-3:week2-financial-rag karthik$ python -m src.smoke_test
+
+=========== fixed ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.630 | RJF Item 7 | text |  | 'Separately, RJF provides additional market risk disclosures to comply with the M'
+    0.559 | RJF Item 7 | text |  | 'In August 2023, Raymond James Investment Services Limited, one of our U.K. subsi'
+    0.550 | RJF Item 7 | text |  | 'The following table details the Fed’s short-term interest rate activity since th'
+  reranked top-3:
+    0.830 | RJF Item 7 | text | 
+    0.094 | RJF Item 7 | text | 
+    0.075 | RJF Item 7 | text | 
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.715 | SCHW Item 7 | text |  | 'With equity market gains and strong client asset gathering, Schwab’s total clien'
+    0.690 | SCHW Item 7 | text |  | '- 39 -\n\nTHE CHARLES SCHWAB CORPORATION\n\nManagement’s Discussion and Analysis of '
+    0.674 | SCHW Item 7 | text |  | '- 55 -\n\nTHE CHARLES SCHWAB CORPORATION\n\nManagement’s Discussion and Analysis of '
+  reranked top-3:
+    0.989 | SCHW Item 7 | text | 
+    0.921 | SCHW Item 7 | text | 
+    0.892 | SCHW Item 7 | text | 
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.627 | LPLA Item 1A | text |  | 'We can provide no assurances that advisors or institutions that join LPL Financi'
+    0.592 | LPLA Item 1A | text |  | '• Our future ability to pay regular dividends to holders of our common stock or '
+    0.589 | SF Item 1A | text |  | 'The labor market remains competitive, and we face competition for talent across '
+  reranked top-3:
+    0.709 | LPLA Item 1A | text | 
+    0.595 | LPLA Item 1A | text | 
+    0.594 | LPLA Item 1A | text | 
+
+=========== section ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.590 | RJF Item 7 | text | Managed programs | '[Managed programs]\nAMS\n\nSee “Management’s Discussion and Analysis - Results of O'
+    0.566 | RJF Item 7 | text | Banking operations | '[Banking operations]\nOur banking operations are also subject to foreign exchange'
+    0.551 | RJF Item 1A | text | RISKS RELATED TO OUR REGULATORY ENVIRONMENT | '[RISKS RELATED TO OUR REGULATORY ENVIRONMENT]\nFederal and state laws or regulati'
+  reranked top-3:
+    0.147 | RJF Item 7 | text | Banking operations
+    0.115 | RJF Item 7 | text | NET INTEREST ANALYSIS
+    0.050 | RJF Item 1A | text | RISKS RELATED TO OUR REGULATORY ENVIRONMENT
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.756 | SCHW Item 7 | text | Net Interest Revenue | '[Net Interest Revenue]\nSchwab’s primary interest-earning assets include cash and'
+    0.717 | SCHW Item 7 | text | Market Risk | '[Market Risk]\nMarket risk is the potential for changes in earnings or the value '
+    0.704 | SCHW Item 7 | text | 2024 Compared to 2023 | '[2024 Compared to 2023]\nThrough an evolving macroeconomic landscape in 2024, Sch'
+  reranked top-3:
+    0.960 | SCHW Item 7 | text | Management’s Discussion and Analysis of Finan
+    0.906 | SCHW Item 7 | text | 2024 Compared to 2023
+    0.610 | SCHW Item 7 | text | Management’s Discussion and Analysis of Finan
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.630 | SF Item 1A | text | OPERATIONAL RISKS | '[OPERATIONAL RISKS]\nSpecifically within the financial industry, employers are in'
+    0.603 | LPLA Item 1A | text | Risks Related to Our Business and Industry | '[Risks Related to Our Business and Industry]\nWe depend on our ability to attract'
+    0.600 | RJF Item 1A | text | RISKS RELATED TO OUR BUSINESS AND INDUSTRY | '[RISKS RELATED TO OUR BUSINESS AND INDUSTRY]\ntarget range, and/or negatively imp'
+  reranked top-3:
+    0.953 | LPLA Item 1A | text | Risks Related to Our Business and Industry
+    0.687 | LPLA Item 1A | text | Risks Related to Our Business and Industry
+    0.650 | LPLA Item 1A | text | Risks Related to Our Business and Industry
+
+=========== table_aware ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.722 | RJF Item 7 | table | Banking operations | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — Banking operations. Table:\n|'
+    0.680 | RJF Item 7 | table | Banking operations | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — Banking operations. Table:\n|'
+    0.672 | RJF Item 7 | table | Year ended September 30, 2024 compared with t | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — Year ended September 30, 202'
+  reranked top-3:
+    0.209 | RJF Item 7 | table | Year ended September 30, 2024 compared with t
+    0.156 | RJF Item 7 | table | NET INTEREST ANALYSIS
+    0.118 | RJF Item 7 | table | Year ended September 30, 2024 compared with t
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.803 | SCHW Item 7 | text | Total Net Revenues | '[Total Net Revenues]\nThe following table presents a comparison of revenue by cat'
+    0.767 | SCHW Item 7 | table | Total Net Revenues | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — Total Net Revenues. Table:\n| Year En'
+    0.751 | SCHW Item 7 | table | Segment Information | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — Segment Information. Table:\n| Invest'
+  reranked top-3:
+    0.970 | SCHW Item 7 | table | Segment Information
+    0.944 | SCHW Item 7 | table | Total Net Revenues
+    0.941 | SCHW Item 7 | table | Total Net Revenues
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.630 | SF Item 1A | text | OPERATIONAL RISKS | '[OPERATIONAL RISKS]\nSpecifically within the financial industry, employers are in'
+    0.603 | LPLA Item 1A | text | Risks Related to Our Business and Industry | '[Risks Related to Our Business and Industry]\nWe depend on our ability to attract'
+    0.601 | RJF Item 1A | text | RISKS RELATED TO OUR BUSINESS AND INDUSTRY | '[RISKS RELATED TO OUR BUSINESS AND INDUSTRY]\ntarget range, and/or negatively imp'
+  reranked top-3:
+    0.953 | LPLA Item 1A | text | Risks Related to Our Business and Industry
+    0.687 | LPLA Item 1A | text | Risks Related to Our Business and Industry
+    0.650 | LPLA Item 1A | text | Risks Related to Our Business and Industry

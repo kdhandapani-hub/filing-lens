@@ -1,0 +1,50 @@
+
+Q: What does Raymond James say about interest rate risk?
+   tickers=['RJF'] | max_rerank=0.26095408 | refused=False | total 17.483s (retrieve 8.943s, generate 8.472s)
+   retrieve breakdown: {'embed': 7.71, 'pinecone': 0.328, 'bm25': 0.002, 'rerank': 0.894}
+   generation: finish=stop attempts=1 usage={'input_tokens': 2332, 'output_tokens': 808, 'total_tokens': 3140, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 601}}
+
+Raymond James quantifies banking-operations interest rate risk by projecting net interest income under instantaneous rate changes: +200 bp $1,898 million (3%), +100 bp $1,891 million (2%), 0 $1,846 million (—%), -100 bp $1,765 million ((4)%), and -200 bp $1,661 million ((10)%) [2]. It also lists Fed funds target rate changes, including September 30, 2025: (25) bp to 4.00%-4.25%, and October 30, 2025: (25) bp to 3.75%-4.00% [5]. Separately, it discusses foreign exchange risk from Canadian-dollar bank loans totaling $1.00 billion and $1.23 billion at September 30, 2025 and 2024, respectively, hedged with forward contracts [3]. Net interest analysis also shows average rates on interest-earning assets and liabilities [1][4].
+   [1] RJF-table_aware-7-0052 | RJF Item 7 | NET INTEREST ANALYSIS > Year ended September 30, 2024 compared with th
+   [2] RJF-table_aware-7-0113 | RJF Item 7 | RISK MANAGEMENT > Banking operations
+   [3] RJF-table_aware-7-0118 | RJF Item 7 | RISK MANAGEMENT > Banking operations
+   [4] RJF-table_aware-7-0050 | RJF Item 7 | NET INTEREST ANALYSIS > Year ended September 30, 2024 compared with th
+   [5] RJF-table_aware-7-0046 | RJF Item 7 | NET INTEREST ANALYSIS
+
+Q: What were Schwab's net revenues by segment?
+   tickers=['SCHW'] | max_rerank=0.9439706 | refused=False | total 12.669s (retrieve 9.312s, generate 3.342s)
+   retrieve breakdown: {'embed': 8.37, 'pinecone': 0.103, 'bm25': 0.003, 'rerank': 0.829}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3731, 'output_tokens': 316, 'total_tokens': 4047, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 128}}
+
+Schwab reported total net revenues by segment (in millions) [3]:
+
+- **Investor Services:** $18,999 in 2025, $15,558 in 2024, and $14,650 in 2023; up 22% in 2025 vs. 2024 [3].
+- **Advisor Services:** $4,922 in 2025, $4,048 in 2024, and $4,187 in 2023; up 22% in 2025 vs. 2024 [3].
+- **Total:** $23,921 in 2025, $19,606 in 2024, and $18,837 in 2023; up 22% in 2025 vs. 2024 [3].
+
+Both segments grew 22% year-over-year, with Investor Services contributing the majority of total net revenues [3].
+   [3] SCHW-table_aware-7-0056 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Information
+
+Q: Compare how Raymond James and Stifel describe competition for financial advisors.
+   tickers=['RJF', 'SF'] | max_rerank=0.37250522 | refused=False | total 13.919s (retrieve 1.854s, generate 12.052s)
+   retrieve breakdown: {'embed': 0.336, 'pinecone': 0.132, 'bm25': 0.003, 'rerank': 1.373}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3858, 'output_tokens': 848, 'total_tokens': 4706, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 666}}
+
+Raymond James describes competition for advisors as intense, including non-traditional firms such as technology companies and an industry-wide trend of advisors leaving traditional firms to form independent RIAs or join third-party RIAs, some backed by private equity [1]. It notes rivals offer guaranteed contracts, upfront payments and increased compensation [1]. Stifel says its Global Wealth Management segment faces competition for qualified associates from major financial services companies, including other brokerage firms, insurance companies, banking institutions and discount brokerage firms [3]. Stifel paid $228.5 million in upfront notes to financial advisors for transition pay in 2025 and may devote more resources as competition for skilled professionals increases amid market displacement [5]. Difference: RJF stresses independent-RIA/private-equity and tech entrants; Stifel stresses traditional financial-services competitors and market-displacement recruiting, with quantified transition pay [1][3][5].
+   [1] RJF-table_aware-1A-0009 | RJF Item 1A | RISKS RELATED TO OUR BUSINESS AND INDUSTRY > Our ability to attract an
+   [3] SF-table_aware-7-0056 | SF Item 7 | SEGMENT ANALYSIS
+   [5] SF-table_aware-7-0087 | SF Item 7 | INCOME BEFORE INCOME TAXES > Use of Capital Resources
+
+Q: What were Morgan Stanley's wealth management revenues?
+   tickers=[] | max_rerank=0.8576489 | refused=True (not_in_context) | total 2.256s (retrieve 1.426s, generate 0.821s)
+   retrieve breakdown: {'embed': 0.886, 'pinecone': 0.121, 'bm25': 0.001, 'rerank': 0.413}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3635, 'output_tokens': 25, 'total_tokens': 3660, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 21}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+
+Q: What is Raymond James' stock price target for next year?
+   tickers=['RJF'] | max_rerank=0.56973296 | refused=True (not_in_context) | total 1.766s (retrieve 0.891s, generate 0.863s)
+   retrieve breakdown: {'embed': 0.451, 'pinecone': 0.067, 'bm25': 0.001, 'rerank': 0.366}
+   generation: finish=stop attempts=1 usage={'input_tokens': 1506, 'output_tokens': 24, 'total_tokens': 1530, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 20}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).

@@ -1,0 +1,51 @@
+
+Q: What does Raymond James say about interest rate risk?
+   tickers=['RJF'] | max_rerank=0.26095408 | refused=False | total 6.351s (retrieve 2.951s, generate 3.381s)
+   retrieve breakdown: {'embed': 1.838, 'pinecone': 0.356, 'bm25': 0.004, 'rerank': 0.742}
+   generation: finish=stop attempts=1 usage={'input_tokens': 2307, 'output_tokens': 209, 'total_tokens': 2516, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+
+Raymond James discloses interest rate risk mainly through banking operations. An instantaneous rate shock shows projected net interest income of $1,846 million at 0 bps, $1,891 million (+2%) at +100 bps, $1,898 million (+3%) at +200 bps, $1,765 million (−4%) at −100 bps, and $1,661 million (−10%) at −200 bps [2]. It also lists Fed funds target rate changes affecting fiscal quarters, from 5.25%–5.50% (July 27, 2023) to 4.00%–4.25% (September 18, 2025), with a subsequent cut to 3.75%–4.00% (October 30, 2025) [5]. Foreign exchange risk from Canadian-dollar loans ($1.00 billion and $1.23 billion at September 30, 2025 and 2024) is also noted [3].
+   [2] RJF-table_aware-7-0113 | RJF Item 7 | RISK MANAGEMENT > Banking operations
+   [3] RJF-table_aware-7-0118 | RJF Item 7 | RISK MANAGEMENT > Banking operations
+   [5] RJF-table_aware-7-0046 | RJF Item 7 | NET INTEREST ANALYSIS
+
+Q: What were Schwab's net revenues by segment?
+   tickers=['SCHW'] | max_rerank=0.9439706 | refused=False | total 3.865s (retrieve 3.084s, generate 0.768s)
+   retrieve breakdown: {'embed': 2.161, 'pinecone': 0.149, 'bm25': 0.003, 'rerank': 0.764}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3706, 'output_tokens': 111, 'total_tokens': 3817, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+
+Schwab's FY2025 total net revenues were $23,921 million (in millions), up 22% from $19,606 million in 2024 [3].
+
+By segment for 2025 (in millions) [3]:
+- Investor Services: $18,999, up 22% from $15,558 in 2024.
+- Advisor Services: $4,922, up 22% from $4,048 in 2024.
+
+Both segments grew 22% year-over-year [3][4].
+   [3] SCHW-table_aware-7-0056 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Information
+   [4] SCHW-table_aware-7-0060 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Net Revenues
+
+Q: Compare how Raymond James and Stifel describe competition for financial advisors.
+   tickers=['RJF', 'SF'] | max_rerank=0.37250522 | refused=False | total 4.802s (retrieve 3.641s, generate 1.147s)
+   retrieve breakdown: {'embed': 2.017, 'pinecone': 0.142, 'bm25': 0.008, 'rerank': 1.453}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3833, 'output_tokens': 141, 'total_tokens': 3974, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+
+Both companies describe intense competition for advisor talent. Raymond James cites competition across all business lines, including non-traditional firms like technology companies, and notes rivals offer guaranteed contracts, upfront payments, and increased compensation; it warns recruiting costs could hurt earnings [1]. Stifel cites competition from major financial services companies, including other brokerage firms, insurance companies, banking institutions, and discount brokerage firms [3], and notes it paid $228.5 million in upfront transition notes in 2025, with competition for skilled professionals increasing [5].
+
+Both frame competition similarly, but only Raymond James explicitly mentions non-traditional/technology competitors and guaranteed contracts [1]; Stifel quantifies transition pay [5].
+   [1] RJF-table_aware-1A-0009 | RJF Item 1A | RISKS RELATED TO OUR BUSINESS AND INDUSTRY > Our ability to attract an
+   [3] SF-table_aware-7-0056 | SF Item 7 | SEGMENT ANALYSIS
+   [5] SF-table_aware-7-0087 | SF Item 7 | INCOME BEFORE INCOME TAXES > Use of Capital Resources
+
+Q: What were Morgan Stanley's wealth management revenues?
+   tickers=[] | max_rerank=0.8576489 | refused=True (not_in_context) | total 2.848s (retrieve 1.894s, generate 0.937s)
+   retrieve breakdown: {'embed': 1.327, 'pinecone': 0.123, 'bm25': 0.003, 'rerank': 0.431}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3610, 'output_tokens': 4, 'total_tokens': 3614, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+
+Q: What is Raymond James' stock price target for next year?
+   tickers=['RJF'] | max_rerank=0.56973296 | refused=True (not_in_context) | total 1.935s (retrieve 1.207s, generate 0.712s)
+   retrieve breakdown: {'embed': 0.747, 'pinecone': 0.086, 'bm25': 0.004, 'rerank': 0.362}
+   generation: finish=stop attempts=1 usage={'input_tokens': 1481, 'output_tokens': 4, 'total_tokens': 1485, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 0}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).

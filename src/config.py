@@ -14,7 +14,17 @@ for p in (DATA_RAW, DATA_PROC):
 
 # --- Models (Nebius Token Factory) ---
 EMBED_MODEL = os.getenv("NEBIUS_EMBED_MODEL", "Qwen/Qwen3-Embedding-8B")  # 4096-dim
-CHAT_MODEL = os.getenv("NEBIUS_CHAT_MODEL", "")  # set in .env on Day 2 (from Nebius models page)
+CHAT_MODEL = os.getenv("NEBIUS_CHAT_MODEL", "")  # exact ID from the Nebius playground
+# Optional switches to turn off hidden reasoning (find the right one with: python -m src.check_reasoning)
+CHAT_EXTRA_BODY = os.getenv("NEBIUS_CHAT_EXTRA_BODY", "")      # JSON, e.g. {"chat_template_kwargs": {"thinking": false}}
+REASONING_EFFORT = os.getenv("NEBIUS_REASONING_EFFORT", "")    # e.g. low
+
+# --- Retrieval defaults (Day 2). Tune RELEVANCE_THRESHOLD on the eval set. ---
+CANDIDATES_K = 10           # per retriever (dense and BM25) before fusion
+RRF_K = 60                  # reciprocal-rank-fusion constant
+TOP_N = 5                   # chunks passed to the LLM for single-company / open questions
+TOP_N_PER_COMPANY = 3       # per company for comparison questions
+RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.15"))  # min rerank score to answer
 
 # --- Vector store (Pinecone serverless): one index, one namespace per chunking strategy ---
 PINECONE_INDEX = os.getenv("PINECONE_INDEX", "week2-financial-rag")

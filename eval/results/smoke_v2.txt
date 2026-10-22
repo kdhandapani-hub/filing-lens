@@ -1,0 +1,96 @@
+
+=========== fixed ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.631 | RJF Item 7 | text |  | 'Separately, RJF provides additional market risk disclosures to comply with the M'
+    0.561 | RJF Item 7 | text |  | 'In August 2023, Raymond James Investment Services Limited, one of our U.K. subsi'
+    0.550 | RJF Item 7 | text |  | 'The following table details the Fed’s short-term interest rate activity since th'
+  reranked top-3:
+    0.830 | RJF Item 7 | text |  | 'Separately, RJF provides additional market risk disclosures to comply with the M'
+    0.094 | RJF Item 7 | text |  | 'Decreases in short-term interest rates generally result in a decrease to our RJB'
+    0.075 | RJF Item 7 | text |  | 'In August 2023, Raymond James Investment Services Limited, one of our U.K. subsi'
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.751 | SCHW Item 7 | text |  | 'Schwab’s financial performance in 2025 reflected strong asset gathering, sustain'
+    0.696 | SCHW Item 7 | text |  | 'Schwab supported strong client demand for margin and bank lending in 2025, while'
+    0.676 | SCHW Item 7 | text |  | '(1) 2025 includes net outflows of $20.8 billion from off-platform brokered CDs i'
+  reranked top-3:
+    0.949 | SCHW Item 7 | text |  | 'Schwab’s financial performance in 2025 reflected strong asset gathering, sustain'
+    0.788 | SCHW Item 7 | text |  | '| Schwab Money | Schwab Equity and | Mutual Fund OneSource ® |  |  |  |  |  |  |'
+    0.739 | SCHW Item 7 | text |  | '(1) 2025 includes net outflows of $20.8 billion from off-platform brokered CDs i'
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.627 | LPLA Item 1A | text |  | 'We can provide no assurances that advisors or institutions that join LPL Financi'
+    0.593 | LPLA Item 1A | text |  | '• Our future ability to pay regular dividends to holders of our common stock or '
+    0.590 | SF Item 1A | text |  | 'The labor market remains competitive, and we face competition for talent across '
+  reranked top-3:
+    0.709 | LPLA Item 1A | text |  | 'We can provide no assurances that advisors or institutions that join LPL Financi'
+    0.595 | LPLA Item 1A | text |  | '• Our future ability to pay regular dividends to holders of our common stock or '
+    0.594 | LPLA Item 1A | text |  | 'Our risk management policies and procedures may not be effective in fully mitiga'
+
+=========== section ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.600 | RJF Item 7 | text | RESULTS OF OPERATIONS – ASSET MANAGEMENT > AM | '[RESULTS OF OPERATIONS – ASSET MANAGEMENT > AMS]\nSee “Management’s Discussion an'
+    0.582 | RJF Item 7 | text | RISK MANAGEMENT > Banking operations | '[RISK MANAGEMENT > Banking operations]\nOur banking operations are also subject t'
+    0.551 | RJF Item 7 | text | NET INTEREST ANALYSIS | '[NET INTEREST ANALYSIS]\nDecreases in short-term interest rates generally result '
+  reranked top-3:
+    0.237 | RJF Item 7 | text | RISK MANAGEMENT > Banking operations | '[RISK MANAGEMENT > Banking operations]\nOur banking operations are also subject t'
+    0.115 | RJF Item 7 | text | NET INTEREST ANALYSIS | '[NET INTEREST ANALYSIS]\nDecreases in short-term interest rates generally result '
+    0.103 | RJF Item 1A | text | RISKS RELATED TO OUR BUSINESS AND INDUSTRY >  | '[RISKS RELATED TO OUR BUSINESS AND INDUSTRY > We are exposed to market risk, inc'
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.715 | SCHW Item 7 | text | RESULTS OF OPERATIONS > Net Interest Revenue | '[RESULTS OF OPERATIONS > Net Interest Revenue]\nSchwab’s primary interest-earning'
+    0.702 | SCHW Item 7 | text | OVERVIEW > 2025 Compared to 2024 | '[OVERVIEW > 2025 Compared to 2024]\nGuided by our “Through Clients’ Eyes” strateg'
+    0.696 | SCHW Item 7 | text | FORWARD-LOOKING STATEMENTS | '[FORWARD-LOOKING STATEMENTS]\nIn addition to historical information, this Annual '
+  reranked top-3:
+    0.931 | SCHW Item 7 | text | OVERVIEW > 2025 Compared to 2024 | '[OVERVIEW > 2025 Compared to 2024]\nGuided by our “Through Clients’ Eyes” strateg'
+    0.860 | SCHW Item 7 | text | RESULTS OF OPERATIONS > Net Interest Revenue | '[RESULTS OF OPERATIONS > Net Interest Revenue]\nSchwab’s primary interest-earning'
+    0.651 | SCHW Item 7 | text | RESULTS OF OPERATIONS > Net Interest Revenue | '[RESULTS OF OPERATIONS > Net Interest Revenue]\nThe Federal Reserve maintained th'
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.630 | SF Item 1A | text | OPERATIONAL RISKS | '[OPERATIONAL RISKS]\nSpecifically within the financial industry, employers are in'
+    0.611 | RJF Item 1A | text | RISKS RELATED TO OUR BUSINESS AND INDUSTRY >  | '[RISKS RELATED TO OUR BUSINESS AND INDUSTRY > Our ability to attract and retain '
+    0.609 | LPLA Item 1A | text | Our business could be materially adversely af | '[Our business could be materially adversely affected as a result of the risks as'
+  reranked top-3:
+    0.961 | LPLA Item 1A | text | We face competition in attracting and retaini | '[We face competition in attracting and retaining key talent.]\nOur success depend'
+    0.844 | LPLA Item 1A | text | Risks Related to Ownership of Our Common Stoc | '[Risks Related to Ownership of Our Common Stock]\n• The price of our common stock'
+    0.759 | LPLA Item 1A | text | Our business could be materially adversely af | '[Our business could be materially adversely affected as a result of the risks as'
+
+=========== table_aware ===========
+
+Q: What does Raymond James say about interest rate risk?
+  dense top-3:
+    0.740 | RJF Item 7 | table | RISK MANAGEMENT > Banking operations | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RISK MANAGEMENT > Banking op'
+    0.693 | RJF Item 7 | table | NET INTEREST ANALYSIS > Year ended September  | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — NET INTEREST ANALYSIS > Year'
+    0.685 | RJF Item 7 | table | NET INTEREST ANALYSIS > Year ended September  | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — NET INTEREST ANALYSIS > Year'
+  reranked top-3:
+    0.243 | RJF Item 7 | table | RISK MANAGEMENT > Banking operations | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RISK MANAGEMENT > Banking op'
+    0.168 | RJF Item 7 | table | NET INTEREST ANALYSIS > Year ended September  | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — NET INTEREST ANALYSIS > Year'
+    0.156 | RJF Item 7 | table | NET INTEREST ANALYSIS | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — NET INTEREST ANALYSIS. Table'
+
+Q: Schwab net revenues by segment
+  dense top-3:
+    0.776 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Total Net Revenues | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Total Net Re'
+    0.763 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Segment Information | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Segment Info'
+    0.750 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Total Net Revenues | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Total Net Re'
+  reranked top-3:
+    0.971 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Segment Information | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Segment Info'
+    0.946 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Total Net Revenues | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Total Net Re'
+    0.944 | SCHW Item 7 | table | RESULTS OF OPERATIONS > Segment Information | 'Charles Schwab (SCHW) FY2025 10-K, Item 7 — RESULTS OF OPERATIONS > Segment Info'
+
+Q: LPL advisor recruiting and retention risks
+  dense top-3:
+    0.630 | SF Item 1A | text | OPERATIONAL RISKS | '[OPERATIONAL RISKS]\nSpecifically within the financial industry, employers are in'
+    0.612 | RJF Item 1A | text | RISKS RELATED TO OUR BUSINESS AND INDUSTRY >  | '[RISKS RELATED TO OUR BUSINESS AND INDUSTRY > Our ability to attract and retain '
+    0.609 | LPLA Item 1A | text | Our business could be materially adversely af | '[Our business could be materially adversely affected as a result of the risks as'
+  reranked top-3:
+    0.961 | LPLA Item 1A | text | We face competition in attracting and retaini | '[We face competition in attracting and retaining key talent.]\nOur success depend'
+    0.844 | LPLA Item 1A | text | Risks Related to Ownership of Our Common Stoc | '[Risks Related to Ownership of Our Common Stock]\n• The price of our common stock'
+    0.759 | LPLA Item 1A | text | Our business could be materially adversely af | '[Our business could be materially adversely affected as a result of the risks as'

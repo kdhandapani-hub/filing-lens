@@ -456,22 +456,22 @@
   "heading": "OPERATIONAL RISKS"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "We are subject to risks relating to environmental, social, and governance matters that could adversely affect our reputation, business, financial condition, and results of operations.",
   "item": "1A",
-  "heading": "OPERATIONAL RISKS"
+  "heading": "OPERATIONAL RISKS > We are subject to risks relating to environmental, social, and governance matters that could adversely affect our reputation, business, financial condition, and results of operations."
  },
  {
   "type": "text",
   "text": "We have multiple stakeholders, including our shareholders, clients, associates, federal, state, and foreign regulatory authorities, and the communities in which we operate, and these stakeholders will often have differing priorities and expectations regarding environmental, social, and governance matters. For example, individual U.S. states are increasingly developing differing, and sometimes conflicting, rules related to environmental, social, and governance matters, while at the federal level, the SEC has recently stopped pursuing rulemaking efforts focused on certain of these matters. In addition, proxy advisory firms and certain institutional investors who manage investments in public companies may integrate environmental, social, and governance factors into their investment analysis. Frameworks for evaluating such matters remain underdeveloped and vary widely, which may lead to misperceptions of our policies and practices. Organizations that provide ratings information to investors on such matters may also assign unfavorable ratings to Stifel. Stakeholders continue to focus on environmental, social, and governance issues in corporate actions, such as the election of directors and approval of executive compensation. Certain of our clients might also require that we implement additional procedures or standards in these areas in order to continue to do business with them. If we take action in conflict with one or another of those stakeholders\u2019 expectations, we could experience an increase in client complaints, a loss of business, or reputational harm. We could also face negative publicity or reputational harm based on the identity of those with whom we choose to do business. Any adverse publicity in connection with environmental, social, and governance issues could damage our reputation, ability to attract and retain clients, associates, and independent advisors, compete effectively, and grow our business.",
   "item": "1A",
-  "heading": "OPERATIONAL RISKS"
+  "heading": "OPERATIONAL RISKS > We are subject to risks relating to environmental, social, and governance matters that could adversely affect our reputation, business, financial condition, and results of operations."
  },
  {
   "type": "text",
   "text": "Regulatory scrutiny of disclosure practices for sustainable and values-based investment strategies has been a focus in recent years, though that focus appears to be moderating following the SEC\u2019s decision to withdraw proposed rulemaking in this area. Nonetheless, we could still face reputational risk if our investment managers are perceived as making inaccurate or misleading statements regarding the investment strategies of our funds and ETFs, commonly referred to as \u201cgreenwashing.\u201d Such perceptions or accusations could damage our reputation, result in litigation or regulatory enforcement actions, and adversely affect our business.",
   "item": "1A",
-  "heading": "OPERATIONAL RISKS"
+  "heading": "OPERATIONAL RISKS > We are subject to risks relating to environmental, social, and governance matters that could adversely affect our reputation, business, financial condition, and results of operations."
  },
  {
   "type": "heading",
@@ -744,154 +744,136 @@
   "heading": "RESULTS OF OPERATIONS"
  },
  {
-  "type": "heading",
-  "text": "NET REVENUES",
-  "item": "7",
-  "heading": "NET REVENUES"
- },
- {
   "type": "text",
   "text": "The following table presents consolidated net revenues for the periods indicated (in thousands, except percentages) :",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "table",
   "text": "| For the Year Ended December 31, | Percentage Change |  |  |  |  |\n|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 |  |\n| Revenues: |  |  |  |  |  |\n| Commissions | $813,618 | $756,024 | $673,597 | 7.6% | 12.2% |\n| Principal transactions | 645,337 | 604,564 | 490,440 | 6.7 | 23.3 |\n| Transactional revenues | 1,458,955 | 1,360,588 | 1,164,037 | 7.2 | 16.9 |\n| Capital raising | 528,708 | 417,399 | 265,667 | 26.7 | 57.1 |\n| Advisory | 722,033 | 577,432 | 465,588 | 25.0 | 24.0 |\n| Investment banking | 1,250,741 | 994,831 | 731,255 | 25.7 | 36.0 |\n| Asset management | 1,700,345 | 1,536,674 | 1,299,496 | 10.7 | 18.3 |\n| Net interest | 1,085,766 | 1,035,098 | 1,145,409 | 4.9 | (9.6) |\n| Other income | 33,923 | 43,129 | 8,747 | (21.3) | 393.1 |\n| Total net revenues | $5,529,730 | $4,970,320 | $4,348,944 | 11.3% | 14.3% |",
   "item": "7",
-  "heading": "NET REVENUES"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024",
-  "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, net revenues increased 11.3% to a record $5.53 billion from $4.97 billion in 2024. The increase was primarily attributable to higher investment banking, asset management, transactional revenues, and net interest income.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Commissions \u2013 Commission revenues are primarily generated from agency transactions in OTC and listed equity securities, insurance products, and options. In addition, commission revenues also include distribution fees for promoting and distributing mutual funds.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, commission revenues increased 7.6% to $813.6 million from $756.0 million in 2024. The increase is primarily attributable to higher volumes due to increased market volatility over the comparable period in 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Principal transactions \u2013 Principal transaction revenues are gains and losses on secondary trading, principally fixed income transactional revenues.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, principal transactions revenues increased 6.7% to $645.3 million from $604.6 million in 2024. The increase is primarily attributable to higher realized trading gains and increased client activity over the comparable period in 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 Investment banking revenues include: (i) capital-raising revenues representing fees earned from the underwriting of debt and equity securities, and (ii) advisory fees related to corporate debt and equity offerings, municipal debt offerings, merger and acquisitions, private placements, and other investment banking advisory fees.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, investment banking revenues increased 25.7% to $1.3 billion from $994.8 million in 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, capital-raising revenues increased 26.7% to $528.7 million from $417.4 million in 2024. For the year ended December 31, 2025, equity capital-raising revenues increased 41.4% to $280.7 million from $198.5 million in 2024 driven by higher volumes during 2025. For the year ended December 31, 2025, fixed income capital-raising revenues increased 13.3% to $248.0 million from $218.9 million in 2024 driven by higher bond issuances reflecting a more favorable financing environment during 2025.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, advisory revenues increased 25.0% to $722.0 million from $577.4 million in 2024. The increase is primarily attributable to higher levels of completed advisory transactions during 2025 with continued growth in depository advisory transactions.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Asset management \u2013 Asset management revenues include fees for asset-based financial services provided to individuals and institutional clients. Investment advisory fees are charged based on the value of assets in fee-based accounts. Asset management revenues are affected by changes in the balances of client assets due to market fluctuations and levels of net new client assets.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, asset management revenues increased 10.7% to a record $1.70 billion from $1.54 billion in 2024. The increase is primarily attributable to market appreciation leading to higher asset values due to improved market conditions and net new asset growth. Please refer to \u201cAsset management\u201d in the Global Wealth Management segment discussion for information on the changes in asset management revenues.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2025, other income decreased 21.3% to $33.9 million from $43.1 million during 2024. The decrease is primarily attributable to reduced lease income generated from our aircraft engine leasing business due to the sale of engines, lower investment gains, and a decrease in mortgage loan origination fees from the comparable period in 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023",
-  "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, net revenues increased 14.3% to $4.97 billion from $4.35 billion in 2023. The increase was primarily attributable to higher investment banking, asset management, and transactional revenues, partially offset by lower net interest income.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Commissions \u2013 For the year ended December 31, 2024, commission revenues increased 12.2% to $756.0 million from $673.6 million in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Principal transactions \u2013 For the year ended December 31, 2024, principal transactions revenues increased 23.3% to $604.6 million from $490.4 million in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 For the year ended December 31, 2024, investment banking revenues increased 36.0% to $994.8 million from $731.3 million in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, capital-raising revenues increased 57.1% to $417.4 million from $265.7 million in 2023. For the year ended December 31, 2024, equity capital-raising revenues increased 73.2% to $198.5 million from $114.6 million in 2023 driven by higher volumes during 2024. For the year ended December 31, 2024, fixed income capital-raising revenues increased 44.9% to $218.9 million from $151.1 million in 2023 driven by higher bond issuances during 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, advisory revenues increased 24.0% to $577.4 million from $465.6 million in 2023. The increase is primarily attributable to higher levels of completed advisory transactions during 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Asset management \u2013 For the year ended December 31, 2024, asset management revenues increased 18.3% to $1.54 billion from $1.30 billion in 2023. The increase is primarily attributable to market appreciation leading to higher asset values and net cash inflows primarily as a result of our recruiting efforts. Please refer to \u201cAsset management\u201d in the Global Wealth Management segment discussion for information on the changes in asset management revenues.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2024, other income increased 393.1% to $43.1 million from $8.7 million in 2023. The increase is primarily attributable to higher investment gains over the comparable period in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "RESULTS OF OPERATIONS"
  },
  {
   "type": "heading",
@@ -903,367 +885,337 @@
   "type": "heading",
   "text": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "The following tables present average balance data and operating interest revenue and expense data, as well as related interest yields for the periods indicated (in thousands, except rates) :",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "table",
   "text": "| For the Year Ended |  |  |  |  |  |  |  |  |  |\n|---|---|---|---|---|---|---|---|---|---|\n| December 31, 2025 | December 31, 2024 | December 31, 2023 |  |  |  |  |  |  |  |\n| Average Balance | Interest Income/ Expense | Average Interest Rate | Average Balance | Interest Income/ Expense | Average Interest Rate | Average Balance | Interest Income/ Expense | Average Interest Rate |  |\n| Interest-earning assets: |  |  |  |  |  |  |  |  |  |\n| Interest-bearing cash and federal funds sold | $2,252,703 | $94,179 | 4.18% | $3,126,654 | $164,110 | 5.25% | $2,394,404 | $123,363 | 5.15% |\n| Financial instruments owned | 1,347,543 | 33,007 | 2.45 | 1,126,934 | 25,001 | 2.22 | 895,020 | 16,726 | 1.87 |\n| Margin balances | 866,477 | 59,324 | 6.85 | 698,487 | 55,156 | 7.90 | 786,264 | 61,138 | 7.78 |\n| Investments: |  |  |  |  |  |  |  |  |  |\n| Asset-backed securities | 6,591,048 | 397,304 | 6.03 | 6,210,508 | 442,176 | 7.12 | 6,143,333 | 428,664 | 6.98 |\n| Mortgage-backed securities | 1,140,980 | 37,092 | 3.25 | 993,619 | 26,368 | 2.65 | 963,414 | 21,355 | 2.22 |\n| Corporate fixed income securities | 453,374 | 12,336 | 2.72 | 564,101 | 15,469 | 2.74 | 624,079 | 17,060 | 2.73 |\n| Other | 4,773 | 122 | 2.55 | 4,740 | 120 | 2.55 | 4,709 | 120 | 2.55 |\n| Total investments | 8,190,175 | 446,854 | 5.46 | 7,772,968 | 484,133 | 6.23 | 7,735,535 | 467,199 | 6.04 |\n| Loans: |  |  |  |  |  |  |  |  |  |\n| Residential real estate | 8,896,581 | 347,303 | 3.90 | 8,268,123 | 291,376 | 3.52 | 7,731,478 | 241,730 | 3.13 |\n| Commercial and industrial | 3,977,009 | 287,446 | 7.23 | 3,734,097 | 323,531 | 8.66 | 4,491,531 | 378,277 | 8.42 |\n| Fund banking | 3,860,296 | 267,804 | 6.94 | 3,458,175 | 273,907 | 7.92 | 4,256,903 | 323,120 | 7.59 |\n| Securities-based loans | 2,513,202 | 153,195 | 6.10 | 2,292,176 | 162,161 | 7.07 | 2,440,912 | 170,699 | 6.99 |\n| Construction and land | 1,208,737 | 88,395 | 7.31 | 1,176,660 | 96,929 | 8.24 | 770,563 | 63,134 | 8.19 |\n| Commercial real estate | 451,642 | 33,890 | 7.50 | 612,374 | 44,658 | 7.29 | 670,556 | 49,715 | 7.41 |\n| Loans held for sale | 497,295 | 39,904 | 8.02 | 486,261 | 41,071 | 8.45 | 210,446 | 13,628 | 6.48 |\n| Other | 254,659 | 17,863 | 7.01 | 211,733 | 16,415 | 7.75 | 166,245 | 12,705 | 7.64 |\n| Total loans | 21,659,421 | 1,235,800 | 5.71 | 20,239,599 | 1,250,048 | 6.18 | 20,738,634 | 1,253,008 | 6.04 |\n| Other interest-earning assets | 997,251 | 34,405 | 3.45 | 838,928 | 38,016 | 4.53 | 764,679 | 34,311 | 4.49 |\n| Total interest-earning assets/interest income | $35,313,570 | $1,903,569 | 5.39% | $33,803,570 | $2,016,464 | 5.97% | $33,314,536 | $1,955,745 | 5.87% |\n| Interest-bearing liabilities: |  |  |  |  |  |  |  |  |  |\n| Short-term borrowings | $1,874 | $96 | 5.14% | $404 | $26 | 6.44% | $2,412 | $144 | 5.97% |\n| Stock loan | 381,779 | (6,578) | (1.72) | 253,467 | (7,203) | (2.84) | 147,904 | (8,028) | (5.43) |\n| Senior notes | 617,000 | 28,524 | 4.62 | 905,733 | 40,349 | 4.45 | 1,115,052 | 50,025 | 4.49 |\n| Stifel Capital Trusts | 58,712 | 3,713 | 6.32 | 60,000 | 4,408 | 7.35 | 60,000 | 4,363 | 7.27 |\n| Deposits: |  |  |  |  |  |  |  |  |  |\n| Money market | 25,544,354 | 639,991 | 2.51 | 25,581,967 | 814,527 | 3.18 | 24,967,085 | 632,251 | 2.53 |\n| Demand deposits | 2,868,142 | 89,287 | 3.11 | 1,913,841 | 67,920 | 3.55 | 2,297,253 | 92,527 | 4.03 |\n| Time deposits | 211,772 | 8,924 | 4.21 | 114,681 | 5,995 | 5.23 | 2,535 | 75 | 2.95 |\n| Savings | 10,999 | 113 | 1.03 | 1,235 | 11 | 0.88 | 556 | 4 | 0.72 |\n| Total deposits | 28,635,267 | 738,315 | 2.58 | 27,611,724 | 888,453 | 3.22 | 27,267,429 | 724,857 | 2.66 |\n| Federal Home Loan Bank advances | 823 | 38 | 4.60 | 1 | \u2014 | 2.15 | 1,371 | 68 | 4.99 |\n| Other interest-bearing liabilities | 1,142,270 | 53,695 | 4.70 | 1,065,202 | 55,333 | 5.19 | 1,027,985 | 38,907 | 3.78 |\n| Total interest-bearing liabilities/interest expense | $30,837,725 | 817,803 | 2.65% | $29,896,531 | 981,366 | 3.28% | $29,622,153 | 810,336 | 2.74% |\n| Net interest income/margin | $1,085,766 | 3.07% | $1,035,098 | 3.06% | $1,145,409 | 3.44% |  |  |  |",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "The following table sets forth an analysis of the effect on net interest income of volume and rate changes for the periods indicated (in thousands) :",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "table",
   "text": "| Year Ended December 31, 2025 Compared to Year Ended December 31, 2024 | Year Ended December 31, 2024 Compared to Year Ended December 31, 2023 |  |  |  |  |  |\n|---|---|---|---|---|---|---|\n| Increase (decrease) due to: | Increase (decrease) due to: |  |  |  |  |  |\n| Volume | Rate | Total | Volume | Rate | Total |  |\n| Interest income: |  |  |  |  |  |  |\n| Interest-bearing cash and federal funds sold | $(40,470) | $(29,461) | $(69,931) | $38,393 | $2,354 | $40,747 |\n| Financial instruments owned | 5,227 | 2,779 | 8,006 | 4,805 | 3,470 | 8,275 |\n| Margin balances | 9,321 | (5,153) | 4,168 | (6,948) | 966 | (5,982) |\n| Investments: |  |  |  |  |  |  |\n| Asset-backed securities | 29,858 | (74,730) | (44,872) | 4,721 | 8,791 | 13,512 |\n| Mortgage-backed securities | 4,260 | 6,464 | 10,724 | 688 | 4,325 | 5,013 |\n| Corporate fixed income securities | (3,014) | (119) | (3,133) | (1,645) | 54 | (1,591) |\n| Other | 1 | 1 | 2 | \u2014 | \u2014 | \u2014 |\n| Loans: |  |  |  |  |  |  |\n| Residential real estate | 23,135 | 32,792 | 55,927 | 17,532 | 32,114 | 49,646 |\n| Commercial and industrial | 23,300 | (59,385) | (36,085) | (66,003) | 11,257 | (54,746) |\n| Fund banking | 90,438 | (96,541) | (6,103) | (64,059) | 14,846 | (49,213) |\n| Securities-based loans | 20,610 | (29,576) | (8,966) | (10,551) | 2,013 | (8,538) |\n| Construction and land | 2,737 | (11,271) | (8,534) | 33,451 | 344 | 33,795 |\n| Commercial real estate | (12,102) | 1,334 | (10,768) | (4,254) | (803) | (5,057) |\n| Loans held for sale | 971 | (2,138) | (1,167) | 22,273 | 5,170 | 27,443 |\n| Other | 3,097 | (1,649) | 1,448 | 3,782 | (72) | 3,710 |\n| Other interest-earning assets | 13,646 | (17,257) | (3,611) | 3,361 | 344 | 3,705 |\n| $171,015 | $(283,910) | $(112,895) | $(24,454) | $85,173 | $60,719 |  |\n| Interest expense: |  |  |  |  |  |  |\n| Short-term borrowings | $74 | $(4) | $70 | $(126) | $8 | $(118) |\n| Stock loan | 2,809 | (2,184) | 625 | 2,483 | (1,658) | 825 |\n| Senior notes | (13,414) | 1,589 | (11,825) | (9,327) | (349) | (9,676) |\n| Stifel Capital Trusts | (93) | (602) | (695) | \u2014 | 45 | 45 |\n| Deposits: |  |  |  |  |  |  |\n| Money market | (1,196) | (173,340) | (174,536) | 15,921 | 166,355 | 182,276 |\n| Demand deposits | 28,349 | (6,982) | 21,367 | (14,371) | (10,236) | (24,607) |\n| Time deposits | 3,799 | (870) | 2,929 | 5,819 | 101 | 5,920 |\n| Savings | 100 | 2 | 102 | 6 | 1 | 7 |\n| Federal Home Loan Bank advances | 29 | 9 | 38 | (44) | (24) | (68) |\n| Other interest-bearing liabilities | 5,215 | (6,853) | (1,638) | 1,455 | 14,971 | 16,426 |\n| $25,672 | $(189,235) | $(163,563) | $1,816 | $169,214 | $171,030 |  |",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "Increases and decreases in interest revenue and interest expense result from changes in average balances (volume) of interest-earning bank assets and liabilities, as well as changes in average interest rates. The effect of changes in volume is determined by multiplying the change in volume by the previous year\u2019s average yield/cost. Similarly, the effect of rate changes is calculated by multiplying the change in average yield/cost by the previous year\u2019s volume. Changes applicable to both volume and rate have been allocated proportionately.",
   "item": "7",
-  "heading": "I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024",
-  "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "Net interest income \u2013 Net interest income is the difference between interest earned on interest-earning assets and interest paid on funding sources. Net interest income is affected by changes in the volume and mix of these assets and liabilities, as well as by fluctuations in interest rates and portfolio management strategies. For the year ended December 31, 2025, net interest income increased 4.9% to $1.09 billion from $1.04 billion in 2024.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, interest revenue decreased 5.6% to $1.90 billion from $2.02 billion in 2024, principally as a result of lower interest rates, partially offset by an increase in interest-earning assets. The average interest-earning assets of Stifel Bancorp increased to $31.2 billion during the year ended December 31, 2025, compared to $30.1 billion in 2024 at average interest rates of 5.59% and 6.14%, respectively.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, interest expense decreased 16.7% to $817.8 million from $981.4 million in 2024. The decrease is primarily attributable to lower interest rates, partially offset by higher interest-bearing liabilities. The average interest-bearing liabilities of Stifel Bancorp increased to $28.8 billion during the year ended December 31, 2025, compared to $27.7 billion in 2024 at average interest rates of 2.59% and 3.23%, respectively.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023",
-  "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "Net interest income \u2013 For the year ended December 31, 2024, net interest income decreased 9.6% to $1.0 billion from $1.1 billion in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, interest revenue increased 3.1% to $2.02 billion from $1.96 billion in 2023, principally as a result of higher interest rates and an increase in interest-earning assets. The average interest-earning assets of Stifel Bancorp increased to $30.1 billion during the year ended December 31, 2024, compared to $29.9 billion in 2023 at average interest rates of 6.14% and 6.01%, respectively.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, interest expense increased 21.1% to $981.4 million from $810.3 million in 2023. The increase is primarily attributable to higher interest rates and higher interest-bearing liabilities. The average interest-bearing liabilities of Stifel Bancorp increased to $27.7 billion during the year ended December 31, 2024, compared to $27.3 billion in 2023 at average interest rates of 3.23% and 2.66%, respectively.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > I. Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential"
  },
  {
   "type": "heading",
   "text": "II. Investment in Debt Securities",
   "item": "7",
-  "heading": "II. Investment in Debt Securities"
+  "heading": "NET INTEREST INCOME > II. Investment in Debt Securities"
  },
  {
   "type": "text",
   "text": "The maturities and related weighted-average yields of our debt securities not carried at fair value at December 31, 2025, are as follows (in thousands, except rates) :",
   "item": "7",
-  "heading": "II. Investment in Debt Securities"
+  "heading": "NET INTEREST INCOME > II. Investment in Debt Securities"
  },
  {
   "type": "table",
   "text": "| Within 1 Year | 1-5 Years | 5-10 Years | After 10 Years | Total |  |\n|---|---|---|---|---|---|\n| Asset-backed securities | $\u2014 | $157,770 | $1,494,530 | $4,896,754 | $6,549,054 |\n| Weighted-average yield (1) | 0.00% | 5.95% | 5.99% | 5.71% | 5.78% |",
   "item": "7",
-  "heading": "II. Investment in Debt Securities"
+  "heading": "NET INTEREST INCOME > II. Investment in Debt Securities"
  },
  {
   "type": "text",
   "text": "The weighted-average yield is computed using the expected maturity of each security weighted based on the amortized cost of each security.",
   "item": "7",
-  "heading": "II. Investment in Debt Securities"
+  "heading": "NET INTEREST INCOME > II. Investment in Debt Securities"
  },
  {
   "type": "heading",
   "text": "III. Loan Portfolio",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "text",
   "text": "The following table presents the maturities of each major loan category in Stifel Bancorp\u2019s loan portfolio held for investment for the periods indicated (in thousands) :",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "table",
   "text": "| Within 1 Year | 1-5 Years | 5-15 years | Over 15 Years | Total |  |\n|---|---|---|---|---|---|\n| Residential real estate | $128 | $1,286 | $602,778 | $8,650,747 | $9,254,939 |\n| Commercial and industrial | 748,406 | 2,394,279 | 979,511 | 12,895 | 4,135,091 |\n| Fund banking | 3,301,306 | 780,597 | 14,746 | \u2014 | 4,096,649 |\n| Securities-based loans | 2,578,835 | 93,596 | \u2014 | \u2014 | 2,672,431 |\n| Construction and land | 608,167 | 606,283 | \u2014 | \u2014 | 1,214,450 |\n| Commercial real estate | 126,843 | 296,109 | 522 | \u2014 | 423,474 |\n| Home equity lines of credit | 23,944 | 28,069 | 173,101 | 82 | 225,196 |\n| Other | 44,533 | \u2014 | \u2014 | \u2014 | 44,533 |\n| $7,432,162 | $4,200,219 | $1,770,658 | $8,663,724 | $22,066,763 |  |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "text",
   "text": "The sensitivity of loans with maturities in excess of one year at December 31, 2025, is as follows (in thousands) :",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "table",
   "text": "| Variable or adjusted-rate loans |  |\n|---|---|\n| Residential real estate | $7,440,990 |\n| Commercial and industrial | 3,146,260 |\n| Fund banking | 795,343 |\n| Securities-based loans | 81,500 |\n| Construction and land | 606,283 |\n| Commercial real estate | 283,534 |\n| Home equity lines of credit | 201,252 |\n| Other | \u2014 |\n| $12,555,162 |  |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "table",
   "text": "| Fixed-rate loans |  |\n|---|---|\n| Residential real estate | $1,813,821 |\n| Commercial and industrial | 240,425 |\n| Fund banking | \u2014 |\n| Securities-based loans | 12,096 |\n| Construction and land | \u2014 |\n| Commercial real estate | 13,097 |\n| Home equity lines of credit | \u2014 |\n| Other | \u2014 |\n| $2,079,439 |  |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "text",
   "text": "The following table presents the Company\u2019s credit ratios, as well as the component of the ratio\u2019s calculation, for the periods indicated (in thousands, except percentages) :",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "table",
   "text": "| As of and for the year ending December 31, |  |  |  |\n|---|---|---|---|\n| 2025 | 2024 | 2023 |  |\n| Allowance for credit losses to total loans outstanding | 0.73% | 0.81% | 0.83% |\n| Allowance for credit losses | $160,911 | $170,044 | $161,605 |\n| Loans held for investment | $22,066,763 | $20,879,745 | $19,441,467 |\n| Nonaccrual loans to total loans outstanding | 0.57% | 0.77% | 0.22% |\n| Nonaccrual loans | $125,159 | $160,900 | $42,366 |\n| Loans held for investment | $22,066,763 | $20,879,745 | $19,441,467 |\n| Allowance for credit losses to nonaccrual loans | 1.29x | 1.06x | 3.83x |\n| Allowance for credit losses | $160,911 | $170,044 | $161,605 |\n| Nonaccrual loans | $125,159 | $160,900 | $42,366 |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "text",
   "text": "The following table presents net charge-offs to average loans outstanding by major loan category for the year ended December 31, 2025 (in thousands, except percentages) :",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
   "type": "table",
   "text": "| Residential real estate | 0.00% |\n|---|---|\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $8,896,581 |\n| Commercial and industrial | 1.22% |\n| Net charge-off during the period | $48,326 |\n| Average amount outstanding | $3,977,009 |\n| Fund banking | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $3,860,296 |\n| Securities-based loans | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $2,513,202 |\n| Construction and land | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $1,208,737 |\n| Commercial real estate | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $451,642 |\n| Home equity lines of credit | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $210,087 |\n| Other | 0.00% |\n| Net charge-off during the period | $\u2014 |\n| Average amount outstanding | $44,572 |\n| Total loans held for investment | 0.23% |\n| Net charge-off during the period | $48,326 |\n| Average amount outstanding | $21,162,126 |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > III. Loan Portfolio"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "Allocation of the Allowance for Credit Losses",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The following is a breakdown of the allowance for credit losses by each major loan category at December 31, 2025 and 2024 (in thousands, except rates) :",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "table",
   "text": "| December 31, 2025 | December 31, 2024 |  |  |  |\n|---|---|---|---|---|\n| Balance | Percent (1) | Balance | Percent (1) |  |\n| Commercial and industrial | $92,612 | 18.7% | $92,698 | 19.5% |\n| Residential real estate | 11,264 | 41.9 | 11,061 | 41.0 |\n| Construction and land | 10,567 | 5.5 | 12,866 | 5.9 |\n| Fund banking | 8,193 | 18.6 | 10,792 | 18.5 |\n| Commercial real estate | 5,650 | 1.9 | 8,057 | 2.5 |\n| Securities-based loans | 3,254 | 12.1 | 2,917 | 11.4 |\n| Home equity lines of credit | 134 | 1.0 | 317 | 0.9 |\n| Other | 571 | 0.3 | 600 | 0.3 |\n| $132,245 | 100.0% | $139,308 | 100.0% |  |",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "Loan category as a percentage of total loan portfolio.",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "When principal or interest becomes 90 days past due or when collection becomes uncertain, the accrual of interest and amortization of deferred loan origination fees is generally discontinued (\u201cnonaccrual status\u201d) and any accrued and unpaid interest income is reversed.",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "Please refer to the section entitled \u201cCritical Accounting Policies and Estimates\u201d herein regarding our policies for establishing credit loss reserves, including placing loans on nonaccrual status.",
   "item": "7",
-  "heading": "III. Loan Portfolio"
+  "heading": "NET INTEREST INCOME > Allocation of the Allowance for Credit Losses"
  },
  {
   "type": "heading",
   "text": "IV. Deposits",
   "item": "7",
-  "heading": "IV. Deposits"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Deposits consist of money market and savings accounts, certificates of deposit, and demand deposits. The average balances of deposits and the associated weighted-average interest rates for the periods indicated are as follows (in thousands, except percentages) :",
   "item": "7",
-  "heading": "IV. Deposits"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "table",
   "text": "| December 31, 2025 | December 31, 2024 | December 31, 2023 |  |  |  |  |\n|---|---|---|---|---|---|---|\n| Average Balance | Average Interest Rate | Average Balance | Average Interest Rate | Average Balance | Average Interest Rate |  |\n| Non-interest bearing demand deposits | $466,150 | * | $372,601 | * | $382,686 | * |\n| Interest-bearing demand deposits | 2,868,142 | 3.11% | 1,913,841 | 3.55% | 2,297,253 | 4.03% |\n| Money market and savings deposits | 25,555,353 | 2.50% | 25,583,202 | 3.18% | 24,967,641 | 2.53% |\n| Time deposits | 211,772 | 4.21% | 114,681 | 5.23% | 2,535 | 2.95% |\n| Other | 129,670 | 5.55% | 82,316 | 7.16% | 20,447 | 8.77% |",
   "item": "7",
-  "heading": "IV. Deposits"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "* Not applicable.",
   "item": "7",
-  "heading": "IV. Deposits"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "As of December 31, 2025 and 2024, we estimate that approximately $4.9 billion and $5.4 billion, respectively, of our deposit portfolio was uninsured. The uninsured amounts are estimates based on methodologies and assumptions used by our company in accordance with regulatory reporting requirements. At December 31, 2025, there were no time deposits that exceeded the FDIC-insured limit.",
   "item": "7",
-  "heading": "IV. Deposits"
- },
- {
-  "type": "heading",
-  "text": "NON-INTEREST EXPENSES",
-  "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "The following table presents consolidated non-interest expenses for the periods indicated (in thousands, except percentages) :",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "table",
   "text": "| For the Year Ended December 31, | Percentage Change |  |  |  |  |\n|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 |  |\n| Non-interest expenses: |  |  |  |  |  |\n| Compensation and benefits | $3,272,130 | $2,916,229 | $2,554,581 | 12.2% | 14.2% |\n| Occupancy and equipment rental | 382,287 | 362,402 | 339,322 | 5.5 | 6.8 |\n| Communications and office supplies | 196,314 | 194,382 | 184,652 | 1.0 | 5.3 |\n| Commissions and floor brokerage | 66,176 | 62,823 | 58,344 | 5.3 | 7.7 |\n| Provision for credit losses | 38,404 | 25,402 | 24,999 | 51.2 | 1.6 |\n| Other operating expenses | 703,280 | 480,638 | 480,354 | 46.3 | 0.1 |\n| Total non-interest expenses | $4,658,591 | $4,041,876 | $3,642,252 | 15.3% | 11.0% |",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024",
-  "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 Compensation and benefits expenses, which are the largest component of our expenses, include salaries, bonuses, transition pay, benefits, amortization of stock-based compensation, employment taxes, and other associate-related costs. A significant portion of compensation expense is comprised of production-based variable compensation, including discretionary bonuses, which fluctuates in proportion to the level of business activity, increasing with higher revenues and operating profits. Other compensation costs, including base salaries, stock-based compensation amortization, and benefits, are more fixed in nature.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, compensation and benefits expense increased 12.2% to $3.27 billion from $2.92 billion in 2024. Compensation and benefits expense as a percentage of net revenues was 59.2% for the year ended December 31, 2025, compared to 58.7% for the year ended December 31, 2024. The increase is primarily attributable to higher variable compensation costs during 2025.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2025, occupancy and equipment rental expense increased 5.5% to $382.3 million from $362.4 million in 2024. The increase is primarily attributable to higher data processing and occupancy costs associated with the continued investments made in our business.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 Communications expense includes costs for telecommunication and data transmission, primarily for obtaining third-party market data information. For the year ended December 31, 2025, communications and office supplies expense increased 1.0% to $196.3 million from $194.4 million in 2024. The increase is primarily attributable to higher communication and quote equipment expenses associated with the continued investments made in our business, partially offset by lower internet costs.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2025, commissions and floor brokerage expense increased 5.3% to $66.2 million from $62.8 million in 2024. The increase is primarily attributable to higher electronic communication network (\u201cECN\u201d) trading costs, processing expenses, and trading and clearing costs.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Provision for credit losses \u2013 For the year ended December 31, 2025, provision for credit losses increased 51.2% to $38.4 million from $25.4 million in 2024. Provision for credit losses was primarily impacted by overall loan growth in the loan portfolio and specific reserves on individual credits.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 Other operating expenses primarily include license and registration fees, litigation-related expenses, which consist of amounts we accrue and/or pay out for legal and regulatory matters, travel and entertainment, promotional, investment banking deal costs, and professional service expenses.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, other operating expenses increased 46.3% to $703.3 million from $480.6 million in 2024. The increase is primarily attributable to higher legal-related expenses, investment banking expenses, amortization of identifiable intangible assets, advertising, travel and conference-related expenses, professional fees, subscriptions, insurance expenses, and licensing fees. During the first quarter of 2025, we recorded $180.0 million related to provisions for legal and regulatory matters.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Provision for income taxes \u2013 For the year ended December 31, 2025, our provision for income taxes was $187.4 million, representing an effective tax rate of 21.5%, compared to $197.1 million in 2024, representing an effective tax rate of 21.2%. The effective tax rate in 2025 was impacted by the benefit related to the tax impact on stock-based compensation.",
   "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023",
-  "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Except as noted in the following discussion of variances, the underlying reasons for the increase in non-interest expenses can be attributed principally to our continued expansion, both organically and through our acquisitions, and increased administrative overhead to support the growth in our segments.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 For the year ended December 31, 2024, compensation and benefits expense increased 14.2% to $2.92 billion from $2.55 billion in 2023. The increase in compensation and benefits expenses is primarily attributable to higher variable compensation expense. Compensation and benefits expense as a percentage of net revenues of 58.7% for the year ended December 31, 2024, was consistent with the comparable period in 2023.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2024, occupancy and equipment rental expense increased 6.8% to $362.4 million from $339.3 million in 2023. The increase is primarily attributable to higher data processing and occupancy costs associated with the continued investments made in our business.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 For the year ended December 31, 2024, communications and office supplies expense increased 5.3% to $194.4 million from $184.7 million in 2023. The increase is primarily attributable to higher communication and quote equipment expenses associated with the continued investments made in our business.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2024, commissions and floor brokerage expense increased 7.7% to $62.8 million from $58.3 million in 2023. The increase is primarily attributable to higher clearing expense and ECN trading costs and processing expenses.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Provision for credit losses \u2013 For the year ended December 31, 2024, provision for credit losses increased 1.6% to $25.4 million from $25.0 million in 2023. Provision for credit losses was primarily impacted by loan growth and a deterioration in certain loans, partially offset by a slightly better macroeconomic forecast.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 For the year ended December 31, 2024, other operating expenses increased 0.1% to $480.6 million from $480.4 million in 2023. The increase is primarily attributable to higher investment banking transaction expense, professional fees, advertising, conference-related expenses, and subscriptions, partially offset by lower litigation-related expenses. During the year ended December 31, 2023, we recorded $67 million related to provisions for legal and regulatory matters.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "text",
   "text": "Provision for income taxes \u2013 For the year ended December 31, 2024, our provision for income taxes was $197.1 million, representing an effective tax rate of 21.2%, compared to $184.2 million in 2023, representing an effective tax rate of 26.1%. The effective tax rate in 2024 was impacted by the benefit related to the tax impact on stock-based compensation.",
   "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
+  "heading": "NET INTEREST INCOME > IV. Deposits"
  },
  {
   "type": "heading",
@@ -1311,145 +1263,127 @@
   "type": "heading",
   "text": "Results of Operations \u2013 Global Wealth Management",
   "item": "7",
-  "heading": "Results of Operations \u2013 Global Wealth Management"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "The following table presents consolidated financial information for the Global Wealth Management segment for the periods indicated (in thousands, except percentages) :",
   "item": "7",
-  "heading": "Results of Operations \u2013 Global Wealth Management"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "table",
   "text": "| For the Year Ended December 31, | Percentage Change | As a Percentage of Net Revenues for the Year Ended December 31, |  |  |  |  |  |  |  |  |\n|---|---|---|---|---|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 | 2025 | 2024 | 2023 |  |  |  |\n| Revenues: |  |  |  |  |  |  |  |  |  |  |\n| Commissions | $538,650 | $508,717 | $444,949 | 5.9% | 14.3% | 15.2% | 15.5% | 14.6% |  |  |\n| Principal transactions | 240,143 | 243,635 | 209,282 | (1.4) | 16.4 | 6.8 | 7.4 | 6.9 |  |  |\n| Transactional revenues | 778,793 | 752,352 | 654,231 | 3.5 | 15.0 | 22.0 | 22.9 | 21.5 |  |  |\n| Asset management | 1,700,209 | 1,536,296 | 1,299,361 | 10.7 | 18.2 | 48.1 | 46.8 | 42.6 |  |  |\n| Interest | 1,814,407 | 1,910,502 | 1,861,873 | (5.0) | 2.6 | 51.3 | 58.2 | 61.0 |  |  |\n| Investment banking | 26,995 | 21,475 | 16,680 | 25.7 | 28.7 | 0.8 | 0.7 | 0.5 |  |  |\n| Other income | 12,150 | 6,125 | (6,938) | 98.4 | 188.3 | 0.3 | 0.1 | (0.2) |  |  |\n| Total revenues | 4,332,554 | 4,226,750 | 3,825,207 | 2.5 | 10.5 | 122.5 | 128.7 | 125.4 |  |  |\n| Interest expense | 795,774 | 942,790 | 775,245 | (15.6) | 21.6 | 22.5 | 28.7 | 25.4 |  |  |\n| Net revenues | 3,536,780 | 3,283,960 | 3,049,962 | 7.7 | 7.7 | 100.0 | 100.0 | 100.0 |  |  |\n| Non-interest expenses: |  |  |  |  |  |  |  |  |  |  |\n| Compensation and benefits | 1,752,199 | 1,605,148 | 1,415,210 | 9.2 | 13.4 | 49.5 | 48.9 | 46.4 |  |  |\n| Occupancy and equipment rental | 184,104 | 175,389 | 165,776 | 5.0 | 5.8 | 5.2 | 5.3 | 5.4 |  |  |\n| Communication and office supplies | 66,240 | 65,383 | 63,345 | 1.3 | 3.2 | 1.9 | 2.0 | 2.1 |  |  |\n| Commissions and floor brokerage | 29,551 | 27,158 | 25,458 | 8.8 | 6.7 | 0.8 | 0.8 | 0.8 |  |  |\n| Provision for credit losses | 38,404 | 25,102 | 22,699 | 53.0 | 10.6 | 1.1 | 0.8 | 0.7 |  |  |\n| Other operating expenses | 361,098 | 177,838 | 141,652 | 103.0 | 25.5 | 10.3 | 5.4 | 4.7 |  |  |\n| Total non-interest expenses | 2,431,596 | 2,076,018 | 1,834,140 | 17.1 | 13.2 | 68.8 | 63.2 | 60.1 |  |  |\n| Income before income taxes | $1,105,184 | $1,207,942 | $1,215,822 | (8.5 | )% | (0.6 | )% | 31.2% | 36.8% | 39.9% |",
   "item": "7",
-  "heading": "Results of Operations \u2013 Global Wealth Management"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024",
-  "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
- },
- {
-  "type": "heading",
-  "text": "NET REVENUES",
-  "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, Global Wealth Management net revenues increased 7.7% to a record $3.54 billion from $3.28 billion in 2024. The increase in net revenues is primarily attributable to higher asset management revenues, net interest income, commission revenues, and investment banking revenues, partially offset by lower principal transactions revenues.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Commissions \u2013 For the year ended December 31, 2025, commission revenues increased 5.9% to $538.7 million from $508.7 million in 2024. The increase is primarily attributable to higher volumes due to increased market volatility over 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Principal transactions \u2013 For the year ended December 31, 2025, principal transactions revenues decreased 1.4% to $240.1 million from $243.6 million in 2024. The decrease is primarily attributable to lower realized trading gains and decreased client activity over 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Asset management \u2013 For the year ended December 31, 2025, asset management revenues increased 10.7% to a record $1.70 billion from $1.54 billion in 2024. The increase is primarily attributable to higher asset values due to improved market conditions and net new asset growth. Fee-based account revenues are primarily billed based on asset values at the end of the prior quarter.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Client asset metrics as of the periods indicated (in thousands, except for number of accounts) :",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "table",
   "text": "| December 31, | Percentage Change |  |  |  |  |\n|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 |  |\n| Client assets | $551,863,000 | $501,402,000 | $444,318,000 | 10.1% | 12.8% |\n| Fee-based client assets | $224,488,000 | $192,705,000 | $165,301,000 | 16.5 | 16.6 |\n| Number of client accounts | 1,290,000 | 1,246,000 | 1,213,000 | 3.5 | 2.7 |\n| Number of fee-based client accounts | 384,000 | 355,000 | 333,000 | 8.2 | 6.6 |",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "The increase in the value of our client assets and fee-based assets was primarily attributable to improved market conditions and asset growth resulting from our recruiting efforts.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Interest revenue \u2013 For the year ended December 31, 2025, interest revenue decreased 5.0% to $1.81 billion from $1.91 billion in 2024. The decrease is primarily attributable to lower interest rates, partially offset by higher interest-earning assets. Please refer to the Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential table for additional information on average balances and interest income.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 Investment banking, which represents sales credits for investment banking underwritings, increased 25.7% to $27.0 million for the year ended December 31, 2025, from $21.5 million in 2024. Please refer to \u201cInvestment banking\u201d in the Institutional Group segment discussion for information on the changes in investment banking revenues.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2025, other income increased 98.4% to $12.2 million from $6.1 million in 2024. The increase is primarily attributable to an increase in investment gains over 2024, partially offset by a decrease in mortgage loan origination fees.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Interest expense \u2013 For the year ended December 31, 2025, interest expense decreased 15.6% to $795.8 million from $942.8 million in 2024. The decrease in interest expense is primarily attributable to lower interest rates, partially offset by higher interest-bearing liabilities. Please refer to the Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential table for additional information on average balances and interest expense.",
   "item": "7",
-  "heading": "NET REVENUES"
- },
- {
-  "type": "heading",
-  "text": "NON-INTEREST EXPENSES",
-  "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, Global Wealth Management non-interest expenses increased 17.1% to $2.43 billion from $2.08 billion in 2024.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 For the year ended December 31, 2025, compensation and benefits expense increased 9.2% to $1.75 billion from $1.61 billion in 2024. Compensation and benefits expense as a percentage of net revenues was 49.5% for the year ended December 31, 2025, compared to 48.9% in 2024. The increase is primarily attributable to increased variable compensation costs over 2024.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2025, occupancy and equipment rental expense increased 5.0% to $184.1 million from $175.4 million in 2024. The increase is primarily attributable to higher data processing, occupancy, and furniture and equipment costs associated with an increase in business activity.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 For the year ended December 31, 2025, communications and office supplies expense increased 1.3% to $66.2 million from $65.4 million in 2024. The increase is primarily attributable to higher postage and shipping expenses and communication and quote equipment expenses associated with the continued growth of our business, partially offset by lower internet costs.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2025, commissions and floor brokerage expense increased 8.8% to $29.6 million from $27.2 million in 2024. The increase is primarily attributable to higher processing fees and clearing expenses.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Provision for credit losses \u2013 For the year ended December 31, 2025, provision for credit losses increased 53.0% to $38.4 million from $25.1 million in 2024. Provision for credit losses was primarily impacted by overall loan growth in the loan portfolio and specific reserves on individual credits.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 For the year ended December 31, 2025, other operating expenses increased 103.0% to $361.1 million from $177.8 million in 2024. The increase is primarily attributable to increases in litigation-related expense, subscription expense, travel and conference-related expenses, bank service charges, and insurance expense. During the first quarter of 2025, we recorded $180.0 million related to provisions for legal-related matters.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "SEGMENT ANALYSIS > Results of Operations \u2013 Global Wealth Management"
  },
  {
   "type": "heading",
@@ -1464,124 +1398,106 @@
   "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
-  "type": "heading",
-  "text": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023",
-  "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
- },
- {
-  "type": "heading",
-  "text": "NET REVENUES",
-  "item": "7",
-  "heading": "NET REVENUES"
- },
- {
   "type": "text",
   "text": "For the year ended December 31, 2024, Global Wealth Management net revenues increased 7.7% to $3.3 billion from $3.0 billion in 2023. The increase in net revenues is primarily attributable to increases in asset management revenues and transactional revenues, partially offset by lower net interest income.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Commissions \u2013 For the year ended December 31, 2024, commission revenues increased 14.3% to $508.7 million from $444.9 million in 2023. The increase is primarily attributable to an increase in equities trading and mutual funds revenue.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Principal transactions \u2013 For the year ended December 31, 2024, principal transactions revenues increased 16.4% to $243.6 million from $209.3 million in 2023 as a result of an increase in client activity.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Asset management \u2013 For the year ended December 31, 2024, asset management revenues increased 18.2% to $1.54 billion from $1.30 billion in 2023. The increase is primarily attributable to higher asset values and strong fee-based asset flows. Fee-based account revenues are primarily billed based on asset values at the end of the prior quarter.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "The value of assets in fee-based accounts at December 31, 2024, increased 16.6% to $192.7 billion from $165.3 billion at December 31, 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Interest revenue \u2013 For the year ended December 31, 2024, interest revenue increased 2.6% to $1.91 billion from $1.86 billion in 2023. The increase is primarily attributable to higher interest-earning assets and higher interest rates. Please refer to the Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential table for additional information on average balances and interest income.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 Investment banking increased 28.7% to $21.5 million for the year ended December 31, 2024, from $16.7 million in 2023. Please refer to \u201cInvestment banking\u201d in the Institutional Group segment discussion for information on the changes in investment banking revenues.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2024, other income increased 188.3% to $6.1 million from a loss of $6.9 million in 2023. The increase is primarily attributable to an increase in investment gains over 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Interest expense \u2013 For the year ended December 31, 2024, interest expense increased 21.6% to $942.8 million from $775.2 million in 2023. The increase in interest expense is primarily attributable to higher interest rates and higher interest-bearing liabilities. Please refer to the Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential table for additional information on average balances and interest expense.",
   "item": "7",
-  "heading": "NET REVENUES"
- },
- {
-  "type": "heading",
-  "text": "NON-INTEREST EXPENSES",
-  "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, Global Wealth Management non-interest expenses increased 13.2% to $2.08 billion from $1.83 billion in 2023.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 For the year ended December 31, 2024, compensation and benefits expense increased 13.4% to $1.61 billion from $1.42 billion in 2023. The increase is primarily attributable to increased variable compensation from our continued recruiting efforts.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Compensation and benefits expense as a percentage of net revenues was 48.9% for the year ended December 31, 2024, compared to 46.4% in 2023. The increase is primarily as a result of the revenue mix across the segment.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2024, occupancy and equipment rental expense increased 5.8% to $175.4 million from $165.8 million in 2023. The increase is primarily attributable to higher data processing, occupancy, and furniture and equipment costs associated with an increase in business activity.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 For the year ended December 31, 2024, communications and office supplies expense increased 3.2% to $65.4 million from $63.3 million in 2023. The increase is primarily attributable to higher postage and shipping expenses and communication and quote equipment expenses associated with the continued growth of our business, partially offset by lower internet costs.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2024, commissions and floor brokerage expense increased 6.7% to $27.2 million from $25.5 million in 2023. The increase is primarily attributable to higher clearing expenses.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Provision for credit losses \u2013 For the year ended December 31, 2024, provision for credit losses increased 10.6% to $25.1 million from $22.7 million in 2023. Provision for credit losses was primarily impacted by loan growth and a deterioration in certain loans, partially offset by a slightly better macroeconomic forecast.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 For the year ended December 31, 2024, other operating expenses increased 25.5% to $177.8 million from $141.7 million in 2023. The increase is primarily attributable to increases in litigation-related expense, professional fees, subscription expense, and travel and conference-related expenses, partially offset by lower insurance expense and bank service charges.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "heading",
@@ -1599,157 +1515,139 @@
   "type": "heading",
   "text": "Results of Operations \u2013 Institutional Group",
   "item": "7",
-  "heading": "Results of Operations \u2013 Institutional Group"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "The following table presents consolidated financial information for the Institutional Group segment for the periods indicated (in thousands, except percentages) :",
   "item": "7",
-  "heading": "Results of Operations \u2013 Institutional Group"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "table",
   "text": "| For the Year Ended December 31, | Percentage Change | As a Percentage of Net Revenues for the Year Ended December 31, |  |  |  |  |  |  |\n|---|---|---|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 | 2025 | 2024 | 2023 |  |\n| Revenues: |  |  |  |  |  |  |  |  |\n| Commissions | $274,968 | $247,307 | $228,648 | 11.2% | 8.2% | 14.4% | 15.5% | 18.6% |\n| Principal transactions | 405,194 | 360,929 | 281,158 | 12.3 | 28.4 | 21.2 | 22.7 | 22.9 |\n| Transactional revenues | 680,162 | 608,236 | 509,806 | 11.8 | 19.3 | 35.6 | 38.2 | 41.5 |\n| Capital raising | 503,094 | 395,924 | 248,987 | 27.1 | 59.0 | 26.3 | 24.9 | 20.3 |\n| Advisory | 720,652 | 577,432 | 465,588 | 24.8 | 24.0 | 37.6 | 36.3 | 38.0 |\n| Investment banking | 1,223,746 | 973,356 | 714,575 | 25.7 | 36.2 | 63.9 | 61.2 | 58.3 |\n| Interest | 42,447 | 34,782 | 24,025 | 22.0 | 44.8 | 2.2 | 2.2 | 2.0 |\n| Other income (1) | 19,500 | 31,659 | 12,680 | (38.4) | 149.7 | 1.0 | 1.9 | 1.0 |\n| Total revenues | 1,965,855 | 1,648,033 | 1,261,086 | 19.3 | 30.7 | 102.7 | 103.5 | 102.8 |\n| Interest expense | 51,009 | 55,200 | 34,769 | (7.6) | 58.8 | 2.7 | 3.5 | 2.8 |\n| Net revenues | 1,914,846 | 1,592,833 | 1,226,317 | 20.2 | 29.9 | 100.0 | 100.0 | 100.0 |\n| Non-interest expenses: |  |  |  |  |  |  |  |  |\n| Compensation and benefits | 1,153,895 | 959,602 | 841,671 | 20.2 | 14.0 | 60.3 | 60.2 | 68.6 |\n| Occupancy and equipment rental | 85,978 | 88,819 | 85,644 | (3.2) | 3.7 | 4.5 | 5.6 | 7.0 |\n| Communication and office supplies | 104,358 | 105,586 | 100,831 | (1.2) | 4.7 | 5.4 | 6.6 | 8.2 |\n| Commissions and floor brokerage | 36,625 | 35,665 | 32,886 | 2.7 | 8.5 | 1.9 | 2.2 | 2.7 |\n| Other operating expenses | 204,551 | 179,761 | 163,185 | 13.8 | 10.2 | 10.7 | 11.4 | 13.3 |\n| Total non-interest expenses | 1,585,407 | 1,369,433 | 1,224,217 | 15.8 | 11.9 | 82.8 | 86.0 | 99.8 |\n| Income before income taxes | $329,439 | $223,400 | $2,100 | 47.5% | nm | 17.2% | 14.0% | 0.2% |",
   "item": "7",
-  "heading": "Results of Operations \u2013 Institutional Group"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Includes asset management revenues.",
   "item": "7",
-  "heading": "Results of Operations \u2013 Institutional Group"
- },
- {
-  "type": "heading",
-  "text": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024",
-  "item": "7",
-  "heading": "Year Ended December 31, 2025, Compared With Year Ended December 31, 2024"
- },
- {
-  "type": "heading",
-  "text": "NET REVENUES",
-  "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, Institutional Group net revenues increased 20.2% to $1.9 billion from $1.6 billion in 2024. The increase in net revenues is primarily attributable to higher advisory revenues, capital-raising revenues, and transactional revenues.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Transactional revenues \u2013 For the year ended December 31, 2025, transactional revenues increased 11.8% to $680.2 million from $608.2 million in 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, fixed income transactional revenues increased 11.4% to $437.8 million from $393.0 million in 2024. The increase in fixed income transactional revenues is primarily attributable to increased activity as a result of market volatility and higher trading gains.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, equity transactional revenues increased 12.6% to $242.3 million from $215.2 million in 2024. The increase in equity transactional revenues is primarily attributable to higher equities trading commissions.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 For the year ended December 31, 2025, investment banking revenues increased 25.7% to $1.2 billion from $973.4 million in 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, capital-raising revenues increased 27.1% to $503.1 million from $395.9 million in 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, equity capital-raising revenues increased 44.1% to $269.3 million from $186.9 million in 2024. The increase is primarily attributable to higher volumes as clients actively engaged in capital-raising opportunities in a more constructive market environment.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, fixed income capital-raising revenues increased 11.9% to $233.8 million from $209.0 million in 2024. The increase is primarily attributable to higher bond issuances reflecting a more favorable financing environment.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, advisory revenues increased 24.8% to $720.7 million from $577.4 million in 2024. The increase is primarily attributable to higher levels of completed advisory transactions with continued growth in depository advisory transactions.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Interest income \u2013 For the year ended December 31, 2025, interest income increased 22.0% to $42.4 million from $34.8 million in 2024.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2025, other income decreased 38.4% to $19.5 million from $31.7 million in 2024. The decrease is primarily attributable to reduced lease income generated from our aircraft engine leasing business due to the sale of engines.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Interest expense \u2013 For the year ended December 31, 2025, interest expense decreased 7.6% to $51.0 million from $55.2 million in 2024. The decrease is primarily attributable to lower interest rates.",
   "item": "7",
-  "heading": "NET REVENUES"
- },
- {
-  "type": "heading",
-  "text": "NON-INTEREST EXPENSES",
-  "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, Institutional Group non-interest expenses increased 15.8% to $1.6 billion from $1.4 billion in 2024.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 For the year ended December 31, 2025, compensation and benefits expense increased 20.2% to $1.15 billion from $959.6 million in 2024. The increase is driven by higher variable compensation expense as a result of an improving operating environment.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Compensation and benefits expense as a percentage of net revenues was 60.3% for the year ended December 31, 2025, compared to 60.2% in 2024.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2025, occupancy and equipment rental expense decreased 3.2% to $86.0 million from $88.8 million in 2024. The decrease is primarily attributable to lower furniture and equipment costs and repair and maintenance costs, partially offset by higher data processing expenses and occupancy costs.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 For the year ended December 31, 2025, communications and office supplies expense decreased 1.2% to $104.4 million from $105.6 million in 2024. The decrease is primarily attributable to lower communication and quote expenses, internet costs, and telecommunication expenses, partially offset by higher quote equipment costs.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2025, commissions and floor brokerage increased 2.7% to $36.6 million from $35.7 million in 2024. The increase was primarily attributable to higher ECN trading costs, partially offset by lower clearing expenses.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 For the year ended December 31, 2025, other operating expenses increased 13.8% to $204.6 million from $179.8 million in 2024. The increase is primarily attributable to higher investment banking transaction expenses, travel-related expenses, litigation-related expenses, taxes and licenses expense, professional fees, and conference-related expenses, partially offset by lower subscription costs.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Institutional Group"
  },
  {
   "type": "heading",
@@ -1764,136 +1662,118 @@
   "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
-  "type": "heading",
-  "text": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023",
-  "item": "7",
-  "heading": "Year Ended December 31, 2024, Compared With Year Ended December 31, 2023"
- },
- {
-  "type": "heading",
-  "text": "NET REVENUES",
-  "item": "7",
-  "heading": "NET REVENUES"
- },
- {
   "type": "text",
   "text": "For the year ended December 31, 2024, Institutional Group net revenues increased 29.9% to $1.6 billion from $1.2 billion in 2023. The increase in net revenues is primarily attributable to higher capital-raising, advisory, and transactional revenues.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Transactional revenues \u2013 For the year ended December 31, 2024, transactional revenues increased 19.3% to $608.2 million from $509.8 million in 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, fixed income transactional revenues increased 27.4% to $393.0 million from $308.4 million in 2023. The increase in fixed income transactional revenues is primarily attributable to increased activity as a result of market volatility and higher trading gains.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, equity transactional revenues increased 6.9% to $215.2 million from $201.4 million in 2023. The increase in equity transactional revenues is primarily attributable to higher volumes.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Investment banking \u2013 For the year ended December 31, 2024, investment banking revenues increased 36.2% to $973.4 million from $714.6 million in 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, capital-raising revenues increased 59.0% to $395.9 million from $249.0 million in 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, equity capital-raising revenues increased 74.2% to $186.9 million from $107.3 million in 2023 driven by higher volumes.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, fixed income capital-raising revenues increased 47.6% to $209.0 million from $141.6 million in 2023. The increase is primarily attributable to an increase in our corporate debt issuance business.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, advisory revenues increased 24.0% to $577.4 million from $465.6 million in 2023. The increase is primarily attributable to higher levels of completed advisory transactions.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Interest income \u2013 For the year ended December 31, 2024, interest income increased 44.8% to $34.8 million from $24.0 million in 2023.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Other income \u2013 For the year ended December 31, 2024, other income increased 149.7% to $31.7 million from $12.7 million in 2023. The increase is primarily attributable to an increase in investment gains.",
   "item": "7",
-  "heading": "NET REVENUES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Interest expense \u2013 For the year ended December 31, 2024, interest expense increased 58.8% to $55.2 million from $34.8 million in 2023. The increase is primarily attributable to higher interest rates and an increase in inventory levels.",
   "item": "7",
-  "heading": "NET REVENUES"
- },
- {
-  "type": "heading",
-  "text": "NON-INTEREST EXPENSES",
-  "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2024, Institutional Group non-interest expenses increased 11.9% to $1.4 billion from $1.2 billion in 2023.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Compensation and benefits \u2013 For the year ended December 31, 2024, compensation and benefits expense increased 14.0% to $959.6 million from $841.7 million in 2023. The increase is driven by higher compensable revenues.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Compensation and benefits expense as a percentage of net revenues was 60.2% for the year ended December 31, 2024, compared to 68.6% in 2023. The decrease is primarily attributable to revenue growth.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Occupancy and equipment rental \u2013 For the year ended December 31, 2024, occupancy and equipment rental expense increased 3.7% to $88.8 million from $85.6 million in 2023. The increase is attributable to higher furniture and equipment, repair and maintenance, and occupancy costs associated with continued investments in our business.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Communications and office supplies \u2013 For the year ended December 31, 2024, communications and office supplies expense increased 4.7% to $105.6 million from $100.8 million in 2023. The increase is primarily attributable to higher communication and quote expenses.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Commissions and floor brokerage \u2013 For the year ended December 31, 2024, commissions and floor brokerage expense increased 8.5% to $35.7 million from $32.9 million in 2023. The increase was primarily attributable to higher clearing expenses and ECN trading costs, partially offset by lower processing expenses.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "text",
   "text": "Other operating expenses \u2013 For the year ended December 31, 2024, other operating expenses increased 10.2% to $179.8 million from $163.2 million in 2023. The increase is primarily attributable to higher investment banking transaction expenses, professional fees, and conference-related expenses, partially offset by lower litigation-related expenses, travel-related expenses, and taxes and licenses expense.",
   "item": "7",
-  "heading": "NON-INTEREST EXPENSES"
+  "heading": "INCOME BEFORE INCOME TAXES"
  },
  {
   "type": "heading",
@@ -1911,750 +1791,750 @@
   "type": "heading",
   "text": "Results of Operations \u2013 Other Segment",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "text",
   "text": "The Other segment includes costs associated with investments made in the Company\u2019s infrastructure and control environment and expenses related to the Company\u2019s acquisition strategy. The following table presents financial information for our Other segment for the periods presented broken out between infrastructure growth-related expenses and acquisition-related expenses (in thousands, except percentages) :",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "table",
   "text": "| For the Year Ended December 31, | Percentage Change |  |  |  |  |  |\n|---|---|---|---|---|---|---|\n| 2025 | 2024 | 2023 | 2025 vs. 2024 | 2024 vs. 2023 |  |  |\n| Net revenues | $78,104 | $93,527 | $72,665 | (16.5 | )% | 28.7% |\n| Non-interest expenses: |  |  |  |  |  |  |\n| Compensation and benefits: |  |  |  |  |  |  |\n| Core business-related | 301,214 | 318,647 | 265,550 | (5.5) | 20.0 |  |\n| Acquisition-related | 64,822 | 32,832 | 32,150 | 97.4 | 2.1 |  |\n| Total compensation and benefits | 366,036 | 351,479 | 297,700 | 4.1 | 18.1 |  |\n| Other operating expenses: |  |  |  |  |  |  |\n| Core business-related | 222,915 | 206,972 | 255,137 | 7.7 | (18.9) |  |\n| Acquisition-related | 52,637 | 37,974 | 31,058 | 38.6 | 22.3 |  |\n| Total other operating expenses | 275,552 | 244,946 | 286,195 | 12.5 | (14.4) |  |\n| Total non-interest expenses | 641,588 | 596,425 | 583,895 | 7.6 | 2.1 |  |\n| Loss before income taxes | $(563,484) | $(502,898) | $(511,230) | 12.0% | (1.6 | )% |",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, non-interest expenses increased 7.6% to $641.6 million from $596.4 million in 2024. The increase is primarily attributable to increased provisions for legal and regulatory matters, an increase in variable compensation, and the recording of severance costs associated with workforce reductions in certain of our foreign subsidiaries.",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "text",
   "text": "The expenses relating to the Company\u2019s acquisition strategy are primarily attributable to integration-related activities, signing bonuses, amortization of restricted stock awards, debentures, and promissory notes issued as retention, additional earn-out expense, and amortization of intangible assets acquired. These costs were directly related to acquisitions of certain businesses and are not representative of the costs of running the Company\u2019s ongoing business.",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "text",
   "text": "For the year ended December 31, 2025, non-interest expenses related to our acquisition strategy, included in the numbers presented in the table above, increased 65.9% to $117.5 million from $70.8 million in 2024.",
   "item": "7",
-  "heading": "Results of Operations \u2013 Other Segment"
+  "heading": "INCOME BEFORE INCOME TAXES > Results of Operations \u2013 Other Segment"
  },
  {
   "type": "heading",
   "text": "Analysis of Financial Condition",
   "item": "7",
-  "heading": "Analysis of Financial Condition"
+  "heading": "INCOME BEFORE INCOME TAXES > Analysis of Financial Condition"
  },
  {
   "type": "text",
   "text": "Our company\u2019s consolidated statements of financial condition consist primarily of cash and cash equivalents, receivables, financial instruments owned, bank loans, investments, goodwill, loans and advances to financial advisors, bank deposits, and payables. Total assets of $41.3 billion at December 31, 2025, were up 3.4% over December 31, 2024. Our broker-dealer subsidiary\u2019s gross assets and liabilities, including financial instruments owned, stock loan/borrow, receivables and payables from/to brokers, dealers, and clearing organizations and clients, fluctuate with our business levels and overall market conditions.",
   "item": "7",
-  "heading": "Analysis of Financial Condition"
+  "heading": "INCOME BEFORE INCOME TAXES > Analysis of Financial Condition"
  },
  {
   "type": "text",
   "text": "As of December 31, 2025, our liabilities were comprised primarily of deposits of $29.8 billion at Stifel Bancorp, accounts payable and accrued expenses of $701.4 million, senior notes, net of debt issuance costs, of $617.4 million, payables to customers of $431.6 million at our broker-dealer subsidiaries, and accrued employee compensation of $989.0 million. To meet our obligations to clients and operating needs, we had $12.9 billion of cash or assets readily convertible into cash at December 31, 2025.",
   "item": "7",
-  "heading": "Analysis of Financial Condition"
+  "heading": "INCOME BEFORE INCOME TAXES > Analysis of Financial Condition"
  },
  {
   "type": "heading",
   "text": "Cash Flow",
   "item": "7",
-  "heading": "Cash Flow"
+  "heading": "INCOME BEFORE INCOME TAXES > Cash Flow"
  },
  {
   "type": "text",
   "text": "Cash and cash equivalents decreased $395.4 million to $2.3 billion at December 31, 2025, from $2.7 billion at December 31, 2024. Operating activities provided cash of $1.1 billion primarily due to net income recognized in 2025 adjusted for non-cash activities. Investing activities used cash of $1.6 billion due to investment securities purchases, the growth of our loan portfolio, cash used to fund acquisitions, and fixed asset purchases, partially offset by proceeds from principal paydowns of investment securities. Financing activities provided cash of $91.2 million primarily due to the increase in bank deposits, securities sold under agreements to repurchase, and securities loaned, partially offset by repurchases of our common stock, tax payments related to shares withheld for stock-based compensation, and dividends paid on our common and preferred stock.",
   "item": "7",
-  "heading": "Cash Flow"
+  "heading": "INCOME BEFORE INCOME TAXES > Cash Flow"
  },
  {
   "type": "heading",
   "text": "Liquidity and Capital Resources",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "Liquidity and capital are essential to our business. The primary goal of our liquidity management activities is to ensure adequate funding and liquidity to conduct our business over a range of economic and market environments, including times of broader industry or market liquidity stress events. In times of market stress or uncertainty, we generally maintain higher levels of capital and liquidity, including increased cash levels at our bank subsidiaries, to ensure we have adequate funding to support our business and meet our clients\u2019 needs. We seek to manage capital levels to support execution of our business strategy, provide financial strength to our subsidiaries, and maintain sustained access to the capital markets, while at the same time meeting our regulatory capital requirements, and conservative internal management targets.",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "Liquidity and capital resources are provided primarily through our business operations and financing activities. Financing activities could include bank borrowings, collateralized financing arrangements, new or enhanced deposit product offerings, or additional capital-raising activities under our \u201cuniversal\u201d shelf registration statement. We believe our existing assets, most of which are liquid in nature, together with funds generated from operations and available from committed and uncommitted financing facilities, provide adequate funds for continuing operations at current levels of activity in the short term. We also believe that we will be able to continue to meet our long-term cash requirements due to our strong financial position and ability to access capital from financial markets.",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "The Company\u2019s senior management establishes the liquidity and capital policies of our company. The Company\u2019s senior management reviews business performance relative to these policies, monitors the availability of alternative sources of financing, and oversees the liquidity and interest rate sensitivity of our company\u2019s asset and liability position.",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "Our assets, consisting mainly of cash or assets readily convertible into cash, are our principal source of liquidity. The liquid nature of these assets provides for flexibility in managing and financing the projected operating needs of the business. These assets are financed primarily by our equity capital, corporate debt, debentures to trusts, client credit balances, short-term bank loans, proceeds from securities lending, repurchase agreements, and other payables. We currently finance our client accounts and firm trading positions through ordinary course borrowings at floating interest rates from various banks on a demand basis, securities lending, and repurchase agreements, with company-owned and client securities pledged as collateral. Changes in securities market volumes, related client borrowing demands, underwriting activity, and levels of securities inventory affect the amount of our financing requirements.",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "Our bank assets consist principally of available-for-sale and held-to-maturity securities, loans held for investment, and cash and cash equivalents. Stifel Bancorp\u2019s current liquidity needs are generally met through deposits from brokerage clients and equity capital. We monitor the liquidity of our bank subsidiaries daily to ensure their ability to meet customer deposit withdrawals, maintain reserve requirements, and support asset growth.",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "As of December 31, 2025, we had $41.3 billion in assets, $12.9 billion of which consisted of cash or assets readily convertible into cash as follows (in thousands) :",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "table",
   "text": "| December 31, |  |  |\n|---|---|---|\n| 2025 | 2024 |  |\n| Cash and cash equivalents | $2,253,789 | $2,648,308 |\n| Receivables from brokers, dealers, and clearing organizations | 571,663 | 486,465 |\n| Securities purchased under agreements to resell | 564,162 | 528,976 |\n| Financial instruments owned at fair value | 1,366,783 | 1,109,507 |\n| Available-for-sale securities at fair value | 1,593,390 | 1,584,598 |\n| Held-to-maturity securities at amortized cost | 6,549,054 | 6,524,954 |\n| Investments | 35,488 | 30,785 |\n| Total cash and assets readily convertible to cash | $12,934,329 | $12,913,593 |",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "text",
   "text": "As of December 31, 2025 and 2024, the amount of collateral by asset class is as follows (in thousands) :",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "table",
   "text": "| December 31, 2025 | December 31, 2024 |  |  |  |\n|---|---|---|---|---|\n| Contractual | Contingent | Contractual | Contingent |  |\n| Cash and cash equivalents | $128,630 | $\u2014 | $142,901 | $\u2014 |\n| Financial instruments owned at fair value | 651,236 | 651,236 | 580,170 | 580,170 |\n| Investment portfolio (AFS & HTM) | \u2014 | 4,166,400 | \u2014 | 3,019,850 |\n| $779,866 | $4,817,636 | $723,071 | $3,600,020 |  |",
   "item": "7",
-  "heading": "Liquidity and Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity and Capital Resources"
  },
  {
   "type": "heading",
   "text": "Liquidity Available From Subsidiaries",
   "item": "7",
-  "heading": "Liquidity Available From Subsidiaries"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Available From Subsidiaries"
  },
  {
   "type": "text",
   "text": "Liquidity is principally available to our company from Stifel and Stifel Bancorp.",
   "item": "7",
-  "heading": "Liquidity Available From Subsidiaries"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Available From Subsidiaries"
  },
  {
   "type": "text",
   "text": "Stifel is required to maintain net capital equal to the greater of $1 million or two percent of aggregate debit items arising from client transactions. Covenants in the Company\u2019s committed financing facilities require the excess net capital of Stifel, our principal broker-dealer subsidiary, to be above a defined amount. At December 31, 2025, Stifel\u2019s excess net capital exceeded the minimum requirement, as defined. There are also limitations on the amount of dividends that may be declared by a broker-dealer without FINRA approval. See Note 19 of the Notes to Consolidated Financial Statements for more information on the capital restrictions placed on our broker-dealer subsidiaries.",
   "item": "7",
-  "heading": "Liquidity Available From Subsidiaries"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Available From Subsidiaries"
  },
  {
   "type": "text",
   "text": "Stifel Bancorp may pay dividends to the parent company without prior approval by its regulator as long as the dividend does not exceed the sum of Stifel Bancorp\u2019s current calendar year and the previous two calendar years\u2019 retained net income and Stifel Bancorp maintains its targeted capital to risk-weighted assets ratios.",
   "item": "7",
-  "heading": "Liquidity Available From Subsidiaries"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Available From Subsidiaries"
  },
  {
   "type": "text",
   "text": "Although we have liquidity available to us from our other subsidiaries, the available amounts are not as significant as the amounts described above and, in certain instances, may be subject to regulatory requirements.",
   "item": "7",
-  "heading": "Liquidity Available From Subsidiaries"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Available From Subsidiaries"
  },
  {
   "type": "heading",
   "text": "Capital Management",
   "item": "7",
-  "heading": "Capital Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Capital Management"
  },
  {
   "type": "text",
   "text": "We have an ongoing authorization from the Board of Directors to repurchase our common stock in the open market or in negotiated transactions. At December 31, 2025, the maximum number of shares that may yet be purchased under this plan was 7.6 million. We utilize the share repurchase program to manage our equity capital relative to the growth of our business and help to meet obligations under our employee benefit plans.",
   "item": "7",
-  "heading": "Capital Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Capital Management"
  },
  {
   "type": "heading",
   "text": "Liquidity Risk Management",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Our businesses are diverse, and our liquidity needs are determined by many factors, including market movements, collateral requirements, and client commitments, all of which can change dramatically in a difficult funding environment. During a liquidity crisis, credit-sensitive funding, including unsecured debt and some types of secured financing agreements, may be unavailable, and the terms (e.g., interest rates, collateral provisions, and tenor) or availability of other types of secured financing may change. We manage liquidity risk by diversifying our funding sources across products and among individual counterparties within those products.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "As a holding company, whereby all of our operations are conducted through our subsidiaries, our cash flow and our ability to service our debt, including the notes, depend upon the earnings of our subsidiaries. Our subsidiaries are separate and distinct legal entities. Our subsidiaries have no obligation to pay any amounts due on the notes or to provide us with funds to pay our obligations, whether by dividends, distributions, loans, or other payments.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Our liquidity requirements may change in the event we need to raise more funds than anticipated to increase inventory positions, support more rapid expansion, develop new or enhanced services and products, acquire technologies, respond to acquisition opportunities, expand our recruiting efforts, or respond to other unanticipated liquidity requirements. We primarily rely on financing activities and distributions from our subsidiaries for funds to implement our business and growth strategies and repurchase our shares. Net capital rules, restrictions under our borrowing arrangements of our subsidiaries, as well as the earnings, financial condition, and cash requirements of our subsidiaries, may each limit distributions to us from our subsidiaries.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "The availability of outside financing, including access to the capital markets and bank lending, depends on a variety of factors, such as market conditions, the general availability of credit, the volume of trading activities, the overall availability of credit to the financial services sector, and our credit rating. Our cost and availability of funding may be adversely affected by illiquid credit markets and wider credit spreads. As a result of any future concerns about the stability of the markets generally and the strength of counterparties specifically, lenders may from time to time curtail, or even cease to provide, funding to borrowers.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Our liquidity management policies are designed to mitigate the potential risk that we may be unable to access adequate financing to service our financial obligations without material business impact. The principal elements of our liquidity management framework are: (a) daily monitoring of our liquidity needs at the holding company and significant subsidiary level, (b) stress testing the liquidity positions of Stifel and our bank subsidiaries, and (c) diversification of our funding sources.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Monitoring of liquidity \u2013 Senior management establishes our liquidity and capital policies. These policies include senior management\u2019s review of short- and long-term cash flow forecasts, review of monthly capital expenditures, the monitoring of the availability of alternative sources of financing, and the daily monitoring of liquidity in our significant subsidiaries. Our decisions on the allocation of capital to our business units consider, among other factors, projected profitability and cash flow, risk, and impact on future liquidity needs. Our treasury department assists in evaluating, monitoring, and controlling the impact that our business activities have on our financial condition, liquidity, and capital structure, as well as maintains our relationships with various lenders. The objectives of these policies are to support the successful execution of our business strategies while ensuring ongoing and sufficient liquidity.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Liquidity stress testing (Firmwide) \u2013 A liquidity stress test model is maintained by the Company that measures liquidity outflows across multiple scenarios at the major operating subsidiaries and details the corresponding impact to our holding company and the overall consolidated firm. Liquidity stress tests are utilized to ensure that current exposures are consistent with the Company\u2019s established liquidity risk tolerance and, more specifically, to identify and quantify sources of potential liquidity strain. Further, the stress tests are utilized to analyze possible impacts on the Company\u2019s cash flows and liquidity position. The outflows are modeled over a 30-day liquidity stress timeframe and include the impact of idiosyncratic and macro-economic stress events.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "The assumptions utilized in the Company\u2019s liquidity stress tests include, but are not limited to, the following:",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "No government support",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "No access to equity and unsecured debt markets within the stress time horizon",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Higher haircuts and significantly lower availability of secured funding",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Additional collateral that would be required by trading counter-parties, certain exchanges, and clearing organizations related to credit rating downgrades",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Client cash withdrawals and inability to accept new deposits",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Increased demand from customers on the funding of loans and lines of credit",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "At December 31, 2025, the Company maintained sufficient liquidity to meet current and contingent funding obligations as modeled in its liquidity stress test model.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Liquidity stress testing (Stifel Bancorp) \u2013 Our bank subsidiaries perform three primary stress tests on its liquidity position. These stress tests are based on the following company-specific stresses: (1) the amount of deposit run-off that they could withstand over a one-month period of time based on their on-balance sheet liquidity and available credit, (2) the ability to fund operations if all available credit were to be drawn immediately, with no additional available credit, and (3) the ability to fund operations under a regulatory prompt corrective action. The goal of these stress tests is to determine their ability to fund continuing operations under significant pressures on both assets and liabilities.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "Under all stress tests, our bank subsidiaries consider cash and highly liquid investments as available to meet liquidity needs. In its analysis, our bank subsidiaries consider agency mortgage-backed securities, corporate bonds, and commercial mortgage-backed securities as highly liquid. In addition to being able to be readily financed at modest haircut levels, our bank subsidiaries estimate that each of the individual securities within each of the asset classes described above could be sold into the market and converted into cash within three business days under normal market conditions, assuming that the entire portfolio of a given asset class was not simultaneously liquidated. At December 31, 2025, available cash and highly liquid investments comprised approximately 12% of Stifel Bancorp\u2019s assets, which was well in excess of its internal target.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "text",
   "text": "In addition to these stress tests, management performs a daily liquidity review. The daily analysis provides management with all major fluctuations in liquidity. The analysis also tracks the proportion of deposits that Stifel Bancorp is sweeping from its affiliated broker-dealer, Stifel. On a monthly basis, liquidity key performance indicators and compliance with liquidity policy limits are reported to the Board of Directors. Our bank subsidiaries have not violated any internal liquidity policy limits.",
   "item": "7",
-  "heading": "Liquidity Risk Management"
+  "heading": "INCOME BEFORE INCOME TAXES > Liquidity Risk Management"
  },
  {
   "type": "heading",
   "text": "Funding Sources",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "The Company pursues a strategy of diversification of secured and unsecured funding sources (by product and by investor) and attempts to ensure that the tenor of the Company\u2019s liabilities equals or exceeds the expected holding period of the assets being financed. The Company funds its balance sheet through diverse sources. These sources may include the Company\u2019s equity capital, long-term debt, repurchase agreements, securities lending, deposits, committed and uncommitted credit facilities, Federal Home Loan Bank advances, and federal funds agreements.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "On September 14, 2023, we filed a \u201cuniversal\u201d shelf registration statement with the SEC pursuant to which we can issue debt, equity, and other capital instruments if and when necessary or perceived by us to be opportune. Subject to certain conditions, this registration statement will be effective through September 14, 2026.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Cash and Cash Equivalents \u2013 We held $2.3 billion of cash and cash equivalents at December 31, 2025, compared to $2.6 billion at December 31, 2024. Cash and cash equivalents provide immediate sources of funds to meet our liquidity needs.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Available-for-Sale Securities \u2013 We held $1.59 billion in available-for-sale investment securities at December 31, 2025, compared to $1.58 billion at December 31, 2024. These investment securities provide increased liquidity and flexibility to support our company\u2019s funding requirements.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "We monitor the available-for-sale investment portfolio for other-than-temporary impairment based on a number of criteria, including the size of the unrealized loss position, the duration for which the security has been in a loss position, credit rating, the nature of the investments, and current market conditions. For debt securities, we also consider any intent to sell the security and the likelihood we",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "will be required to sell the security before its anticipated recovery. We continually monitor the ratings of our security holdings and conduct regular reviews of our credit-sensitive assets.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Deposits \u2013 Deposits have become our largest funding source. Deposits provide a stable, low-cost source of funds that we utilize to fund asset growth and to diversify funding sources. We have continued to expand our deposit-gathering efforts through our existing private client network and through expansion. These channels offer a broad set of deposit products that include demand deposits, money market deposits, and certificates of deposit (\u201cCDs\u201d). Our core deposits are primarily comprised of money market deposit accounts, non-interest-bearing deposits, and CDs. The weighted-average interest rate on deposits was 2.58% and 3.22% at December 31, 2025 and 2024, respectively.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Deposits are primarily sourced by our multi-bank sweep program in which clients\u2019 cash deposits in their brokerage accounts are swept into FDIC-insured interest-bearing accounts at our bank subsidiaries and various third-party banks. During 2025, we have seen an increase in deposits from our commercial, venture banking, and fund banking clients. In addition to our historical sweep program, we offer the Stifel Smart Rate Program (\u201cSmart Rate\u201d), a high yield savings account that keeps our brokerage clients\u2019 cash balances at Stifel affiliated banks through their securities accounts. Brokerage client deposits totaled $25.6 billion and $27.1 billion at December 31, 2025 and 2024, respectively, which includes $14.7 billion and $17.1 billion, respectively, of client cash in our Smart Rate program. The decrease in money market deposits in 2025 was primarily driven by typical seasonality related to income tax payments. Please refer to the Distribution of Assets, Liabilities, and Shareholders\u2019 Equity; Interest Rates and Interest Differential table for additional information on our average balances and interest income and expense.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Short-term borrowings \u2013 Our short-term financing is generally obtained through short-term bank line financing on an uncommitted, secured basis, securities lending arrangements, repurchase agreements, advances from the Federal Home Loan Bank, term loans, and committed bank line financing on an unsecured basis. We borrow from various banks on a demand basis with company-owned securities pledged as collateral. We also have an unsecured, committed bank line available.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Our uncommitted secured lines of credit at December 31, 2025, totaled $880.0 million with four banks and are dependent on having appropriate collateral, as determined by the bank agreements, to secure an advance under the line. The availability of our uncommitted lines is subject to approval by the individual banks each time an advance is requested and may be denied. Our peak daily borrowing on our uncommitted secured lines was $125.0 million during the year ended December 31, 2025. There are no compensating balance requirements under these arrangements. Any borrowings on secured lines of credit are day-to-day and are generally utilized to finance certain fixed income securities. At December 31, 2025, we had no outstanding balances on our uncommitted secured lines of credit.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Federal Home Loan advances are floating-rate advances. The weighted average interest rates during the year ended December 31, 2025, on these advances was 4.60%. The advances are secured by Stifel Bancorp\u2019s residential mortgage loan portfolio and investment portfolio. The interest rates reset on a daily basis. Stifel Bancorp has the option to prepay these advances without penalty on the interest reset date. At December 31, 2025, there were no Federal Home Loan advances.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Unsecured borrowings \u2013 On February 4, 2026, the Company entered into the Amended and Restated Credit Agreement (the \u201cAmended and Restated Credit Agreement\u201d) with respect to its existing unsecured Credit Agreement, dated September 27, 2023, (the \u201cCredit Agreement\u201d), among the Company and Stifel (the \u201cBorrowers\u201d) and a syndicate of lenders led by Bank of America, N.A., as administrative agent. Concurrently with, and conditional upon, the effectiveness of the Amended and Restated Credit Agreement, all of the commitments under the Borrowers\u2019 existing Credit Agreement were terminated.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "The Amended and Restated Credit Agreement has a maturity date of February 4, 2031, and provides for a committed unsecured revolving borrowing facility for maximum aggregate borrowings of up to $1.0 billion depending on the amount of outstanding borrowings of the Borrowers from time to time during the duration of the Amended and Restated Credit Agreement. The interest rates on borrowings under the Amended and Restated Credit Agreement are variable and are based on the Secured Overnight Financing Rate.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "The Borrowers can draw upon this facility as long as certain restrictive covenants are maintained. Under the Amended and Restated Credit Agreement, the Borrowers are required to maintain compliance with a minimum consolidated tangible net worth covenant, as defined, and a maximum consolidated total capitalization ratio covenant, as defined. In addition, Stifel is required to maintain compliance with a minimum regulatory excess net capital percentage covenant, as defined, and the Company\u2019s bank subsidiaries are required to maintain their status as well-capitalized, as defined.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Upon the occurrence and during the continuation of an event of default, the Company\u2019s obligations under the Amended and Restated Credit Agreement may be accelerated and the lending commitments thereunder terminated. The Amended and Restated Credit Agreement contains customary events of default, including, without limitation, payment defaults, breaches of representations and warranties, covenant defaults, cross-defaults to similar obligations, certain events of bankruptcy and insolvency, change of control, and judgment defaults.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Federal Home Loan Bank Advances and other secured financing \u2013 Stifel Bancorp has borrowing capacity with the Federal Home Loan Bank of $7.0 billion at December 31, 2025, and $64.5 million in federal funds agreements for the purpose of purchasing short-term funds should additional liquidity be needed. At December 31, 2025, there were no outstanding Federal Home Loan Bank advances. Stifel Bancorp is eligible to participate in the Federal Reserve\u2019s discount window program; however, Stifel Bancorp does not view",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "borrowings from the Federal Reserve as a primary means of funding. The credit available in this program is subject to periodic review, may be terminated or reduced at the discretion of the Federal Reserve, and is secured by securities. Stifel Bancorp has borrowing capacity of $6.4 billion with the Federal Reserve\u2019s discount window at December 31, 2025. Stifel Bancorp receives overnight funds from excess cash held in Stifel brokerage accounts, which are deposited into a money market account. These balances totaled $25.6 billion at December 31, 2025. At December 31, 2025, there was $26.6 billion in client money market and FDIC-insured product balances.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Public Offering of Senior Notes \u2013 On July 15, 2014, we sold in a registered underwritten public offering, $300.0 million in aggregate principal amount of 4.25% senior notes (the \u201c2014 Notes\u201d). In July 2016, we issued an additional $200.0 million in aggregate principal amount of 4.25% senior notes. In July 2014, we received a BBB- rating on the 2014 Notes. In July 2024, the $500.0 million of 2014 Notes matured.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "On October 4, 2017, we completed the pricing of a registered underwritten public offering of $200.0 million in aggregate principal amount of 5.20% senior notes due October 2047. Interest on the senior notes is payable quarterly in arrears in January, April, July, and October. We may redeem some or all of the senior notes at any time at a redemption price equal to 100% of the principal amount of the notes being redeemed plus accrued interest thereon to the redemption date. On October 27, 2017, we completed the sale of an additional $25.0 million aggregate principal amount of Notes pursuant to the over-allotment option. In October 2017, we received a BBB- rating on the notes.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "On May 20, 2020, we sold in a registered underwritten public offering, $400.0 million in aggregate principal amount of 4.00% senior notes due May 2030. Interest on these senior notes is payable semi-annually in arrears in May and November. We may redeem the notes in whole or in part, at our option, at a redemption price equal to the greater of a) 100% of their principal amount or b) discounted present value at Treasury rate plus 50 basis points prior to February 15, 2030, and on or after February 15, 2030, at 100% of their principal amount, and accrued and unpaid interest, if any, to the date of redemption. In May 2020, we received a BBB- rating on the notes.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "Public Offering of Preferred Stock \u2013 In July 2016, the Company completed an underwritten registered public offering of $150.0 million 6.25% Non-Cumulative Perpetual Preferred Stock, Series A. On August 20, 2021, the Company redeemed all of the outstanding Series A Preferred Stock.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "In February 2019, the Company completed an underwritten registered public offering of $150.0 million 6.25% Non-Cumulative Perpetual Preferred Stock, Series B. In March 2019, we completed a public offering of an additional $10.0 million of Series B Preferred, pursuant to the over-allotment option.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "In May 2020, the Company completed an underwritten registered public offering of $225.0 million 6.125% Non-Cumulative Perpetual Preferred Stock, Series C, which included the sale of $25.0 million of Series C Preferred pursuant to an over-allotment option.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "text",
   "text": "On July 22, 2021, the Company completed an underwritten registered public offering of $300.0 million of 4.50% Non-Cumulative Perpetual Preferred Stock, Series D. When, as, and if declared by the board of directors of the Company, dividends will be payable at an annual rate of 4.50%, payable quarterly, in arrears. The Company may redeem the Series D preferred stock at its option, subject to regulatory approval, on or after August 15, 2026.",
   "item": "7",
-  "heading": "Funding Sources"
+  "heading": "INCOME BEFORE INCOME TAXES > Funding Sources"
  },
  {
   "type": "heading",
   "text": "Credit Rating",
   "item": "7",
-  "heading": "Credit Rating"
+  "heading": "INCOME BEFORE INCOME TAXES > Credit Rating"
  },
  {
   "type": "text",
   "text": "We believe our current rating depends upon a number of factors, including industry dynamics, operating and economic environment, operating results, operating margins, earnings trends and volatility, balance sheet composition, liquidity and liquidity management, our capital structure, our overall risk management, business diversification, and our market share and competitive position in the markets in which we operate. Deteriorations in any of these factors could impact our credit rating. A reduction in our credit rating could adversely affect our liquidity and competitive position, increase our incremental borrowing costs, limit our access to the capital markets, or trigger our obligations under certain financial agreements. As such, we may not be able to successfully obtain additional outside financing to fund our operations on favorable terms, or at all.",
   "item": "7",
-  "heading": "Credit Rating"
+  "heading": "INCOME BEFORE INCOME TAXES > Credit Rating"
  },
  {
   "type": "text",
   "text": "We believe our existing assets, a significant portion of which are liquid in nature, together with the funds from operations, available informal short-term credit arrangements, and our ability to raise additional capital will provide sufficient resources to meet our present and anticipated financing needs.",
   "item": "7",
-  "heading": "Credit Rating"
+  "heading": "INCOME BEFORE INCOME TAXES > Credit Rating"
  },
  {
   "type": "heading",
   "text": "Use of Capital Resources",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "On April 7, 2025, the Company completed the acquisition of a portion of B. Riley Financial, Inc.\u2019s traditional wealth management business, a deal that added 36 advisors with approximately $4 billion in assets under management. Consideration for this transaction consisted of cash from operations.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "On June 2, 2025, the Company completed the acquisition of Bryan, Garnier & Co. (\u201cBryan Garnier\u201d), an independent full-service investment bank focused on European technology and healthcare companies. Bryan Garnier\u2019s product suite includes mergers & acquisitions advisory, private and public growth financing solutions, and institutional sales and execution. Bryan Garnier is headquartered in Europe with offices in Paris, London, Amsterdam, Munich, Oslo, Stockholm, and New York. Consideration for this transaction consisted of cash from operations.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "During the year ended December 31, 2025, we declared and paid cash dividends of $249.0 million to shareholders. On January 26, 2026, the Board of Directors approved an 11% increase in the quarterly dividend to $0.51 per common share starting in the first quarter of 2026. On a split-adjusted basis, the quarterly dividend will be $0.34 per common share or $1.36 per common share on an annual basis.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "During the year ended December 31, 2025, we repurchased $244.6 million, or 2.5 million shares, at an average price of $98.28 per share.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "As part of our ongoing operations, we also enter into contractual arrangements that may require future cash payments, including certificates of deposit, lease obligations, and other contractual arrangements. See Notes 13 and 20 of the Notes to the Consolidated Financial Statements for information regarding our certificates of deposit and lease obligations, respectively. We have entered into investment commitments, lending commitments, and other commitments to extend credit for which we are unable to reasonably predict the timing of future payments. See Note 24 of the Notes to Consolidated Financial Statements for additional information.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "The following table summarizes the activity related to loans and advances to financial advisors and other employees, net from January 1, 2024 to December 31, 2025 (in thousands) :",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "table",
   "text": "| 2025 | 2024 |  |\n|---|---|---|\n| Beginning balance \u2013 January 1 | $682,196 | $683,486 |\n| Notes issued \u2013 organic growth | 228,519 | 91,786 |\n| Restricted cash issued | 3,549 | 67,251 |\n| Amortization | (147,882) | (154,182) |\n| Other | (21,747) | (6,145) |\n| Ending balance \u2013 December 31 | $744,635 | $682,196 |",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "We have paid $228.5 million in the form of upfront notes to financial advisors for transition pay during the year ended December 31, 2025. As we continue to take advantage of the opportunities created by market displacement and as competition for skilled professionals in the industry increases, we may decide to devote more significant resources to attracting and retaining qualified personnel.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "We utilize transition pay, principally in the form of upfront demand notes, to aid financial advisors, who have elected to join our firm, to supplement their lost compensation while transitioning their customers\u2019 accounts to the Stifel platform. The initial value of the notes is determined primarily by the financial advisors\u2019 trailing production and assets under management. These notes are generally forgiven over a five- to twelve-year period based on production. The future estimated amortization expense of the upfront notes, assuming current-year production levels and static growth for the years ended December 31, 2026, 2027, 2028, 2029, 2030, and thereafter, is $171.7 million, $127.9 million, $113.8 million, $86.3 million, $67.6 million, and $177.3 million, respectively. These estimates could change if we continue to grow our business through expansion or experience increased production levels.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "We provide compensation to existing employees in the form of cash awards which are subject to ratable vesting terms with service requirements. We amortize these awards to compensation expense over the relevant service period of five years. At December 31, 2025, there was $43.6 million of cash awards, net, which is included in loans and advances to financial advisors and other employees, net in the consolidated statement of financial condition, which is expected to be amortized over a weighted-average period of 3.7 years.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "We maintain an incentive stock plan and a wealth accumulation plan that provides for the granting of stock options, stock appreciation rights, restricted stock, performance awards, stock units, and debentures (collectively, \u201cdeferred awards\u201d) to our associates. Historically, we have granted stock units to our associates as part of our retention program. A restricted stock unit or restricted stock award represents the right to receive a share of the Company\u2019s common stock at a designated time in the future without cash payment by the associate and is issued in lieu of cash incentive, principally for deferred compensation and employee retention plans. The restricted stock units generally vest over the next one to ten years after issuance and are distributed at predetermined future payable dates once vesting occurs. Restricted stock awards are restricted as to sale or disposition. These restrictions lapse over the next year.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "At December 31, 2025, the total number of restricted stock units, Performance-based Restricted Stock Units (\u201cPRSUs\u201d), and restricted stock awards outstanding was 11.8 million, of which 10.9 million were unvested. At December 31, 2025, there was approximately $733.8 million of unrecognized compensation cost for all deferred awards, which is expected to be recognized over a weighted-average period of 2.7 years.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "The future estimated compensation expense of the deferred awards, assuming current year forfeiture levels and static growth for the years ended December 31, 2026, 2027, 2028, 2029, 2030, and thereafter, is $236.7 million, $178.0 million, $127.9 million, $89.4 million, $41.2 million, and $60.6 million, respectively. These estimates could change if our forfeitures change from historical levels.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "Net Capital Requirements \u2013 We operate in a highly regulated environment and are subject to capital requirements, which may limit distributions to our company from our subsidiaries. Distributions from our broker-dealer subsidiaries are subject to net capital rules. These subsidiaries have historically operated in excess of minimum net capital requirements. However, if distributions were to be limited in the future due to the failure of our subsidiaries to comply with the net capital rules or a change in the net capital rules, it could have a material and adverse effect to our company by limiting our operations that require intensive use of capital, such as underwriting or trading activities, or limit our ability to implement our business and growth strategies, pay interest on and repay the principal of our debt, and/or repurchase our common stock. Our non-broker-dealer subsidiaries, Stifel Bank & Trust, Stifel Bank, Stifel Trust Company,",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "N.A., and Stifel Trust Company Delaware, N.A., are also subject to various regulatory capital requirements administered by the federal banking agencies. Our broker-dealer subsidiaries and our bank subsidiaries have consistently operated in excess of their capital adequacy requirements. Our Canadian subsidiary, SNC, is subject to the regulatory supervision and requirements of CIRO.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "text",
   "text": "At December 31, 2025, Stifel had net capital of $559.5 million, which was 37.7% of aggregate debit items and $529.8 million in excess of its minimum required net capital. At December 31, 2025, all of our broker-dealer subsidiaries\u2019 net capital exceeded the minimum net capital required under the SEC rule. At December 31, 2025, SNEL\u2019s capital and reserves were in excess of the financial resources requirement under the rules of the FCA. At December 31, 2025, our banking subsidiaries were considered well capitalized under the regulatory framework for prompt corrective action. At December 31, 2025, SNC\u2019s net capital and reserves were in excess of the financial resources requirement under the rules of the CIRO. See Note 19 of the Notes to Consolidated Financial Statements for details of our regulatory capital requirements.",
   "item": "7",
-  "heading": "Use of Capital Resources"
+  "heading": "INCOME BEFORE INCOME TAXES > Use of Capital Resources"
  },
  {
   "type": "heading",
   "text": "Critical Accounting Policies and Estimates",
   "item": "7",
-  "heading": "Critical Accounting Policies and Estimates"
+  "heading": "INCOME BEFORE INCOME TAXES > Critical Accounting Policies and Estimates"
  },
  {
   "type": "text",
   "text": "In preparing our consolidated financial statements in accordance with U.S. generally accepted accounting principles and pursuant to the rules and regulations of the SEC, we make assumptions, judgments, and estimates that affect the reported amounts of assets, liabilities, revenues, and expenses, and related disclosures of contingent assets and liabilities. We base our assumptions, judgments, and estimates on historical experience and various other factors that we believe to be reasonable under the circumstances. Actual results could differ materially from these estimates under different assumptions or conditions. On a regular basis, we evaluate our assumptions, judgments, and estimates. We also discuss our critical accounting policies and estimates with the Audit Committee of the Board of Directors.",
   "item": "7",
-  "heading": "Critical Accounting Policies and Estimates"
+  "heading": "INCOME BEFORE INCOME TAXES > Critical Accounting Policies and Estimates"
  },
  {
   "type": "text",
   "text": "We believe that the assumptions, judgments, and estimates involved in the accounting policies described below have the greatest potential impact on our consolidated financial statements. These areas are key components of our results of operations and are based on complex rules that require us to make assumptions, judgments, and estimates, so we consider these to be our critical accounting policies. Historically, our assumptions, judgments, and estimates relative to our critical accounting policies and estimates have not differed materially from actual results.",
   "item": "7",
-  "heading": "Critical Accounting Policies and Estimates"
+  "heading": "INCOME BEFORE INCOME TAXES > Critical Accounting Policies and Estimates"
  },
  {
   "type": "text",
   "text": "For a full description of these and other accounting policies, see Note 2 of the Notes to Consolidated Financial Statements.",
   "item": "7",
-  "heading": "Critical Accounting Policies and Estimates"
+  "heading": "INCOME BEFORE INCOME TAXES > Critical Accounting Policies and Estimates"
  },
  {
   "type": "heading",
   "text": "Contingencies",
   "item": "7",
-  "heading": "Contingencies"
+  "heading": "INCOME BEFORE INCOME TAXES > Contingencies"
  },
  {
   "type": "text",
   "text": "We are involved in various pending and potential legal proceedings related to our business, including litigation, arbitration, and regulatory proceedings. Some of these matters involve claims for substantial amounts, including claims for punitive damages. We have, after consultation with outside legal counsel and consideration of facts currently known by management, recorded estimated losses in accordance with Topic 450 (\u201cTopic 450\u201d), \u201cContingencies,\u201d to the extent that claims are probable of loss and the amount of the loss can be reasonably estimated. The determination of the amount to accrue requires us to use significant judgment, and our final liabilities may ultimately be materially different. This determination is inherently subjective, as it requires estimates that are subject to potentially significant revision as more information becomes available and due to subsequent events. In making these determinations, we consider many factors, including, but not limited to, the loss and damages sought by the plaintiff or claimant, the basis and validity of the claim, the likelihood of a successful defense against the claim, and the potential for, and magnitude of, damages or settlements from such pending and potential litigation and arbitration proceedings, and fines and penalties or orders from regulatory agencies. See \u201cItem 3 \u2013 Legal Proceedings\u201d of this Form 10-K for information on our legal, regulatory, and arbitration proceedings.",
   "item": "7",
-  "heading": "Contingencies"
+  "heading": "INCOME BEFORE INCOME TAXES > Contingencies"
  },
  {
   "type": "heading",
   "text": "Allowance for Credit Losses",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The measurement of the allowance for credit losses, which includes the allowance for credit losses and the reserve for unfunded lending commitments, is based on management\u2019s best estimate of lifetime expected credit losses inherent in our company\u2019s relevant financial assets.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The expected credit losses on our loan portfolio are referred to as the allowance for credit losses and are reported separately as a contra-asset to loans on the consolidated statement of financial condition. The expected credit losses for unfunded lending commitments, including standby letters of credit and binding unfunded loan commitments, are reported on the consolidated statement of financial condition in accounts payable and accrued expenses. The provision for credit losses related to the loan portfolio and the provision for unfunded lending commitments are reported in the consolidated statement of operations in provision for credit losses.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The allowance for credit losses is measured on a collectively evaluated basis when similar risk characteristics exist. For the purpose of calculating portfolio-level allowances, we have grouped our loans into eight segments (\u201cloan portfolio segments\u201d): commercial and industrial, commercial real estate, residential real estate, construction and land, fund banking, securities-based loans, home equity lines of credit, and other loans. When a loan does not share similar risk characteristics with other loans, the loan is evaluated for credit losses on an individual basis. Various risk characteristics are considered when determining whether the loan should be collectively evaluated, including, but not limited to, financial asset type, risk ratings, collateral type, industry of the borrower, and historical or expected credit loss patterns.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The quantitative component of the allowance for credit losses is measured at the loan portfolio segment level utilizing loan-level inputs wherever possible. The allowance for credit losses for the loan portfolio segments, excluding fund banking and securities-based lending,",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "are calculated at the loan portfolio segment level using a non-discounted cash flow method through probability of default (\u201cPD\u201d)/loss given default (\u201cLGD\u201d) models developed by a third-party vendor. These models project a PD, which is then multiplied by the LGD and the estimated exposure at default (\u201cEAD\u201d) at the loan level for every period remaining in the loan\u2019s expected life. For the fund banking and securities-based lending loan portfolio segments, the allowance for credit losses is measured at the loan portfolio segment level using a static loss rate. The expected credit loss for loan portfolio segments using the PD/LGD models are estimated using quantitative methods that consider a variety of factors, such as historical loss experience derived from proxy data over the historical observation period, the current credit quality of the portfolio, as well as an economic outlook over a reasonable and supportable forecast period.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The expected life of the loan for closed-ended products is determined based on each loan portfolio segment. The residential real estate and home equity lines of credit portfolios determine the expected life of the loan based on the contractual maturity of the loan adjusted for any expected prepayments. For commercial and industrial, construction and land, and commercial real estate, the expected life of the loan is based on the contractual maturity of the loan.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "In our loss forecasting framework, we incorporate forward-looking information using macroeconomic forecast scenarios applied over the reasonable and supportable forecast period. These macroeconomic scenarios include variables that have historically been key drivers of increases and decreases in credit losses. These variables include, but are not limited to, unemployment rates, real estate prices, gross domestic product levels, corporate bond spreads, and long-term interest rate forecasts. Our macroeconomic forecast is obtained from a third-party vendor and based on a probability weighting over multiple scenarios. A two-year reasonable and supportable forecast period is used for the construction and land and commercial real estate loan portfolios followed by a one-year straight line reversion period to long-run PD and LGD values. For commercial and industrial, residential real estate, and home equity lines of credit portfolios, we incorporate a reasonable and supportable forecast of various macroeconomic variables over the remaining life of the assets, including an assumption that each macroeconomic variable will revert to a long-term expectation starting in years two to four of the forecast and largely completing within the first five years of the forecast.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "As any one macroeconomic outlook is inherently uncertain, we leverage multiple scenarios. The scenarios that are chosen each quarter and the amount of weighting given to each scenario depend on a variety of factors, including recent economic events, leading economic indicators, and industry trends. The reserve for unfunded lending commitments is estimated using the same scenarios, models, and economic data as the loan portfolio.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "The allowance for credit losses includes adjustments for qualitative reserves based on our company\u2019s assessment that may not be adequately represented in the quantitative methods or the macroeconomic assumptions described above. For example, factors that we consider include changes in lending policies and procedures, business conditions, the nature and size of the portfolio, portfolio concentrations, the volume and severity of past due loans and nonaccrual loans, the effect of external factors such as competition, and legal and regulatory requirements, among others. Further, we consider the inherent uncertainty in quantitative models that are built on historical data. As a result of the uncertainty inherent in the quantitative models, other quantitative and qualitative factors are considered in adjusting allowance amounts, including, but not limited to, the following: model imprecision, imprecision in macroeconomic forecast scenario, or changes in the economic environment affecting specific portfolio segments that deviate from the macroeconomic forecasts. The evaluation is inherently subjective, as it requires estimates that are susceptible to significant revision as more information becomes available. Depending on changes in circumstances, future assessments of credit risk may yield materially different results from the prior estimates, which may require an increase or a decrease in the allowance for credit losses.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "text",
   "text": "To demonstrate the sensitivity of our allowance for credit losses to macroeconomic forecasts, we compared our modeled estimates under the weighted scenarios used to estimate the allowance for credit losses as of December 31, 2025, to what our estimate would have been under a downside case scenario and an upside case scenario, without considering any offsetting effects in the qualitative component of our allowance for credit losses. As of December 31, 2025, use of the downside case scenario would have resulted in an increase of approximately $63.4 million in the quantitative portion of our allowance for credit losses on loans, while the use of the upside case scenario would have resulted in a reduction of approximately $40.4 million in the quantitative portion of our allowance for credit losses. These hypothetical outcomes reflect the relative sensitivity of the modeled portion of our allowance for credit losses estimate to macroeconomic forecast scenarios but do not consider any potential impact qualitative adjustments could have on the allowance for credit losses in such environments. Qualitative adjustments could either increase or decrease modeled loss estimates calculated using an alternative macroeconomic forecast scenario. Further, such sensitivity calculations do not necessarily reflect the nature and extent of future changes in the related allowance for credit losses for a number of reasons, including: (1) management\u2019s predictions of future macroeconomic trends and relationships among the scenarios may differ from actual events, and (2) management\u2019s application of subjective measures to modeled results through the qualitative portion of the allowance for credit losses when appropriate. The downside case scenario utilized in this hypothetical sensitivity analysis assumes a moderate recession. To the extent macroeconomic conditions worsen beyond those assumed in this downside case scenario, we could incur provisions for credit losses significantly in excess of those estimated in this analysis.",
   "item": "7",
-  "heading": "Allowance for Credit Losses"
+  "heading": "INCOME BEFORE INCOME TAXES > Allowance for Credit Losses"
  },
  {
   "type": "heading",
   "text": "Recently Issued Accounting Guidance",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Recently Issued Accounting Guidance"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "Income Statement Expenses",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Income Statement Expenses"
  },
  {
   "type": "text",
   "text": "In November 2024, the Financial Accounting Standards Board (\u201cFASB\u201d) issued Accounting Standards Update (\u201cASU\u201d) No. 2024-03 (\u201cASU 2024-03\u201d), Disaggregation of Income Statement Expenses. The guidance primarily will require enhanced disclosures about certain types of expenses. The amendments in ASU 2024-03 are effective for fiscal years beginning after December 15, 2026 (January 1, 2027, for our company), and interim periods within fiscal years beginning after December 15, 2027, and may be applied either on a prospective or retrospective basis. We are evaluating the impact of the accounting update on our disclosures.",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Income Statement Expenses"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "Internal Use Software",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Internal Use Software"
  },
  {
   "type": "text",
   "text": "In September 2025, the FASB issued ASU No. 2025-06 (\u201cASU 2025-06\u201d), Intangibles \u2013 Goodwill and Other \u2013 Internal-Use Software (Subtopic 350-40): Targeted Improvements to the Accounting for Internal-Use Software. The guidance primarily removes references to software development project stages to better align with current software development methods. Under ASU 2025-06, an entity will begin capitalizing software costs when management authorizes and commits to funding the software project, and it is probable that the project will be completed and the software will be used for its intended purpose. The accounting update is effective for annual periods beginning after December 15, 2027 (January 1, 2028, for our company), including interim periods within those fiscal years with early adoption permitted. The accounting update can be adopted either prospectively, retrospectively, or utilizing a modified transition approach. We are currently evaluating the impact of the accounting update on our consolidated financial statements.",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Internal Use Software"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "Credit Losses Purchased Loans",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Credit Losses Purchased Loans"
  },
  {
   "type": "text",
   "text": "In November 2025, the FASB issued ASU 2025-08, Financial Instruments \u2013 Credit Losses (Topic 326) \u2013 Purchased Loans, which expands the population of purchased financial assets subject to the gross-up approach in Topic 326. As a result of this update, loans (excluding credit cards) acquired without credit deterioration and deemed \u201cseasoned\u201d as defined in the accounting update will follow the gross-up approach at acquisition, and the initial allowance for credit losses at acquisition is added to the amortized cost basis of the loans. The accounting update is effective for annual reporting periods beginning after December 15, 2026 (January 1, 2027, for our company), including interim periods within those fiscal years with early adoption permitted. The accounting update will be applied using a prospective transition approach. We are currently evaluating the impact of the accounting update on our consolidated financial statements.",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Credit Losses Purchased Loans"
  },
  {
-  "type": "text",
+  "type": "heading",
   "text": "Interim Reporting",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Interim Reporting"
  },
  {
   "type": "text",
   "text": "In December 2025, the FASB issued ASU 2025-11, Interim Reporting (Topic 270): Narrow-Scope Improvements, which clarifies interim disclosure requirements and provides additional required interim disclosure guidance. The accounting update is effective for annual reporting periods beginning after December 15, 2027 (January 1, 2028, for our company) with early adoption permitted and can be applied either prospectively or retrospectively. We are currently evaluating the impact of the accounting update on our consolidated financial statements.",
   "item": "7",
-  "heading": "Recently Issued Accounting Guidance"
+  "heading": "INCOME BEFORE INCOME TAXES > Interim Reporting"
  },
  {
   "type": "heading",
   "text": "Off-Balance Sheet Arrangements",
   "item": "7",
-  "heading": "Off-Balance Sheet Arrangements"
+  "heading": "INCOME BEFORE INCOME TAXES > Off-Balance Sheet Arrangements"
  },
  {
   "type": "text",
   "text": "Information concerning our off-balance sheet arrangements is included in Note 24 of the Notes to Consolidated Financial Statements. Such information is hereby incorporated by reference.",
   "item": "7",
-  "heading": "Off-Balance Sheet Arrangements"
+  "heading": "INCOME BEFORE INCOME TAXES > Off-Balance Sheet Arrangements"
  },
  {
   "type": "heading",
   "text": "Dilution",
   "item": "7",
-  "heading": "Dilution"
+  "heading": "INCOME BEFORE INCOME TAXES > Dilution"
  },
  {
   "type": "text",
   "text": "As of December 31, 2025, there were 11,831,871 outstanding restricted stock units, PRSUs, and restricted stock awards. A restricted stock unit represents the right to receive a share of the Company\u2019s common stock at a designated time in the future without cash payment by the associate and is issued in lieu of cash incentive, principally for deferred compensation and employee retention plans. The restricted stock units vest on an annual basis over the next one to ten years and are distributable, if vested, at future specified dates. Restricted stock awards are restricted as to sale or disposition. These restrictions lapse over the next year. Of the outstanding restricted stock units, PRSUs, and restricted stock awards, 972,131 shares are currently vested and 10,859,740 are unvested. Assuming vesting requirements are met, the Company anticipates that 2,612,252 shares under these awards will be distributed in 2026, 2,408,790 will vest in 2027, 1,894,312 will vest in 2028, and the balance of 3,944,386 will be distributed thereafter.",
   "item": "7",
-  "heading": "Dilution"
+  "heading": "INCOME BEFORE INCOME TAXES > Dilution"
  },
  {
   "type": "text",
   "text": "An associate will realize income as a result of an award of stock units at the time shares are distributed in an amount equal to the fair market value of the shares at that time, and we are entitled to a corresponding tax deduction in the year of vesting in some instances, or delivery in other instances. Unless an associate elects to satisfy the withholding in another manner, either by paying the amount in cash or by delivering shares of Stifel Financial Corp. common stock already owned by the individual for at least six months, we may satisfy tax withholding obligations on income associated with the grants by reducing the number of shares otherwise deliverable in connection with the awards. The reduction will be calculated based on the current market price of our common stock. Based on current tax law, we anticipate that the shares issued when the awards are paid to the associates will be reduced by approximately 35% to satisfy the maximum withholding obligations, so that approximately 65% of the total restricted stock units that are distributable in any particular year will be converted into issued and outstanding shares.",
   "item": "7",
-  "heading": "Dilution"
+  "heading": "INCOME BEFORE INCOME TAXES > Dilution"
  },
  {
   "type": "text",
   "text": "It has been our practice historically to satisfy almost all tax withholding obligations on income associated with the grants by reducing the number of shares otherwise deliverable in connection with the awards. We anticipate that practice will continue, as recently our Compensation Committee made a determination to satisfy tax withholding obligations through the cancellation of shares subject to an",
   "item": "7",
-  "heading": "Dilution"
+  "heading": "INCOME BEFORE INCOME TAXES > Dilution"
  },
  {
   "type": "text",
   "text": "award. In addition, the plan pursuant to which we issue restricted stock units and restricted stock awards permits us to elect to settle certain awards entirely in cash, and we may elect to do so as those awards vest and become deliverable.",
   "item": "7",
-  "heading": "Dilution"
+  "heading": "INCOME BEFORE INCOME TAXES > Dilution"
  }
 ]

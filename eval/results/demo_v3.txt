@@ -1,0 +1,45 @@
+
+Q: What does Raymond James say about interest rate risk?
+   tickers=['RJF'] | max_rerank=0.26095408 | refused=False | total 4.563s (retrieve 1.607s, generate 2.941s)
+   retrieve breakdown: {'embed': 0.349, 'pinecone': 0.387, 'bm25': 0.003, 'rerank': 0.858}
+   generation: finish=stop attempts=1 usage={'input_tokens': 2332, 'output_tokens': 1149, 'total_tokens': 3481, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 918}}
+
+Raymond James discloses interest rate risk for banking operations through an instantaneous rate-change sensitivity table: +200 bps gives $1,898 million net interest income, +3%; +100 bps $1,891 million, +2%; 0 bps $1,846 million, —%; -100 bps $1,765 million, (4)%; and -200 bps $1,661 million, (10)% [2]. It also lists Fed funds target rate actions: July 27, 2023 +25 bps to 5.25%-5.50%; September 19, 2024 -50 bps to 4.75%-5.00%; November 8, 2024 -25 bps to 4.50%-4.75%; December 19, 2024 -25 bps to 4.25%-4.50%; September 18, 2025 -25 bps to 4.00%-4.25%; and October 30, 2025 -25 bps to 3.75%-4.00% [5].
+   [2] RJF-table_aware-7-0113 | RJF Item 7 | RISK MANAGEMENT > Banking operations
+   [5] RJF-table_aware-7-0046 | RJF Item 7 | NET INTEREST ANALYSIS
+
+Q: What were Schwab's net revenues by segment?
+   tickers=['SCHW'] | max_rerank=0.9439706 | refused=False | total 3.553s (retrieve 2.238s, generate 1.302s)
+   retrieve breakdown: {'embed': 1.258, 'pinecone': 0.144, 'bm25': 0.002, 'rerank': 0.826}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3731, 'output_tokens': 340, 'total_tokens': 4071, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 161}}
+
+Schwab reported total net revenues by segment (in millions) [3]:
+
+- **Investor Services:** $18,999 in 2025, $15,558 in 2024, and $14,650 in 2023; up 22% in 2025 vs. 2024 [3].
+- **Advisor Services:** $4,922 in 2025, $4,048 in 2024, and $4,187 in 2023; up 22% in 2025 vs. 2024 [3].
+- **Total:** $23,921 in 2025, $19,606 in 2024, and $18,837 in 2023; up 22% in 2025 vs. 2024 [3].
+
+Both segments increased 22% year-over-year [3][4].
+   [3] SCHW-table_aware-7-0056 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Information
+   [4] SCHW-table_aware-7-0060 | SCHW Item 7 | RESULTS OF OPERATIONS > Segment Net Revenues
+
+Q: Compare how Raymond James and Stifel describe competition for financial advisors.
+   tickers=['RJF', 'SF'] | max_rerank=0.37250522 | refused=False (empty_output) | total 9.161s (retrieve 1.895s, generate 7.254s)
+   retrieve breakdown: {'embed': 0.43, 'pinecone': 0.142, 'bm25': 0.006, 'rerank': 1.3}
+   generation: finish=length attempts=2 usage={'input_tokens': 3858, 'output_tokens': 1500, 'total_tokens': 5358, 'input_token_details': {'cache_read': 3840}, 'output_token_details': {'reasoning': 1500}}
+
+[empty model output]
+
+Q: What were Morgan Stanley's wealth management revenues?
+   tickers=[] | max_rerank=0.8576489 | refused=True (not_in_context) | total 1.913s (retrieve 1.057s, generate 0.841s)
+   retrieve breakdown: {'embed': 0.527, 'pinecone': 0.109, 'bm25': 0.003, 'rerank': 0.411}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3635, 'output_tokens': 25, 'total_tokens': 3660, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 21}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+
+Q: What is Raymond James' stock price target for next year?
+   tickers=['RJF'] | max_rerank=0.56973296 | refused=True (not_in_context) | total 3.749s (retrieve 3.011s, generate 0.729s)
+   retrieve breakdown: {'embed': 2.164, 'pinecone': 0.186, 'bm25': 0.002, 'rerank': 0.652}
+   generation: finish=stop attempts=1 usage={'input_tokens': 1506, 'output_tokens': 24, 'total_tokens': 1530, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 20}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
