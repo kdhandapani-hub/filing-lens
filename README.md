@@ -2,6 +2,12 @@
 
 > My RAG app helps wealth-management analysts answer risk, segment and performance questions from the latest 10-K filings of four broker-dealers (Raymond James, Schwab, LPL, Stifel — SEC EDGAR, Items 1A and 7) via a chat API with ≥90% faithfulness and a ≤5s latency ceiling.
 
+## Architecture
+
+![Filing Lens architecture](docs/filing-lens-architecture.png)
+
+Build pipeline, LangGraph query path, managed services, and evaluation. Components, interfaces, request sequence and design decisions: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)**.
+
 ## Stack
 EDGAR HTML → BeautifulSoup cleaning → 3 chunking strategies → Nebius `Qwen3-Embedding-8B` → Pinecone serverless (dense, 1 namespace per strategy) + BM25 (sparse) → hybrid + Pinecone-hosted rerank (`bge-reranker-v2-m3`) → LangGraph (retrieve → grade → answer | refuse) → LangSmith tracing + evals.
 
@@ -56,6 +62,15 @@ Results: `eval/results/eval_summary.md`, `eval/results/eval_rows.csv`.
 
 Core matrix: `fixed`, `section`, `table_aware` with hybrid+rerank (chunking comparison), plus `table_aware` with dense/bm25/hybrid, rerank on/off (retrieval ablation).
 Judge caveat: the same model family judges and answers; scores are indicative, and expected answers are human-verified.
+
+## Chat UI (bonus)
+
+```bash
+streamlit run app.py
+```
+Sidebar switches chunking strategy, retriever and rerank live; each answer shows cited source excerpts, refusal reason, and latency. Set `APP_PASSWORD` to require an access code.
+
+Local demo and fallback. The hosted bonus UI is a vibe-coded chat front end on Replit calling a FastAPI `POST /ask` service (planned; see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#deployment)).
 
 ## Chunking strategies
 | Strategy | How | Hypothesis |

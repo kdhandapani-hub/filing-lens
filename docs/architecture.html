@@ -1,0 +1,371 @@
+<title>Filing Lens Architecture</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one wide system diagram in three horizontal lanes (build, query, evaluate) with a managed-services column on the right; interface table below. */
+:root {
+  --bg: #f5f7f9; --panel: #ffffff; --ink: #16202b; --muted: #5a6673; --line: #c8d0d8;
+  --lane1: #edf2f6; --lane2: #eef3f2; --lane3: #f1f1f6;
+  --svc-bg: #eaf2fb; --svc: #2d5f8f;
+  --q: #0c6f6a; --b: #8a6a17; --o: #6656c4; --planned: #b45309;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f141a; --panel: #18212b; --ink: #e4eaf0; --muted: #96a2ae; --line: #34414e;
+  --lane1: #141c25; --lane2: #132020; --lane3: #171a26;
+  --svc-bg: #15273a; --svc: #7fb2e0;
+  --q: #43bcb3; --b: #d6aa45; --o: #a99df2; --planned: #f0a45c; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f141a; --panel: #18212b; --ink: #e4eaf0; --muted: #96a2ae; --line: #34414e;
+  --lane1: #141c25; --lane2: #132020; --lane3: #171a26;
+  --svc-bg: #15273a; --svc: #7fb2e0;
+  --q: #43bcb3; --b: #d6aa45; --o: #a99df2; --planned: #f0a45c; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1480px; margin: 0 auto; padding-block: 28px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 6px; margin-bottom: 18px; }
+h1 { font-size: 1.6rem; font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+.oneliner { color: var(--muted); max-width: 75ch; margin: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 0.82rem; color: var(--muted); margin: 6px 0 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 7px; }
+.sw { width: 26px; height: 0; border-top: 2.5px solid; display: inline-block; }
+.sw.q { border-color: var(--q); } .sw.b { border-color: var(--b); } .sw.o { border-color: var(--o); border-top-style: dashed; }
+.box-sw { width: 16px; height: 12px; border-radius: 3px; display: inline-block; border: 1.5px solid; }
+.box-sw.svc { background: var(--svc-bg); border-color: var(--svc); }
+.box-sw.pl { border-color: var(--planned); border-style: dashed; background: var(--panel); }
+.box-sw.built { border-color: var(--line); background: var(--panel); }
+
+.diagram { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+.diagram svg { display: block; width: 100%; min-width: 1100px; height: auto; }
+
+/* SVG styling through tokens */
+svg text { font-family: var(--sans); fill: var(--ink); }
+svg .t { font-size: 13.5px; font-weight: 600; }
+svg .s { font-size: 11.5px; fill: var(--muted); }
+svg .m { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
+svg .lane-label { font-size: 11px; font-weight: 600; letter-spacing: 0.09em; fill: var(--muted); }
+svg .lane1 { fill: var(--lane1); } svg .lane2 { fill: var(--lane2); } svg .lane3 { fill: var(--lane3); }
+svg .box { fill: var(--panel); stroke: var(--line); stroke-width: 1.3; }
+svg .svcg { fill: var(--svc-bg); stroke: var(--svc); stroke-width: 1.3; }
+svg .svcbox { fill: var(--panel); stroke: var(--svc); stroke-width: 1; }
+svg .svc-title { font-size: 13px; font-weight: 600; fill: var(--svc); }
+svg .planned { fill: var(--panel); stroke: var(--planned); stroke-width: 1.5; stroke-dasharray: 6 4; }
+svg .planned-group { fill: none; stroke: var(--planned); stroke-width: 1.2; stroke-dasharray: 3 4; }
+svg .tag { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; fill: var(--planned); }
+svg .graph { fill: none; stroke: var(--q); stroke-width: 1.5; }
+svg .node { fill: var(--panel); stroke: var(--q); stroke-width: 1.4; }
+svg .node-refuse { fill: var(--panel); stroke: var(--planned); stroke-width: 1.4; }
+svg .panel { fill: var(--lane2); stroke: var(--line); stroke-width: 1; }
+svg .e-q { fill: none; stroke: var(--q); stroke-width: 1.8; }
+svg .e-b { fill: none; stroke: var(--b); stroke-width: 1.8; }
+svg .e-o { fill: none; stroke: var(--o); stroke-width: 1.6; stroke-dasharray: 5 4; }
+svg .e-link { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 3 3; }
+svg .lbl { font-family: var(--mono); font-size: 10.5px; paint-order: stroke; stroke: var(--panel); stroke-width: 4px; stroke-linejoin: round; }
+svg .lbl.q { fill: var(--q); } svg .lbl.b { fill: var(--b); } svg .lbl.o { fill: var(--o); } svg .lbl.k { fill: var(--muted); }
+svg .mk-q { fill: var(--q); } svg .mk-b { fill: var(--b); } svg .mk-o { fill: var(--o); } svg .mk-k { fill: var(--muted); }
+
+h2 { font-size: 1.05rem; font-weight: 600; margin: 34px 0 10px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--panel); }
+table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: 0.86rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); font-weight: 600; }
+tr:last-child td { border-bottom: 0; }
+td code, .notes code { font-family: var(--mono); font-size: 0.8rem; }
+.chip { display: inline-block; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.05em; padding: 1px 7px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+.chip.built { color: var(--q); border-color: var(--q); }
+.chip.planned { color: var(--planned); border-color: var(--planned); }
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+.note { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.note h3 { margin: 0 0 6px; font-size: 0.92rem; }
+.note p { margin: 0; color: var(--muted); font-size: 0.86rem; }
+</style>
+
+<div class="wrap">
+<header>
+  <h1>Filing Lens Architecture</h1>
+  <p class="oneliner">Hybrid RAG over the latest 10-K filings of Raymond James, Schwab, LPL Financial and Stifel (Item 1A Risk Factors, Item 7 MD&amp;A). Answers are cited or refused, traced end to end, and evaluated across chunking and retrieval configurations.</p>
+</header>
+
+<div class="legend" aria-label="Legend">
+  <span><i class="sw b"></i>Build-time flow</span>
+  <span><i class="sw q"></i>Query-time flow</span>
+  <span><i class="sw o"></i>Tracing &amp; evaluation</span>
+  <span><i class="box-sw built"></i>Built</span>
+  <span><i class="box-sw pl"></i>Planned (Friday)</span>
+  <span><i class="box-sw svc"></i>Managed service</span>
+</div>
+
+<div class="diagram">
+<svg viewBox="0 0 1440 960" role="img" aria-labelledby="dtitle">
+  <title id="dtitle">Filing Lens system architecture: build pipeline, query path through LangGraph, managed services, and evaluation</title>
+  <defs>
+    <marker id="aq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-q" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-b" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-o" d="M0 0 L10 5 L0 10 z"/></marker>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="mk-k" d="M0 0 L10 5 L0 10 z"/></marker>
+  </defs>
+
+  <!-- lanes -->
+  <rect class="lane1" x="10" y="20" width="1150" height="200" rx="10"/>
+  <rect class="lane2" x="10" y="240" width="1150" height="410" rx="10"/>
+  <rect class="lane3" x="10" y="670" width="1150" height="270" rx="10"/>
+  <text class="lane-label" x="28" y="44">BUILD TIME · RUN WHEN NEW FILINGS LAND</text>
+  <text class="lane-label" x="28" y="264">QUERY TIME · PER QUESTION</text>
+  <text class="lane-label" x="28" y="694">EVALUATE &amp; SHIP</text>
+
+  <!-- ===== build lane ===== -->
+  <rect class="svcg" x="30" y="60" width="165" height="110" rx="8"/>
+  <text class="t" x="44" y="84">SEC EDGAR</text>
+  <text class="s" x="44" y="104">submissions API</text>
+  <text class="s" x="44" y="120">+ 10-K primary HTML</text>
+  <text class="m" x="44" y="148">RJF SCHW LPLA SF</text>
+
+  <rect class="box" x="220" y="60" width="160" height="110" rx="8"/>
+  <text class="t" x="234" y="84">download.py</text>
+  <text class="s" x="234" y="104">latest 10-K per CIK</text>
+  <text class="m" x="234" y="132">data/raw/*.html</text>
+  <text class="m" x="234" y="148">manifest.json</text>
+
+  <rect class="box" x="405" y="60" width="165" height="110" rx="8"/>
+  <text class="t" x="419" y="84">ingest.py</text>
+  <text class="s" x="419" y="104">strip markup + footers</text>
+  <text class="s" x="419" y="120">keep Item 1A + Item 7</text>
+  <text class="s" x="419" y="136">tables → markdown</text>
+  <text class="m" x="419" y="158">blocks JSON</text>
+
+  <rect class="box" x="595" y="60" width="165" height="110" rx="8"/>
+  <text class="t" x="609" y="84">chunking.py</text>
+  <text class="m" x="609" y="106">fixed       512/64</text>
+  <text class="m" x="609" y="122">section     headings</text>
+  <text class="m" x="609" y="138">table_aware +tables</text>
+  <text class="s" x="609" y="158">+ citation metadata</text>
+
+  <rect class="box" x="785" y="60" width="150" height="110" rx="8"/>
+  <text class="t" x="799" y="84">index.py</text>
+  <text class="s" x="799" y="104">embed + upsert</text>
+  <text class="s" x="799" y="120">one namespace</text>
+  <text class="s" x="799" y="136">per strategy</text>
+
+  <path class="e-b" d="M195 115 H218" marker-end="url(#ab)"/>
+  <path class="e-b" d="M380 115 H403" marker-end="url(#ab)"/>
+  <path class="e-b" d="M570 115 H593" marker-end="url(#ab)"/>
+  <path class="e-b" d="M760 115 H783" marker-end="url(#ab)"/>
+
+  <!-- BM25 artifact, shared by build and query -->
+  <rect class="box" x="785" y="190" width="150" height="46" rx="8"/>
+  <text class="t" x="799" y="209" style="font-size:12.5px">chunks_*.pkl</text>
+  <text class="s" x="799" y="226">BM25 corpus · in repo</text>
+  <path class="e-b" d="M860 170 V188" marker-end="url(#ab)"/>
+
+  <!-- build → services -->
+  <path class="e-b" d="M935 92 H1188" marker-end="url(#ab)"/>
+  <text class="lbl b" x="950" y="85">embed_documents · batch 64</text>
+  <path class="e-b" d="M935 158 H1160 V467 H1188" marker-end="url(#ab)"/>
+  <text class="lbl b" x="950" y="151">upsert · ns = strategy</text>
+
+  <!-- ===== query lane ===== -->
+  <rect class="box" x="30" y="395" width="120" height="75" rx="8"/>
+  <text class="t" x="44" y="422">Analyst</text>
+  <text class="s" x="44" y="442">browser</text>
+
+  <rect class="planned-group" x="165" y="352" width="377" height="148" rx="10"/>
+  <text class="tag" x="177" y="368">REPLIT APP · PLANNED</text>
+
+  <rect class="planned" x="175" y="378" width="165" height="112" rx="8"/>
+  <text class="t" x="189" y="402">Chat UI</text>
+  <text class="s" x="189" y="422">vibe-coded (Replit Agent)</text>
+  <text class="s" x="189" y="438">citation chips</text>
+  <text class="s" x="189" y="454">refusal banner</text>
+  <text class="s" x="189" y="470">config toggles</text>
+
+  <rect class="planned" x="365" y="378" width="165" height="112" rx="8"/>
+  <text class="t" x="379" y="402">api.py · FastAPI</text>
+  <text class="m" x="379" y="424">POST /ask</text>
+  <text class="s" x="379" y="442">X-API-Key · CORS</text>
+  <text class="s" x="379" y="458">Replit Deployment</text>
+  <text class="s" x="379" y="474">keys in Replit Secrets</text>
+
+  <path class="e-q" d="M150 432 H173" marker-end="url(#aq)"/>
+  <path class="e-q" d="M340 432 H363" marker-end="url(#aq)"/>
+  <path class="e-q" d="M530 432 H558" marker-end="url(#aq)"/>
+
+  <rect class="box" x="175" y="522" width="165" height="48" rx="8"/>
+  <text class="t" x="189" y="542" style="font-size:12.5px">app.py · Streamlit</text>
+  <text class="s" x="189" y="559">local demo / fallback</text>
+  <rect class="box" x="175" y="584" width="165" height="48" rx="8"/>
+  <text class="t" x="189" y="604" style="font-size:12.5px">ask.py · CLI</text>
+  <text class="s" x="189" y="621">--demo · --show-docs</text>
+  <path class="e-q" d="M340 546 H558" marker-end="url(#aq)"/>
+  <path class="e-q" d="M340 608 H558" marker-end="url(#aq)"/>
+  <text class="lbl k" x="380" y="539">ask() in-process</text>
+
+  <!-- LangGraph container -->
+  <rect class="graph" x="560" y="268" width="560" height="366" rx="12"/>
+  <text class="t" x="578" y="292" style="fill:var(--q)">graph.py · LangGraph</text>
+
+  <rect class="node" x="578" y="310" width="100" height="62" rx="8"/>
+  <text class="t" x="590" y="333">plan</text>
+  <text class="s" x="590" y="350">detect firms</text>
+  <text class="s" x="590" y="364">focus_query</text>
+
+  <rect class="node" x="698" y="310" width="100" height="62" rx="8"/>
+  <text class="t" x="710" y="333">retrieve</text>
+  <text class="s" x="710" y="350">hybrid</text>
+  <text class="s" x="710" y="364">+ rerank</text>
+
+  <rect class="node" x="818" y="310" width="100" height="62" rx="8"/>
+  <text class="t" x="830" y="333">grade</text>
+  <text class="s" x="830" y="350">top score</text>
+  <text class="m" x="830" y="364">≥ 0.15</text>
+
+  <rect class="node" x="955" y="296" width="110" height="66" rx="8"/>
+  <text class="t" x="967" y="317">generate</text>
+  <text class="s" x="967" y="335">cite [n], or</text>
+  <text class="m" x="967" y="352">NOT_FOUND</text>
+
+  <rect class="node-refuse" x="955" y="390" width="110" height="50" rx="8"/>
+  <text class="t" x="967" y="412">refuse</text>
+  <text class="s" x="967" y="429">fixed message</text>
+
+  <path class="e-q" d="M678 341 H696" marker-end="url(#aq)"/>
+  <path class="e-q" d="M798 341 H816" marker-end="url(#aq)"/>
+  <path class="e-q" d="M918 330 H953" marker-end="url(#aq)"/>
+  <path class="e-q" d="M918 356 H936 V415 H953" marker-end="url(#aq)"/>
+  <path class="e-q" d="M1010 362 V388" marker-end="url(#aq)"/>
+  <text class="lbl q" x="1016" y="380">NOT_FOUND</text>
+  <text class="lbl k" x="900" y="400">weak</text>
+
+  <!-- retrieve detail -->
+  <path class="e-link" d="M748 372 V453"/>
+  <rect class="panel" x="578" y="455" width="372" height="163" rx="8"/>
+  <text class="lane-label" x="592" y="476">INSIDE RETRIEVE</text>
+  <text class="s" x="592" y="498" style="fill:var(--ink)">1  Embed the (sub-)query with Nebius</text>
+  <text class="s" x="592" y="519" style="fill:var(--ink)">2  Dense top-10 from Pinecone, filtered by ticker</text>
+  <text class="s" x="592" y="540" style="fill:var(--ink)">3  BM25 top-10 (stopwords, plural folding)</text>
+  <text class="s" x="592" y="561" style="fill:var(--ink)">4  Reciprocal Rank Fusion, k = 60</text>
+  <text class="s" x="592" y="582" style="fill:var(--ink)">5  Rerank → top 5 (comparisons share ~10)</text>
+  <text class="m" x="592" y="606">comparisons: one focused query per firm</text>
+
+  <!-- BM25 load link -->
+  <path class="e-link" d="M860 236 V266" marker-end="url(#ak)"/>
+  <text class="lbl k" x="868" y="257">loaded at start-up</text>
+
+  <!-- query bus to managed services -->
+  <path class="e-q" d="M950 540 H1145 V120 H1188" marker-end="url(#aq)"/>
+  <path class="e-q" d="M1145 370 H1188" marker-end="url(#aq)"/>
+  <path class="e-q" d="M1145 490 H1188" marker-end="url(#aq)"/>
+  <text class="lbl q" x="1000" y="533">embed · query · rerank</text>
+
+  <path class="e-q" d="M1065 315 H1100 V207 H1188" marker-end="url(#aq)"/>
+  <text class="lbl q" x="1093" y="200" text-anchor="end">chat · thinking off</text>
+
+  <!-- ===== evaluate lane ===== -->
+  <rect class="box" x="30" y="730" width="175" height="96" rx="8"/>
+  <text class="t" x="44" y="754">GitHub · filing-lens</text>
+  <text class="s" x="44" y="774">source + README</text>
+  <text class="s" x="44" y="790">iteration log</text>
+  <text class="s" x="44" y="806">eval results</text>
+  <path class="e-link" d="M160 730 V480 H163" marker-end="url(#ak)"/>
+  <text class="lbl k" x="168" y="705">import + deploy</text>
+
+  <rect class="box" x="250" y="730" width="200" height="110" rx="8"/>
+  <text class="t" x="264" y="754">run_eval.py</text>
+  <text class="s" x="264" y="774">8 configs × 22 questions</text>
+  <text class="m" x="264" y="794">retrieval_hit · refusal</text>
+  <text class="m" x="264" y="810">faithfulness · correctness</text>
+  <text class="m" x="264" y="826">latency p50/p95</text>
+
+  <rect class="box" x="480" y="730" width="185" height="110" rx="8"/>
+  <text class="t" x="494" y="754">draft_expected.py</text>
+  <text class="s" x="494" y="774">system drafts answer</text>
+  <text class="s" x="494" y="790">+ source chunks</text>
+  <text class="s" x="494" y="806">human verifies</text>
+  <text class="s" x="494" y="822">→ promote</text>
+
+  <rect class="box" x="695" y="730" width="185" height="110" rx="8"/>
+  <text class="t" x="709" y="754">questions_draft.json</text>
+  <text class="s" x="709" y="774">22 questions, 5 types</text>
+  <text class="s" x="709" y="790">factual · numeric · cross-firm</text>
+  <text class="s" x="709" y="806">exact-term · unanswerable</text>
+  <text class="s" x="709" y="822">verified expected answers</text>
+
+  <path class="e-o" d="M665 785 H693" marker-end="url(#ao)"/>
+  <path class="e-o" d="M880 817 H1188" marker-end="url(#ao)"/>
+  <text class="lbl o" x="900" y="810">create dataset</text>
+  <path class="e-o" d="M350 730 V660 H700 V636" marker-end="url(#ao)"/>
+  <text class="lbl o" x="470" y="653">ask(question, config)</text>
+  <path class="e-o" d="M350 840 V887 H1188" marker-end="url(#ao)"/>
+  <text class="lbl o" x="900" y="880">evaluate() · one experiment per config</text>
+  <path class="e-o" d="M1120 615 H1165 V752 H1188" marker-end="url(#ao)"/>
+  <text class="lbl o" x="1172" y="682" text-anchor="end">traces (auto)</text>
+
+  <!-- ===== managed services ===== -->
+  <text class="lane-label" x="1178" y="30">MANAGED SERVICES</text>
+
+  <rect class="svcg" x="1175" y="40" width="255" height="228" rx="10"/>
+  <text class="svc-title" x="1190" y="62">Nebius Token Factory</text>
+  <rect class="svcbox" x="1190" y="75" width="225" height="70" rx="7"/>
+  <text class="t" x="1202" y="97" style="font-size:12.5px">Qwen3-Embedding-8B</text>
+  <text class="s" x="1202" y="115">4096-d · eu-north1</text>
+  <text class="s" x="1202" y="131">build + query embeddings</text>
+  <rect class="svcbox" x="1190" y="158" width="225" height="96" rx="7"/>
+  <text class="t" x="1202" y="180" style="font-size:12.5px">DeepSeek V4.1 Flash</text>
+  <text class="s" x="1202" y="198">temperature 0 · thinking off</text>
+  <text class="s" x="1202" y="214">answers + eval judge</text>
+  <text class="m" x="1202" y="236">$0.30 / $1.20 per 1M</text>
+
+  <rect class="svcg" x="1175" y="300" width="255" height="228" rx="10"/>
+  <text class="svc-title" x="1190" y="322">Pinecone · us-east-1</text>
+  <rect class="svcbox" x="1190" y="335" width="225" height="70" rx="7"/>
+  <text class="t" x="1202" y="357" style="font-size:12.5px">Inference rerank</text>
+  <text class="s" x="1202" y="375">bge-reranker-v2-m3</text>
+  <text class="s" x="1202" y="391">relevance score per chunk</text>
+  <rect class="svcbox" x="1190" y="418" width="225" height="96" rx="7"/>
+  <text class="t" x="1202" y="440" style="font-size:12.5px">Serverless index</text>
+  <text class="s" x="1202" y="458">4096-d · cosine</text>
+  <text class="m" x="1202" y="478">ns: fixed · section</text>
+  <text class="m" x="1202" y="494">    table_aware</text>
+
+  <rect class="svcg" x="1175" y="700" width="255" height="230" rx="10"/>
+  <text class="svc-title" x="1190" y="722">LangSmith</text>
+  <rect class="svcbox" x="1190" y="733" width="225" height="54" rx="7"/>
+  <text class="t" x="1202" y="755" style="font-size:12.5px">Tracing</text>
+  <text class="s" x="1202" y="773">span per node, tagged by config</text>
+  <rect class="svcbox" x="1190" y="797" width="225" height="54" rx="7"/>
+  <text class="t" x="1202" y="819" style="font-size:12.5px">Dataset</text>
+  <text class="s" x="1202" y="837">filing-lens-eval-&lt;hash&gt;</text>
+  <rect class="svcbox" x="1190" y="861" width="225" height="58" rx="7"/>
+  <text class="t" x="1202" y="883" style="font-size:12.5px">Experiments</text>
+  <text class="s" x="1202" y="901">side-by-side config comparison</text>
+</svg>
+</div>
+
+<h2>Interfaces</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>From → To</th><th>Interface</th><th>Payload</th><th>Status</th></tr></thead>
+  <tbody>
+    <tr><td>Chat UI → api.py</td><td>HTTPS <code>POST /ask</code>, <code>X-API-Key</code> header, CORS for the UI origin</td><td><code>{question, strategy?, retriever?, rerank?}</code> → <code>{answer, citations[], refused, refusal_reason, timings}</code></td><td><span class="chip planned">PLANNED</span></td></tr>
+    <tr><td>api.py · app.py · ask.py → graph.py</td><td>In-process Python call <code>ask()</code></td><td>Question + config in, <code>RAGState</code> out</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>retrieve → Nebius</td><td>OpenAI-compatible embeddings via <code>langchain-nebius</code></td><td>One 4096-d vector per (sub-)query</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>retrieve → Pinecone index</td><td>Vector query, top-10, metadata filter <code>ticker</code>, namespace = strategy</td><td>Chunk text + ticker, item, heading, kind, <code>chunk_id</code></td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>retrieve → Pinecone rerank</td><td>Inference API, <code>bge-reranker-v2-m3</code>, truncate END</td><td>Fused candidates in, relevance score per chunk out</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>generate → Nebius chat</td><td>Chat completions, temperature 0, <code>chat_template_kwargs.thinking=false</code></td><td>Numbered context → cited answer or <code>NOT_FOUND</code></td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>graph.py → LangSmith</td><td>Automatic tracing from environment variables</td><td>Span per node and retrieval stage, tags for strategy / retriever / rerank</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>run_eval.py → LangSmith</td><td><code>evaluate()</code> against a versioned dataset</td><td>One experiment per config, six feedback keys</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>download.py → SEC EDGAR</td><td>HTTPS GET, SEC-required <code>User-Agent</code>, under 10 req/s</td><td>Filing index JSON, 10-K primary HTML</td><td><span class="chip built">BUILT</span></td></tr>
+    <tr><td>index.py → Nebius / Pinecone</td><td>Embeddings in batches of 64; upsert by <code>chunk_id</code></td><td>Vectors + citation metadata into 3 namespaces</td><td><span class="chip built">BUILT</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Design decisions</h2>
+<div class="notes">
+  <div class="note"><h3>Two refusal gates</h3><p>Grade refuses when nothing relevant is retrieved. Generate returns <code>NOT_FOUND</code> when retrieved text is relevant but doesn't answer, which caught the Morgan Stanley question at a 0.86 rerank score.</p></div>
+  <div class="note"><h3>Namespaces as experiments</h3><p>Each chunking strategy lives in its own namespace of one index, so every config runs against the same corpus and the comparison stays clean.</p></div>
+  <div class="note"><h3>Per-firm retrieval</h3><p>Comparison questions send each firm a focused query with a ticker filter and share a ~10-chunk budget, so a consolidated table isn't crowded out by segment tables.</p></div>
+  <div class="note"><h3>Latency budget</h3><p>Hidden reasoning disabled and clients warmed at start-up: 1.9–6.4s end to end in the demo. The remaining cost is the cross-region embedding call (eu-north1 → us-east-1).</p></div>
+</div>
+</div>
