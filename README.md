@@ -41,6 +41,22 @@ Flow (`src/graph.py`): `plan → retrieve → grade → generate | refuse`
 - **generate**: answers only from numbered context with `[n]` citations; returns `NOT_FOUND` → refuse when the context doesn't answer the question.
 - Every run is traced in LangSmith with strategy/retriever/rerank tags; per-node timings returned for latency reporting.
 
+## Day 3: evaluation
+
+```bash
+python -m src.draft_expected                  # drafts candidate answers + source chunks -> eval/expected_review.md
+python -m src.draft_expected --promote N01,N02   # after verifying each candidate against its source
+python -m src.run_eval --limit 3              # dry run (3 questions x 8 configs)
+python -m src.run_eval                        # core matrix: 8 configs; add --full for all 18
+```
+
+Each configuration is a LangSmith experiment on the same dataset, so they can be compared side by side.
+Metrics: retrieval_hit (expected company + Item retrieved), refusal_correct, faithfulness (LLM judge, claims supported by context), correctness (LLM judge vs verified expected answer), latency p50/p95, share under 5s.
+Results: `eval/results/eval_summary.md`, `eval/results/eval_rows.csv`.
+
+Core matrix: `fixed`, `section`, `table_aware` with hybrid+rerank (chunking comparison), plus `table_aware` with dense/bm25/hybrid, rerank on/off (retrieval ablation).
+Judge caveat: the same model family judges and answers; scores are indicative, and expected answers are human-verified.
+
 ## Chunking strategies
 | Strategy | How | Hypothesis |
 |---|---|---|
@@ -62,3 +78,4 @@ Record every change and its effect here; it becomes the "iterations + learnings"
 - Day 2 v2 fixes: max_tokens 1500 + retry once on empty output + strip <think> blocks + record finish_reason/token usage; answers capped at 150 words; per-stage retrieval timings (embed / pinecone / bm25 / rerank) printed and traced in LangSmith; client warm-up so timings exclude one-off setup.
 - Day 2 demo v2 (`eval/results/demo_v2.txt`): stage timings showed (a) embedding cold start 7.7-8.4s on the first two calls, then 0.3-0.9s warm; (b) generation 8-12s because the model emits hidden reasoning tokens (601 of 808 output tokens on Q1) even though the catalog lists Reasoning as "Not available"; this also explains v1's empty answer (600-token limit consumed by reasoning). Pinecone 0.07-0.33s, BM25 ~2ms, rerank 0.4-1.4s. Refusals already 1.8-2.3s end to end. "(in millions)" now stated.
 - Day 2 v3 fixes: warm-up embedding call; configurable `NEBIUS_CHAT_EXTRA_BODY` / `NEBIUS_REASONING_EFFORT` plus `src/check_reasoning.py` to find the setting that disables hidden reasoning.
+- Day 2 v4 (`eval/results/demo_v4.txt`): `src/check_reasoning.py` tested 4 disable switches; only `chat_template_kwargs: {thinking: false}` worked on Nebius DeepSeek V4.1 Flash (reasoning 74 -> 0 tokens); `enable_thinking`, `thinking.type=disabled` and `reasoning_effort=low` had no effect. Result: all 5 demo questions answered or refused correctly with 0 reasoning tokens; end-to-end 1.9-6.4s (4 of 5 under 5s) vs 6.5-14.5s in v1. Remaining latency is the cross-region embedding call (0.7-2.2s; Nebius embeddings run in eu-north1, Pinecone in us-east-1).
