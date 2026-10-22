@@ -1,0 +1,28 @@
+[
+  {"id": "F01", "category": "factual", "question": "What are the principal interest rate risks Raymond James describes in its most recent 10-K?", "tickers": ["RJF"], "item": "1A", "expected_answer": ""},
+  {"id": "F02", "category": "factual", "question": "How does Schwab describe the risk from clients moving cash out of bank sweep deposits into higher-yielding products?", "tickers": ["SCHW"], "item": "1A", "expected_answer": ""},
+  {"id": "F03", "category": "factual", "question": "What risks does LPL Financial cite related to recruiting and retaining financial advisors?", "tickers": ["LPLA"], "item": "1A", "expected_answer": ""},
+  {"id": "F04", "category": "factual", "question": "What cybersecurity risks does Stifel highlight?", "tickers": ["SF"], "item": "1A", "expected_answer": ""},
+  {"id": "F05", "category": "factual", "question": "What does Raymond James identify as the main drivers of its Private Client Group results in MD&A?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
+  {"id": "F06", "category": "factual", "question": "How does LPL describe the impact of interest rates on its client cash revenue?", "tickers": ["LPLA"], "item": "7", "expected_answer": ""},
+
+  {"id": "N01", "category": "numeric_table", "question": "What were Raymond James' total net revenues for the most recent fiscal year?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
+  {"id": "N02", "category": "numeric_table", "question": "What were Schwab's net interest revenue and asset management and administration fees for the most recent year?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
+  {"id": "N03", "category": "numeric_table", "question": "How many advisors did LPL report at year end?", "tickers": ["LPLA"], "item": "7", "expected_answer": ""},
+  {"id": "N04", "category": "numeric_table", "question": "What were Stifel's net revenues by segment (Global Wealth Management vs Institutional Group)?", "tickers": ["SF"], "item": "7", "expected_answer": ""},
+  {"id": "N05", "category": "numeric_table", "question": "What was Raymond James' pre-tax margin or income before taxes for the Capital Markets segment?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
+  {"id": "N06", "category": "numeric_table", "question": "What were Schwab's total client assets at year end?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
+
+  {"id": "C01", "category": "cross_company", "question": "Compare how Raymond James and Stifel describe competition for financial advisors.", "tickers": ["RJF", "SF"], "item": "1A", "expected_answer": ""},
+  {"id": "C02", "category": "cross_company", "question": "Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?", "tickers": ["RJF", "LPLA"], "item": "7", "expected_answer": ""},
+  {"id": "C03", "category": "cross_company", "question": "How do Schwab and LPL each describe their exposure to changes in client cash balances?", "tickers": ["SCHW", "LPLA"], "item": "7", "expected_answer": ""},
+  {"id": "C04", "category": "cross_company", "question": "What regulatory risks are common to all four firms?", "tickers": ["RJF", "SCHW", "LPLA", "SF"], "item": "1A", "expected_answer": ""},
+
+  {"id": "X01", "category": "exact_term", "question": "What does Raymond James say about the Bank Deposit Program?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
+  {"id": "X02", "category": "exact_term", "question": "What does Schwab disclose about TD Ameritrade integration?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
+
+  {"id": "U01", "category": "unanswerable", "question": "What is Raymond James' stock price target for next year?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
+  {"id": "U02", "category": "unanswerable", "question": "What were Morgan Stanley's wealth management revenues?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
+  {"id": "U03", "category": "unanswerable", "question": "Who will be Schwab's CEO in 2030?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
+  {"id": "U04", "category": "unanswerable", "question": "What is LPL's employee parking policy?", "tickers": [], "item": "", "expected_answer": "REFUSE"}
+]
