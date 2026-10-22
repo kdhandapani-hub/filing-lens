@@ -1,0 +1,20 @@
+
+Q: Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?
+   tickers=['RJF', 'LPLA'] | max_rerank=0.7711549 | refused=False | total 7.166s (retrieve 5.679s, generate 1.473s)
+   retrieve breakdown: {'embed': 3.645, 'pinecone': 0.499, 'bm25': 0.004, 'rerank': 1.515}
+   generation: finish=stop attempts=1 usage={'input_tokens': 6063, 'output_tokens': 110, 'total_tokens': 6173, 'input_token_details': {'cache_read': 0}, 'output_token_details': {'reasoning': 0}}
+
+Raymond James reported net revenues of $14,065 million for FY2025 (year ended September 30, 2025) [4]. LPL reported total revenue of $16,989,479 thousand, i.e., $16,989 million, for the year ended December 31, 2025 [7]. LPL's figure is higher, but note the differing fiscal year-ends (September 30 vs. December 31) and that LPL reports "total revenue" while RJF reports "net revenues."
+   [4] RJF-table_aware-7-0036 | RJF Item 7 | EXECUTIVE OVERVIEW > Summary results of operations
+   [7] LPLA-table_aware-7-0054 | LPLA Item 7 | Results of Operations
+   retrieved:
+     0.771 | RJF-table_aware-7-0069 | RESULTS OF OPERATIONS – CAPITAL MARKETS | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.690 | RJF-table_aware-7-0071 | RESULTS OF OPERATIONS – ASSET MANAGEMENT | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.669 | RJF-table_aware-7-0081 | RESULTS OF OPERATIONS – BANK | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.667 | RJF-table_aware-7-0036 | EXECUTIVE OVERVIEW > Summary results of operations | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — EXECUTIVE OVERVIEW'
+     0.664 | RJF-table_aware-7-0057 | RESULTS OF OPERATIONS – PRIVATE CLIENT GROUP | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.662 | LPLA-table_aware-7-0058 | Results of Operations | '[Results of Operations]\nA discussion of changes in our results of oper'
+     0.637 | LPLA-table_aware-7-0054 | Results of Operations | 'LPL Financial Holdings (LPLA) FY2025 10-K, Item 7 — Results of Operati'
+     0.630 | LPLA-table_aware-1A-0020 | Changes in U.S. federal income tax law could make some  | '[Changes in U.S. federal income tax law could make some of the product'
+     0.561 | LPLA-table_aware-7-0074 | Liquidity | '[Liquidity]\nOur liquidity needs are primarily driven by capital requir'
+     0.512 | LPLA-table_aware-7-0080 | Supplemental Guarantor Financial Information | 'LPL Financial Holdings (LPLA) FY2025 10-K, Item 7 — Supplemental Guara'

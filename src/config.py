@@ -23,7 +23,8 @@ REASONING_EFFORT = os.getenv("NEBIUS_REASONING_EFFORT", "")    # e.g. low
 CANDIDATES_K = 10           # per retriever (dense and BM25) before fusion
 RRF_K = 60                  # reciprocal-rank-fusion constant
 TOP_N = 5                   # chunks passed to the LLM for single-company / open questions
-TOP_N_PER_COMPANY = 3       # per company for comparison questions
+COMPARISON_BUDGET = int(os.getenv("COMPARISON_BUDGET", "10"))  # total chunks shared across compared companies
+MIN_PER_COMPANY, MAX_PER_COMPANY = 3, 5                         # -> 2 firms: 5 each, 4 firms: 3 each
 RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.15"))  # min rerank score to answer
 
 # --- Vector store (Pinecone serverless): one index, one namespace per chunking strategy ---

@@ -1,0 +1,14 @@
+
+Q: Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?
+   tickers=['RJF', 'LPLA'] | max_rerank=0.6607199 | refused=True (not_in_context) | total 2.487s (retrieve 1.235s, generate 1.235s)
+   retrieve breakdown: {'bm25': 0.002, 'rerank': 1.224}
+   generation: finish=stop attempts=1 usage={'input_tokens': 3653, 'output_tokens': 4, 'total_tokens': 3657, 'input_token_details': {'cache_read': 256}, 'output_token_details': {'reasoning': 0}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+   retrieved:
+     0.604 | RJF-table_aware-7-0083 | RESULTS OF OPERATIONS – OTHER | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.287 | RJF-table_aware-7-0074 | RESULTS OF OPERATIONS – ASSET MANAGEMENT > Managed prog | 'Raymond James Financial (RJF) FY2025 10-K, Item 7 — RESULTS OF OPERATI'
+     0.283 | RJF-table_aware-7-0072 | RESULTS OF OPERATIONS – CAPITAL MARKETS > Year ended Se | '[RESULTS OF OPERATIONS – CAPITAL MARKETS > Year ended September 30, 20'
+     0.661 | LPLA-table_aware-7-0058 | Results of Operations | '[Results of Operations]\nA discussion of changes in our results of oper'
+     0.627 | LPLA-table_aware-1A-0020 | Changes in U.S. federal income tax law could make some  | '[Changes in U.S. federal income tax law could make some of the product'
+     0.562 | LPLA-table_aware-7-0074 | Liquidity | '[Liquidity]\nOur liquidity needs are primarily driven by capital requir'

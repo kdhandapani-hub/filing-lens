@@ -39,8 +39,30 @@ def timed(stage: str):
 TOKEN = re.compile(r"[a-z0-9][a-z0-9.\-&%$]*")
 
 
+def _stem(t: str) -> str:
+    """Light plural folding so 'revenues' matches 'revenue', 'advisors' matches 'advisor'."""
+    if len(t) > 4 and not any(c.isdigit() for c in t):
+        if t.endswith("ies"):
+            return t[:-3] + "y"
+        if t.endswith("s") and not t.endswith(("ss", "us", "is")):
+            return t[:-1]
+    return t
+
+
+# Function words + question framing. Without these, BM25 matches "which firm reported..." against
+# any prose containing "firm"/"reported" instead of the revenue table the question is about.
+STOPWORDS = {
+    "a", "an", "the", "of", "in", "on", "for", "to", "and", "or", "its", "it", "is", "are", "was", "were",
+    "be", "been", "by", "with", "as", "at", "from", "that", "this", "these", "those", "which", "what", "who",
+    "how", "doe", "do", "did", "ha", "have", "had", "their", "they", "them", "our", "we", "us", "each",
+    "both", "all", "any", "about", "between", "than", "more", "most", "into", "over", "there", "also",
+    "describe", "say", "said", "compare", "firm", "company", "reported", "report", "disclose", "cite",
+    "highlight", "identify", "principal", "main", "recent", "latest", "common",
+}
+
+
 def tokenize(text: str) -> list[str]:
-    return TOKEN.findall(text.lower())
+    return [t for t in (_stem(t) for t in TOKEN.findall(text.lower())) if t not in STOPWORDS]
 
 
 # ---------- clients (created once) ----------
@@ -162,6 +184,19 @@ ALIASES = {
 }
 ALL_FIRMS = re.compile(r"\b(all (four|4|the) (firms|companies)|each (firm|company)|every (firm|company)|"
                        r"all of them|across (the )?(firms|companies))\b", re.I)
+
+
+def focus_query(question: str, ticker: str) -> str:
+    """Per-company sub-query for comparison questions: drop the OTHER companies' names so each
+    company's search is about its own figures (e.g. 'Raymond James ... net revenues ...')."""
+    q = question
+    for t, pats in ALIASES.items():
+        if t != ticker:
+            for p in pats:  # also drop the conjunction that joined it ("X and Y", "X or Y")
+                q = re.sub(rf"(\b(and|or|vs\.?|versus)\s+)?{p}(\s+(and|or)\b)?", " ", q, flags=re.I)
+    q = re.sub(r"\b(compare|versus|vs\.?|which (firm|company)|each of|both)\b", " ", q, flags=re.I)
+    q = re.sub(r"\s+([?.,:])", r"\1", re.sub(r"\s+", " ", q)).strip(" :,?.")
+    return q[:1].upper() + q[1:] + "?"
 
 
 def detect_tickers(question: str) -> list[str]:

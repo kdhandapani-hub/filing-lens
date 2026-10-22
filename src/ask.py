@@ -19,7 +19,7 @@ DEMO = [
 ]
 
 
-def show(q, r):
+def show(q, r, show_docs=False):
     t = r["timings"]
     print(f"\nQ: {q}")
     print(f"   tickers={r.get('tickers')} | max_rerank={r.get('max_score')} | refused={r.get('refused')}"
@@ -32,6 +32,12 @@ def show(q, r):
     print("\n" + r["answer"])
     for c in r.get("citations", []):
         print(f"   [{c['n']}] {c['chunk_id']} | {c['ticker']} Item {c['item']} | {c['heading'][:70]}")
+    if show_docs or r.get("refused"):
+        print("   retrieved:")
+        for d in r.get("docs") or []:
+            m = d.metadata
+            print(f"     {m.get('rerank_score', m.get('rrf_score', 0)):.3f} | {m['chunk_id']} | {m['heading'][:55]} | "
+                  f"{d.page_content[:70]!r}")
 
 
 def main():
@@ -42,6 +48,7 @@ def main():
     ap.add_argument("--no-rerank", action="store_true")
     ap.add_argument("--threshold", type=float)
     ap.add_argument("--demo", action="store_true")
+    ap.add_argument("--show-docs", action="store_true", help="print retrieved chunks")
     a = ap.parse_args()
     kw = dict(strategy=a.strategy, retriever=a.retriever, use_rerank=not a.no_rerank)
     if a.threshold is not None:
@@ -50,7 +57,7 @@ def main():
     _store(a.strategy); _bm25(a.strategy); _pc()  # warm up clients so timings exclude one-off setup
     embed_query("warm-up")                         # first embedding call is a cold start (~8s)
     for q in (DEMO if a.demo else [a.question]):
-        show(q, ask(q, **kw))
+        show(q, ask(q, **kw), a.show_docs)
 
 
 if __name__ == "__main__":

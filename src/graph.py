@@ -23,8 +23,9 @@ from langgraph.graph import END, StateGraph
 
 import json
 
-from src.config import CHAT_EXTRA_BODY, CHAT_MODEL, COMPANIES, REASONING_EFFORT, RELEVANCE_THRESHOLD, TOP_N, TOP_N_PER_COMPANY
-from src.retrieval import STAGE_TIMES, detect_tickers, retrieve as run_retrieval
+from src.config import (CHAT_EXTRA_BODY, CHAT_MODEL, COMPANIES, COMPARISON_BUDGET, MAX_PER_COMPANY,
+                        MIN_PER_COMPANY, REASONING_EFFORT, RELEVANCE_THRESHOLD, TOP_N)
+from src.retrieval import STAGE_TIMES, detect_tickers, focus_query, retrieve as run_retrieval
 
 REFUSAL = ("I can't answer that from the filings in this knowledge base "
            "(latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).")
@@ -36,7 +37,9 @@ Rules:
 - Cite every factual sentence with its passage number(s), e.g. [2] or [1][3].
 - Quote figures exactly as written with the period they refer to. Tables in 10-Ks are usually
   "in millions" unless stated otherwise; say "(in millions)" when the context indicates it.
-- For comparisons, cover each company separately, then summarize the difference.
+- For comparisons, cover each company separately, then summarize the difference. Only say which
+  company is higher/larger if BOTH figures are in the context and cover comparable periods; otherwise
+  give the figures you have and state which figure is missing. Note differing fiscal year-ends.
 - If the context does not contain the information needed, reply with exactly: {NOT_FOUND}
 - If it only partly answers, answer the supported part and say what is not disclosed.
 Be concise: at most 150 words. Start directly with the answer, no preamble."""
@@ -98,7 +101,9 @@ def retrieve(state: RAGState) -> RAGState:
     kw = dict(strategy=state.get("strategy", "table_aware"), retriever=state.get("retriever", "hybrid"),
               use_rerank=state.get("use_rerank", True))
     if len(tickers) >= 2:  # comparison: guarantee every named company is represented
-        docs = [d for t in tickers for d in run_retrieval(q, ticker=t, top_n=TOP_N_PER_COMPANY, **kw)]
+        per = max(MIN_PER_COMPANY, min(MAX_PER_COMPANY, COMPARISON_BUDGET // len(tickers)))
+        docs = [d for t in tickers
+                for d in run_retrieval(focus_query(q, t), ticker=t, top_n=per, **kw)]
     else:
         docs = run_retrieval(q, ticker=tickers[0] if tickers else None, top_n=TOP_N, **kw)
     scores = [d.metadata.get("rerank_score") for d in docs if d.metadata.get("rerank_score") is not None]

@@ -1,0 +1,10 @@
+
+Q: Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?
+   tickers=['RJF', 'LPLA'] | max_rerank=0.21601155 | refused=True (not_in_context) | total 2.381s (retrieve 1.301s, generate 1.066s)
+   retrieve breakdown: {'bm25': 0.004, 'rerank': 1.289}
+   generation: finish=stop attempts=1 usage={'input_tokens': 1678, 'output_tokens': 4, 'total_tokens': 1682, 'input_token_details': {'cache_read': 1536}, 'output_token_details': {'reasoning': 0}}
+
+I can't answer that from the filings in this knowledge base (latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).
+   retrieved:
+     0.216 | RJF-table_aware-1A-0028 | RISKS RELATED TO OUR REGULATORY ENVIRONMENT > Financial | '[RISKS RELATED TO OUR REGULATORY ENVIRONMENT > Financial services firm'
+     0.189 | LPLA-table_aware-7-0058 | Results of Operations | '[Results of Operations]\nA discussion of changes in our results of oper'
