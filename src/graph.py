@@ -13,8 +13,10 @@ Two refusal gates on purpose: grade catches "nothing relevant was retrieved",
 generate catches "something was retrieved but it doesn't answer this question"
 (e.g. a firm that isn't in the corpus, or a forecast the filings don't make).
 """
+import contextvars
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor
 from functools import lru_cache
 from typing import TypedDict
 
@@ -102,8 +104,12 @@ def retrieve(state: RAGState) -> RAGState:
               use_rerank=state.get("use_rerank", True))
     if len(tickers) >= 2:  # comparison: guarantee every named company is represented
         per = max(MIN_PER_COMPANY, min(MAX_PER_COMPANY, COMPARISON_BUDGET // len(tickers)))
-        docs = [d for t in tickers
-                for d in run_retrieval(focus_query(q, t), ticker=t, top_n=per, **kw)]
+        # One focused search per firm, run in parallel. Each task gets a copy of the current
+        # context so LangSmith parent spans and stage timings carry into the worker threads.
+        with ThreadPoolExecutor(max_workers=len(tickers)) as pool:
+            futures = [pool.submit(contextvars.copy_context().run, run_retrieval,
+                                   focus_query(q, t), ticker=t, top_n=per, **kw) for t in tickers]
+            docs = [d for f in futures for d in f.result()]
     else:
         docs = run_retrieval(q, ticker=tickers[0] if tickers else None, top_n=TOP_N, **kw)
     scores = [d.metadata.get("rerank_score") for d in docs if d.metadata.get("rerank_score") is not None]

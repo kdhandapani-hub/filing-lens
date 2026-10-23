@@ -15,3 +15,5 @@ lxml
 tiktoken
 rank_bm25
 streamlit
+fastapi
+uvicorn[standard]

@@ -1,28 +1,238 @@
 [
-  {"id": "F01", "category": "factual", "question": "What are the principal interest rate risks Raymond James describes in its most recent 10-K?", "tickers": ["RJF"], "item": "1A", "expected_answer": ""},
-  {"id": "F02", "category": "factual", "question": "How does Schwab describe the risk from clients moving cash out of bank sweep deposits into higher-yielding products?", "tickers": ["SCHW"], "item": "1A", "expected_answer": ""},
-  {"id": "F03", "category": "factual", "question": "What risks does LPL Financial cite related to recruiting and retaining financial advisors?", "tickers": ["LPLA"], "item": "1A", "expected_answer": ""},
-  {"id": "F04", "category": "factual", "question": "What cybersecurity risks does Stifel highlight?", "tickers": ["SF"], "item": "1A", "expected_answer": ""},
-  {"id": "F05", "category": "factual", "question": "What does Raymond James identify as the main drivers of its Private Client Group results in MD&A?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
-  {"id": "F06", "category": "factual", "question": "How does LPL describe the impact of interest rates on its client cash revenue?", "tickers": ["LPLA"], "item": "7", "expected_answer": ""},
-
-  {"id": "N01", "category": "numeric_table", "question": "What were Raymond James' total net revenues for the most recent fiscal year?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
-  {"id": "N02", "category": "numeric_table", "question": "What were Schwab's net interest revenue and asset management and administration fees for the most recent year?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
-  {"id": "N03", "category": "numeric_table", "question": "How many advisors did LPL report at year end?", "tickers": ["LPLA"], "item": "7", "expected_answer": ""},
-  {"id": "N04", "category": "numeric_table", "question": "What were Stifel's net revenues by segment (Global Wealth Management vs Institutional Group)?", "tickers": ["SF"], "item": "7", "expected_answer": ""},
-  {"id": "N05", "category": "numeric_table", "question": "What was Raymond James' pre-tax margin or income before taxes for the Capital Markets segment?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
-  {"id": "N06", "category": "numeric_table", "question": "What were Schwab's total client assets at year end?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
-
-  {"id": "C01", "category": "cross_company", "question": "Compare how Raymond James and Stifel describe competition for financial advisors.", "tickers": ["RJF", "SF"], "item": "1A", "expected_answer": ""},
-  {"id": "C02", "category": "cross_company", "question": "Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?", "tickers": ["RJF", "LPLA"], "item": "7", "expected_answer": ""},
-  {"id": "C03", "category": "cross_company", "question": "How do Schwab and LPL each describe their exposure to changes in client cash balances?", "tickers": ["SCHW", "LPLA"], "item": "7", "expected_answer": ""},
-  {"id": "C04", "category": "cross_company", "question": "What regulatory risks are common to all four firms?", "tickers": ["RJF", "SCHW", "LPLA", "SF"], "item": "1A", "expected_answer": ""},
-
-  {"id": "X01", "category": "exact_term", "question": "What does Raymond James say about the Bank Deposit Program?", "tickers": ["RJF"], "item": "7", "expected_answer": ""},
-  {"id": "X02", "category": "exact_term", "question": "What does Schwab disclose about TD Ameritrade integration?", "tickers": ["SCHW"], "item": "7", "expected_answer": ""},
-
-  {"id": "U01", "category": "unanswerable", "question": "What is Raymond James' stock price target for next year?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
-  {"id": "U02", "category": "unanswerable", "question": "What were Morgan Stanley's wealth management revenues?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
-  {"id": "U03", "category": "unanswerable", "question": "Who will be Schwab's CEO in 2030?", "tickers": [], "item": "", "expected_answer": "REFUSE"},
-  {"id": "U04", "category": "unanswerable", "question": "What is LPL's employee parking policy?", "tickers": [], "item": "", "expected_answer": "REFUSE"}
+  {
+    "id": "F01",
+    "category": "factual",
+    "question": "What are the principal interest rate risks Raymond James describes in its most recent 10-K?",
+    "tickers": [
+      "RJF"
+    ],
+    "item": "1A",
+    "expected_answer": "Raymond James says it is exposed to market risk, including interest rate risk: (1) rate increases can reduce the value of its available-for-sale securities and fixed income trading inventory; (2) rate changes affect its net interest spread and net interest income, because asset yields and funding costs, including deposit rates paid on client cash balances, reprice differently; (3) decreases in short-term rates generally reduce net earnings and RJBDP fees earned from third-party banks; (4) its Bank segment interest-earning assets, funded mainly by client deposits, carry interest rate risk, which the Asset and Liability Committee manages using net interest income sensitivity scenarios, economic value of equity, and interest rate swaps.",
+    "candidate_answer": "Raymond James says it is exposed to market risk, including interest rate risk: (1) rate increases can reduce the value of its available-for-sale securities and fixed income trading inventory; (2) rate changes affect its net interest spread and net interest income, because asset yields and funding costs, including deposit rates paid on client cash balances, reprice differently; (3) decreases in short-term rates generally reduce net earnings and RJBDP fees earned from third-party banks; (4) its Bank segment interest-earning assets, funded mainly by client deposits, carry interest rate risk, which the Asset and Liability Committee manages using net interest income sensitivity scenarios, economic value of equity, and interest rate swaps."
+  },
+  {
+    "id": "F02",
+    "category": "factual",
+    "question": "How does Schwab describe the risk from clients moving cash out of bank sweep deposits into higher-yielding products?",
+    "tickers": [
+      "SCHW"
+    ],
+    "item": "1A",
+    "expected_answer": "Schwab says clients' allocation of cash held on its balance sheet is sensitive to interest rate levels: when yields are higher, clients increase use of investment cash solutions such as purchased money market funds and certain fixed income products. A significant reduction in clients' allocation to cash, a change in that allocation, or a transfer of cash away from Schwab would likely reduce its income. After rapid short-term rate increases in 2022 and 2023, clients' allocation to sweep cash fell significantly, and Schwab relied extensively on higher-cost funding sources, which negatively impacted net income.",
+    "candidate_answer": "Schwab says clients' allocation of cash held on its balance sheet is sensitive to interest rate levels: when yields are higher, clients increase use of investment cash solutions such as purchased money market funds and certain fixed income products. A significant reduction in clients' allocation to cash, a change in that allocation, or a transfer of cash away from Schwab would likely reduce its income. After rapid short-term rate increases in 2022 and 2023, clients' allocation to sweep cash fell significantly, and Schwab relied extensively on higher-cost funding sources, which negatively impacted net income."
+  },
+  {
+    "id": "F03",
+    "category": "factual",
+    "question": "What risks does LPL Financial cite related to recruiting and retaining financial advisors?",
+    "tickers": [
+      "LPLA"
+    ],
+    "item": "1A",
+    "expected_answer": "LPL says it depends on attracting and retaining experienced, productive advisors: a large portion of its revenue comes from advisor commissions and fees, and its strategy assumes continued growth in advisors. If it fails to attract new advisors, retain and motivate current advisors, replace advisors who retire, or help retiring advisors transition their practices to other advisors on its platform, or if advisor migration from wirehouses to independent channels slows, its business may suffer. Advisors or institutions that join through acquisitions or strategic relationships may later leave, taking their assets off the platform.",
+    "candidate_answer": "LPL says it depends on attracting and retaining experienced, productive advisors: a large portion of its revenue comes from advisor commissions and fees, and its strategy assumes continued growth in advisors. If it fails to attract new advisors, retain and motivate current advisors, replace advisors who retire, or help retiring advisors transition their practices to other advisors on its platform, or if advisor migration from wirehouses to independent channels slows, its business may suffer. Advisors or institutions that join through acquisitions or strategic relationships may later leave, taking their assets off the platform."
+  },
+  {
+    "id": "F04",
+    "category": "factual",
+    "question": "What cybersecurity risks does Stifel highlight?",
+    "tickers": [
+      "SF"
+    ],
+    "item": "1A",
+    "expected_answer": "Stifel highlights: increased cybersecurity risk after acquisitions while it transitions acquired systems and networks; risks from mobile and cloud technologies and reliance on external service providers, including data breaches, unauthorized access and compromised APIs; cloud risks from misconfiguration, weak identity and access controls, vulnerable cloud workloads, and provider failures or outages; data leakage, malicious applications, phishing and network-level threats from mobile and web-facing technologies; and third-party risks including operational disruptions, security weaknesses and delayed incident notification.",
+    "candidate_answer": "Stifel highlights: increased cybersecurity risk after acquisitions while it transitions acquired systems and networks; risks from mobile and cloud technologies and reliance on external service providers, including data breaches, unauthorized access and compromised APIs; cloud risks from misconfiguration, weak identity and access controls, vulnerable cloud workloads, and provider failures or outages; data leakage, malicious applications, phishing and network-level threats from mobile and web-facing technologies; and third-party risks including operational disruptions, security weaknesses and delayed incident notification."
+  },
+  {
+    "id": "F05",
+    "category": "factual",
+    "question": "What does Raymond James identify as the main drivers of its Private Client Group results in MD&A?",
+    "tickers": [
+      "RJF"
+    ],
+    "item": "7",
+    "expected_answer": "Private Client Group net revenues rose 8% to $10,182 million in fiscal 2025 (from $9,459 million), driven mainly by asset management and related administrative fees, up 14% to $5,980 million, and brokerage revenues, up 6% to $1,737 million, partly offset by lower RJBDP fees (Bank segment down 8% to $754 million; third-party banks down 20% to $486 million). Pre-tax income fell 4% to $1,720 million as total compensation, commissions and benefits rose 10% to $7,384 million. Domestic PCG net new assets were $52,431 million (3.8% growth) versus $60,709 million (5.5%) in fiscal 2024.",
+    "candidate_answer": "Private Client Group net revenues rose 8% to $10,182 million in fiscal 2025 (from $9,459 million), driven mainly by asset management and related administrative fees, up 14% to $5,980 million, and brokerage revenues, up 6% to $1,737 million, partly offset by lower RJBDP fees (Bank segment down 8% to $754 million; third-party banks down 20% to $486 million). Pre-tax income fell 4% to $1,720 million as total compensation, commissions and benefits rose 10% to $7,384 million. Domestic PCG net new assets were $52,431 million (3.8% growth) versus $60,709 million (5.5%) in fiscal 2024."
+  },
+  {
+    "id": "F06",
+    "category": "factual",
+    "question": "How does LPL describe the impact of interest rates on its client cash revenue?",
+    "tickers": [
+      "LPLA"
+    ],
+    "item": "7",
+    "expected_answer": "LPL says revenue is exposed to interest rate risk mainly through bank fees in its client cash programs and interest income on deposits and short-term U.S. treasury bills, which are generally based on prevailing rates [1]. Client cash program revenue has declined in the past in low-rate environments and may decline due to rate decreases, lower client cash balances, or mix shifts among sweep vehicles, client cash accounts, or money market accounts [1]. The Federal Reserve raised rates in 2022 and 2023 but reduced them in 2024 and 2025, with further reductions possible; continued reductions would impact revenue [1]. Revenue also depends on placing deposits and negotiating favorable terms with third-party banks and money market fund providers [1].",
+    "candidate_answer": "LPL says revenue is exposed to interest rate risk mainly through bank fees in its client cash programs and interest income on deposits and short-term U.S. treasury bills, which are generally based on prevailing rates [1]. Client cash program revenue has declined in the past in low-rate environments and may decline due to rate decreases, lower client cash balances, or mix shifts among sweep vehicles, client cash accounts, or money market accounts [1]. The Federal Reserve raised rates in 2022 and 2023 but reduced them in 2024 and 2025, with further reductions possible; continued reductions would impact revenue [1]. Revenue also depends on placing deposits and negotiating favorable terms with third-party banks and money market fund providers [1]."
+  },
+  {
+    "id": "N01",
+    "category": "numeric_table",
+    "question": "What were Raymond James' total net revenues for the most recent fiscal year?",
+    "tickers": [
+      "RJF"
+    ],
+    "item": "7",
+    "expected_answer": "Raymond James' total net revenues were $14,065 million for FY2025 (year ended September 30, 2025), up 10% from $12,821 million in FY2024 [2].",
+    "candidate_answer": "Raymond James' total net revenues were $14,065 million for FY2025 (year ended September 30, 2025), up 10% from $12,821 million in FY2024 [2]."
+  },
+  {
+    "id": "N02",
+    "category": "numeric_table",
+    "question": "What were Schwab's net interest revenue and asset management and administration fees for the most recent year?",
+    "tickers": [
+      "SCHW"
+    ],
+    "item": "7",
+    "expected_answer": "Schwab's 2025 net interest revenue was $11,750 million, up 28% from $9,144 million in 2024. Asset management and administration fees were $6,506 million, up 14% from $5,716 million.",
+    "candidate_answer": "Schwab's 2025 net interest revenue was $11,750 million, up 28% from $9,144 million in 2024. Asset management and administration fees were $6,506 million, up 14% from $5,716 million."
+  },
+  {
+    "id": "N03",
+    "category": "numeric_table",
+    "question": "How many advisors did LPL report at year end?",
+    "tickers": [
+      "LPLA"
+    ],
+    "item": "7",
+    "expected_answer": "LPL reported 32,178 advisors as of December 31, 2025, and 28,888 as of December 31, 2024 [1].",
+    "candidate_answer": "LPL reported 32,178 advisors as of December 31, 2025, and 28,888 as of December 31, 2024 [1]."
+  },
+  {
+    "id": "N04",
+    "category": "numeric_table",
+    "question": "What were Stifel's net revenues by segment (Global Wealth Management vs Institutional Group)?",
+    "tickers": [
+      "SF"
+    ],
+    "item": "7",
+    "expected_answer": "Global Wealth Management net revenues were $3,536.8 million in 2025, up 7.7% from $3,284.0 million in 2024. Institutional Group net revenues were $1,914.8 million in 2025, up 20.2% from $1,592.8 million in 2024. (Stifel reports these tables in thousands.)",
+    "candidate_answer": "Global Wealth Management net revenues were $3,536.8 million in 2025, up 7.7% from $3,284.0 million in 2024. Institutional Group net revenues were $1,914.8 million in 2025, up 20.2% from $1,592.8 million in 2024. (Stifel reports these tables in thousands.)"
+  },
+  {
+    "id": "N05",
+    "category": "numeric_table",
+    "question": "What was Raymond James' pre-tax margin or income before taxes for the Capital Markets segment?",
+    "tickers": [
+      "RJF"
+    ],
+    "item": "7",
+    "expected_answer": "Capital Markets pre-tax income was $146 million in fiscal 2025, versus $67 million in fiscal 2024 and a pre-tax loss of $91 million in fiscal 2023, on net revenues of $1,770 million. A segment pre-tax margin is not reported; the firmwide pre-tax margin was 19.3%.",
+    "candidate_answer": "Capital Markets pre-tax income was $146 million in fiscal 2025, versus $67 million in fiscal 2024 and a pre-tax loss of $91 million in fiscal 2023, on net revenues of $1,770 million. A segment pre-tax margin is not reported; the firmwide pre-tax margin was 19.3%."
+  },
+  {
+    "id": "N06",
+    "category": "numeric_table",
+    "question": "What were Schwab's total client assets at year end?",
+    "tickers": [
+      "SCHW"
+    ],
+    "item": "7",
+    "expected_answer": "Schwab's total client assets were $11,903.0 billion ($11.90 trillion) at December 31, 2025, up 18% from $10,101.3 billion at year-end 2024 [1][2].",
+    "candidate_answer": "Schwab's total client assets were $11,903.0 billion ($11.90 trillion) at December 31, 2025, up 18% from $10,101.3 billion at year-end 2024 [1][2]."
+  },
+  {
+    "id": "C01",
+    "category": "cross_company",
+    "question": "Compare how Raymond James and Stifel describe competition for financial advisors.",
+    "tickers": [
+      "RJF",
+      "SF"
+    ],
+    "item": "1A",
+    "expected_answer": "Both describe intense competition for advisor talent. Raymond James says the labor market remains competitive, with competition for talent across all aspects of its business and from non-traditional firms such as technology companies, as firms increase compensation and enhance benefits to attract talent. Stifel says its Global Wealth Management segment depends on attracting, retaining and motivating financial advisors and faces competition for qualified associates from major financial services companies, including other brokerage firms, insurance companies, banking institutions and discount brokerage firms; it also cites competition from fintechs and other non-traditional competitors.",
+    "candidate_answer": "Both describe intense competition for advisor talent. Raymond James says the labor market remains competitive, with competition for talent across all aspects of its business and from non-traditional firms such as technology companies, as firms increase compensation and enhance benefits to attract talent. Stifel says its Global Wealth Management segment depends on attracting, retaining and motivating financial advisors and faces competition for qualified associates from major financial services companies, including other brokerage firms, insurance companies, banking institutions and discount brokerage firms; it also cites competition from fintechs and other non-traditional competitors."
+  },
+  {
+    "id": "C02",
+    "category": "cross_company",
+    "question": "Which firm reported higher net revenues in its most recent fiscal year: Raymond James or LPL?",
+    "tickers": [
+      "RJF",
+      "LPLA"
+    ],
+    "item": "7",
+    "expected_answer": "Raymond James reported net revenues of $14,065 million for FY2025 (year ended September 30, 2025) [4]. LPL reported total revenue of $16,989,479 thousand, i.e., $16,989 million, for the year ended December 31, 2025 [7]. LPL's figure is higher, but note the differing fiscal year-ends (September 30 vs. December 31) and that LPL reports \"total revenue\" rather than \"net revenues.\"",
+    "candidate_answer": "Raymond James reported net revenues of $14,065 million for FY2025 (year ended September 30, 2025) [4]. LPL reported total revenue of $16,989,479 thousand, i.e., $16,989 million, for the year ended December 31, 2025 [7]. LPL's figure is higher, but note the differing fiscal year-ends (September 30 vs. December 31) and that LPL reports \"total revenue\" rather than \"net revenues.\""
+  },
+  {
+    "id": "C03",
+    "category": "cross_company",
+    "question": "How do Schwab and LPL each describe their exposure to changes in client cash balances?",
+    "tickers": [
+      "SCHW",
+      "LPLA"
+    ],
+    "item": "7",
+    "expected_answer": "Schwab: client cash balances are a significant funding source; a significant reduction in clients' cash allocation, a change in allocation, or a transfer of cash away would likely reduce income, and in 2022–2023 sweep cash fell as clients moved to higher-yielding alternatives, requiring higher-cost funding that hurt net income [2]. Rapid rate increases drive cash out of sweep features, potentially requiring higher-cost funding [4]. Schwab's net interest revenue simulations model client cash allocation changes [3].\n\nLPL: revenue is exposed to interest rate risk mainly through bank client cash program fees and interest on third-party bank deposits and T-bills [7]. Client cash program revenue has declined in low-rate periods and may decline from lower rates, lower client cash balances, or mix shifts among sweep vehicles, client cash accounts, or money market accounts [7].\n\nBoth cite client cash as revenue-critical; Schwab frames it as funding, LPL as fee/interest revenue.",
+    "candidate_answer": "Schwab: client cash balances are a significant funding source; a significant reduction in clients' cash allocation, a change in allocation, or a transfer of cash away would likely reduce income, and in 2022–2023 sweep cash fell as clients moved to higher-yielding alternatives, requiring higher-cost funding that hurt net income [2]. Rapid rate increases drive cash out of sweep features, potentially requiring higher-cost funding [4]. Schwab's net interest revenue simulations model client cash allocation changes [3].\n\nLPL: revenue is exposed to interest rate risk mainly through bank client cash program fees and interest on third-party bank deposits and T-bills [7]. Client cash program revenue has declined in low-rate periods and may decline from lower rates, lower client cash balances, or mix shifts among sweep vehicles, client cash accounts, or money market accounts [7].\n\nBoth cite client cash as revenue-critical; Schwab frames it as funding, LPL as fee/interest revenue."
+  },
+  {
+    "id": "C04",
+    "category": "cross_company",
+    "question": "What regulatory risks are common to all four firms?",
+    "tickers": [
+      "RJF",
+      "SCHW",
+      "LPLA",
+      "SF"
+    ],
+    "item": "1A",
+    "expected_answer": "Common to all four: extensive regulation and supervision by federal and state authorities and SROs such as the SEC and FINRA; exposure to regulatory actions that can bring fines, penalties, sanctions and restrictions; and the resulting financial and reputational harm. Raymond James and Stifel use nearly identical language: an evolving regulatory environment, scrutiny from the SEC, Fed, FDIC, OCC, DOL, CFPB, FINRA and state attorneys general, legal challenges to rules that create compliance uncertainty and cost, substantial and growing penalties, and overlapping state regulation. LPL emphasizes litigation, arbitration claims and regulatory proceedings by the SEC, FINRA, DOL and state regulators. Schwab describes compliance risk: legal or regulatory sanctions, fines, penalties, financial loss or reputational damage from failing to comply with laws and rules, under extensive federal, state, foreign and SRO regulation.",
+    "candidate_answer": "Common to all four: extensive regulation and supervision by federal and state authorities and SROs such as the SEC and FINRA; exposure to regulatory actions that can bring fines, penalties, sanctions and restrictions; and the resulting financial and reputational harm. Raymond James and Stifel use nearly identical language: an evolving regulatory environment, scrutiny from the SEC, Fed, FDIC, OCC, DOL, CFPB, FINRA and state attorneys general, legal challenges to rules that create compliance uncertainty and cost, substantial and growing penalties, and overlapping state regulation. LPL emphasizes litigation, arbitration claims and regulatory proceedings by the SEC, FINRA, DOL and state regulators. Schwab describes compliance risk: legal or regulatory sanctions, fines, penalties, financial loss or reputational damage from failing to comply with laws and rules, under extensive federal, state, foreign and SRO regulation."
+  },
+  {
+    "id": "X01",
+    "category": "exact_term",
+    "question": "What does Raymond James say about the Bank Deposit Program?",
+    "tickers": [
+      "RJF"
+    ],
+    "item": "7",
+    "expected_answer": "Raymond James says decreases in short-term interest rates generally decrease RJBDP fees earned from third-party banks, though the magnitude may also depend on third-party banks' demand for cash balances and the rate paid to clients on cash sweep balances [1]. Rates paid to clients are generally impacted by short-term interest rate levels, competitive industry dynamics, and client cash demand [1]. Future regulatory rule or interpretation changes governing cash sweep fees could also impact client rates [1]. New deposit products (e.g., ESP, introduced fiscal 2023, with FDIC coverage up to $50 million for certain accounts) and RJBDP initiatives offer enhanced rates but carry higher relative cost, reducing net interest margin and RJBDP balance yields [1].",
+    "candidate_answer": "Raymond James says decreases in short-term interest rates generally decrease RJBDP fees earned from third-party banks, though the magnitude may also depend on third-party banks' demand for cash balances and the rate paid to clients on cash sweep balances [1]. Rates paid to clients are generally impacted by short-term interest rate levels, competitive industry dynamics, and client cash demand [1]. Future regulatory rule or interpretation changes governing cash sweep fees could also impact client rates [1]. New deposit products (e.g., ESP, introduced fiscal 2023, with FDIC coverage up to $50 million for certain accounts) and RJBDP initiatives offer enhanced rates but carry higher relative cost, reducing net interest margin and RJBDP balance yields [1]."
+  },
+  {
+    "id": "X02",
+    "category": "exact_term",
+    "question": "What does Schwab disclose about TD Ameritrade integration?",
+    "tickers": [
+      "SCHW"
+    ],
+    "item": "7",
+    "expected_answer": "Schwab completed the Ameritrade integration as of December 31, 2024. Across five client transition groups in 2023 and 2024 it converted about $1.9 trillion in client assets in more than 17 million accounts, including 7,000 RIAs; attrition was below initial estimates. Total acquisition and integration-related costs and capital expenditures were about $2.5 billion, with acquisition and integration-related costs of $117 million in 2024 and $401 million in 2023. It realized annualized run-rate cost synergies of about $2.0 billion, plus about $500 million of incremental run-rate savings from streamlining actions.",
+    "candidate_answer": "Schwab completed the Ameritrade integration as of December 31, 2024. Across five client transition groups in 2023 and 2024 it converted about $1.9 trillion in client assets in more than 17 million accounts, including 7,000 RIAs; attrition was below initial estimates. Total acquisition and integration-related costs and capital expenditures were about $2.5 billion, with acquisition and integration-related costs of $117 million in 2024 and $401 million in 2023. It realized annualized run-rate cost synergies of about $2.0 billion, plus about $500 million of incremental run-rate savings from streamlining actions."
+  },
+  {
+    "id": "U01",
+    "category": "unanswerable",
+    "question": "What is Raymond James' stock price target for next year?",
+    "tickers": [],
+    "item": "",
+    "expected_answer": "REFUSE"
+  },
+  {
+    "id": "U02",
+    "category": "unanswerable",
+    "question": "What were Morgan Stanley's wealth management revenues?",
+    "tickers": [],
+    "item": "",
+    "expected_answer": "REFUSE"
+  },
+  {
+    "id": "U03",
+    "category": "unanswerable",
+    "question": "Who will be Schwab's CEO in 2030?",
+    "tickers": [],
+    "item": "",
+    "expected_answer": "REFUSE"
+  },
+  {
+    "id": "U04",
+    "category": "unanswerable",
+    "question": "What is LPL's employee parking policy?",
+    "tickers": [],
+    "item": "",
+    "expected_answer": "REFUSE"
+  }
 ]

@@ -234,6 +234,7 @@ def main():
     ap.add_argument("--full", action="store_true")
     ap.add_argument("--limit", type=int, help="only the first N questions (dry run)")
     ap.add_argument("--concurrency", type=int, default=4)
+    ap.add_argument("--only", help='run one config, e.g. "fixed/hybrid+rr" (re-measure latency in isolation)')
     a = ap.parse_args()
 
     client = Client()
@@ -254,6 +255,10 @@ def main():
     _pc(); embed_query("warm-up")
 
     configs = FULL if a.full else CORE
+    if a.only:
+        configs = [c for c in FULL if label(c) == a.only]
+        if not configs:
+            raise SystemExit(f"Unknown config {a.only!r}. Options: {[label(c) for c in FULL]}")
     OUT.mkdir(parents=True, exist_ok=True)
     rows = []
     for cfg in configs:
@@ -277,7 +282,7 @@ def main():
         done = [x for x in rows if x["config"] == label(cfg)]
         print("   " + " | ".join(f"{m}={_mean([x[m] for x in done])}" for m in METRICS))
 
-    suffix = "_dryrun" if a.limit else ""
+    suffix = "_dryrun" if a.limit else (f"_{a.only.replace('/', '_').replace('+', '_')}" if a.only else "")
     with open(OUT / f"eval_rows{suffix}.csv", "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0]))
         w.writeheader()

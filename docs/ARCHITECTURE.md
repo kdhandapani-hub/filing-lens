@@ -4,7 +4,7 @@ Hybrid RAG over the latest 10-K filings of Raymond James (RJF), Charles Schwab (
 
 ![Filing Lens architecture](filing-lens-architecture.png)
 
-**Status:** everything is built except the FastAPI service and the Replit chat UI, which are marked *planned*.
+**Status:** the pipeline, evaluation and FastAPI service are built. The Replit chat UI and hosted deployment are *planned* (Friday).
 
 ---
 
@@ -28,7 +28,7 @@ flowchart TB
 
   subgraph QUERY["② Query"]
     direction LR
-    UI["Chat UI · Replit<br/>(planned)"] -->|"POST /ask"| API["api.py · FastAPI<br/>(planned)"] --> PLAN
+    UI["Chat UI · Replit<br/>(planned)"] -->|"POST /api/ask"| API["api.py · FastAPI"] --> PLAN
     LOCAL["app.py · ask.py"] --> PLAN
     PLAN["plan"] --> RET["retrieve<br/>dense + BM25 → RRF → rerank"] --> GRADE{"grade<br/>≥ 0.15"}
     GRADE -->|relevant| GEN["generate<br/>cited answer"]
@@ -75,10 +75,10 @@ sequenceDiagram
   participant L as LangSmith
 
   A->>UI: types question
-  UI->>API: POST /ask {question} + X-API-Key
+  UI->>API: POST /api/ask {question} + X-Access-Code
   API->>G: ask(question)
   G->>G: plan: detect RJF, LPLA, build one focused query per firm
-  loop per firm (~5 chunks each)
+  par per firm, in parallel (~5 chunks each)
     G->>N: embed focused query
     G->>P: vector top-10 (filter ticker)
     G->>G: BM25 top-10, fuse with RRF
@@ -108,13 +108,13 @@ sequenceDiagram
 | `run_eval.py` | Evaluation matrix | One LangSmith experiment per config; retrieval hit, refusal correctness, faithfulness, correctness, latency |
 | `draft_expected.py` | Ground-truth helper | System drafts an answer with its source chunks; a human verifies before promoting it to `expected_answer` |
 | `app.py` | Local chat UI | Streamlit; live config switches, cited excerpts, refusal reason, latency |
-| `api.py` *(planned)* | HTTP interface | FastAPI `POST /ask`, API key, CORS; deployed on Replit |
+| `api.py` | HTTP interface | FastAPI `POST /api/ask`, `/api/health`, `/api/options`; user-entered access code (`X-Access-Code`), per-IP rate limit, warm-up on start; serves the built UI from the same origin |
 
 ## Interfaces
 
 | From → To | Interface | Payload | Status |
 |---|---|---|---|
-| Chat UI → `api.py` | HTTPS `POST /ask`, `X-API-Key`, CORS | `{question, strategy?, retriever?, rerank?}` → `{answer, citations[], refused, refusal_reason, timings}` | Planned |
+| Chat UI → `api.py` | HTTPS `POST /api/ask`, same origin, `X-Access-Code` header typed by the user | `{question, strategy?, retriever?, rerank?}` → `{answer, citations[] (with excerpt), refused, refusal_reason, companies, top_score, timings, config}` | API built · UI planned |
 | `api.py` / `app.py` / `ask.py` → `graph.py` | In-process `ask()` | Question + config in, `RAGState` out | Built |
 | retrieve → Nebius | OpenAI-compatible embeddings (`langchain-nebius`) | One 4096-d vector per (sub-)query | Built |
 | retrieve → Pinecone index | Vector query, top-10, `ticker` filter, namespace = strategy | Chunk text + `ticker`, `item`, `heading`, `kind`, `chunk_id` | Built |
@@ -130,7 +130,7 @@ sequenceDiagram
 | Piece | Where | Secrets |
 |---|---|---|
 | Source, chunk files, eval results | GitHub | none (`.env` is git-ignored) |
-| `api.py` + chat UI *(planned)* | Replit app, imported from GitHub; Replit Deployment | Replit Secrets: Nebius, Pinecone, LangSmith keys, API key |
+| `api.py` + chat UI | Replit app imported from GitHub, Autoscale deployment ([setup](REPLIT_SETUP.md)) | Replit Secrets: Nebius, Pinecone, LangSmith keys, `APP_ACCESS_CODE` |
 | Vectors, rerank | Pinecone serverless, AWS us-east-1 | `PINECONE_API_KEY` |
 | Embeddings, generation, eval judge | Nebius Token Factory (embeddings served from eu-north1) | `NEBIUS_API_KEY` |
 | Traces, dataset, experiments | LangSmith | `LANGSMITH_API_KEY` |
@@ -146,5 +146,46 @@ sequenceDiagram
 **Hybrid over keyword-only.** BM25 alone failed the RJF vs LPL revenue question: numeric tables share few words with the question. Dense retrieval recovers them; BM25 still helps on exact terms such as program names.
 
 **Latency.** The chat model emitted hidden reasoning tokens even though the catalog lists none; disabling it (`chat_template_kwargs.thinking=false`) and warming clients at start-up brought demo questions to 1.9–6.4s end to end. The largest remaining cost is the cross-region embedding call (Nebius eu-north1, Pinecone us-east-1).
+
+---
+
+## Roadmap
+
+### Freshness and new firms
+
+Today the corpus is the latest 10-K for four firms, refreshed by rerunning the build pipeline. Making ingestion an admin capability needs:
+
+| Change | Why |
+|---|---|
+| Company registry as data | `COMPANIES` and name aliases are in code; new firms need a ticker → CIK lookup (SEC `company_tickers.json`) and stored aliases |
+| 10-Q support | Quarterly reports use different sections (MD&A is Part I Item 2; risk-factor updates are Part II Item 1A) |
+| Filing version metadata | `form` and `period` on every chunk; default to the latest filing, allow period comparisons |
+| Per-firm re-index | Delete one firm's vectors by metadata filter, upsert the new filing |
+| Durable keyword index | Move BM25 from local pickles to Pinecone sparse vectors or object storage, so hosted deployments don't lose it |
+| Background jobs + admin auth | Embedding a filing takes minutes and spends credits: run as a job with status, behind a separate admin credential and a spend cap |
+
+Target refresh: within one business day of a new 10-K or 10-Q on EDGAR.
+
+### Agentic layer (Week 3: MCP + Deep Agents)
+
+```mermaid
+flowchart LR
+  UI["Chat UI"] --> API["api.py"] --> ROUTER{"router"}
+  ROUTER -->|"single question"| RAG["RAG graph<br/>(fast path, 2–6s)"]
+  ROUTER -->|"multi-step / admin"| AGENT["Deep Agent<br/>plan · tools · reflect"]
+  AGENT --> MCP["filing-lens MCP server"]
+  MCP --> T1["ask_filings"]
+  MCP --> T2["search_chunks"]
+  MCP --> T3["list_firms"]
+  MCP --> T4["ingest_filing<br/>(human approval)"]
+  AGENT --> WEB["Web search<br/>(labeled external)"]
+  T1 --> RAG
+```
+
+- **Same core, two adapters.** The RAG graph stays the domain service; HTTP serves the UI and an MCP server exposes it as tools to agents and any MCP client.
+- **Fast path stays.** A router sends single questions straight to the graph; only multi-step research ("compare all four firms' rate sensitivity and draft a summary") and admin actions go through the agent, which costs several model calls per request.
+- **Grounding rule.** Filing answers cite chunks. Web results are labeled as external and kept separate, so "not in the filings" refusals keep their meaning.
+- **Approval for side effects.** `ingest_filing` changes the index and spends credits, so it pauses for human confirmation.
+- **Unchanged contract.** The UI keeps calling `POST /api/ask`; the agent sits behind it.
 
 See the [iteration log in the README](../README.md#iteration-log) for how each of these was found.

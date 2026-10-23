@@ -1,0 +1,11 @@
+modules = ["python-3.12", "nodejs-20"]
+run = "bash build.sh && bash start.sh"
+
+[deployment]
+deploymentTarget = "autoscale"
+build = ["bash", "build.sh"]
+run = ["bash", "start.sh"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80

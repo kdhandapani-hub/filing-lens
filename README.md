@@ -58,19 +58,27 @@ python -m src.run_eval                        # core matrix: 8 configs; add --fu
 
 Each configuration is a LangSmith experiment on the same dataset, so they can be compared side by side.
 Metrics: retrieval_hit (expected company + Item retrieved), refusal_correct, faithfulness (LLM judge, claims supported by context), correctness (LLM judge vs verified expected answer), latency p50/p95, share under 5s.
-Results: `eval/results/eval_summary.md`, `eval/results/eval_rows.csv`.
+Results: `eval/results/eval_summary.md`, `eval/results/eval_rows.csv`. Analysis and findings: **[docs/EVALUATION.md](docs/EVALUATION.md)**.
 
 Core matrix: `fixed`, `section`, `table_aware` with hybrid+rerank (chunking comparison), plus `table_aware` with dense/bm25/hybrid, rerank on/off (retrieval ablation).
 Judge: an OpenAI model (`JUDGE_MODEL`, default `gpt-4.1-mini`) grades faithfulness and correctness, so answers from DeepSeek are not graded by the same model family. Expected answers are human-verified.
 
-## Chat UI (bonus)
+## API + hosted UI
+
+```bash
+uvicorn api:app --reload --port 8000     # docs at http://localhost:8000/docs
+```
+`POST /api/ask` returns the answer, citations with source excerpts, refusal reason, timings and config. Set `APP_ACCESS_CODE` to require an access code (sent as `X-Access-Code`); a per-IP rate limit caps spend.
+Hosting: one Replit app serves the API and the vibe-coded front end. Setup: [docs/REPLIT_SETUP.md](docs/REPLIT_SETUP.md). Agent prompt: [docs/REPLIT_AGENT_PROMPT.md](docs/REPLIT_AGENT_PROMPT.md).
+
+## Local chat UI (Streamlit)
 
 ```bash
 streamlit run app.py
 ```
 Sidebar switches chunking strategy, retriever and rerank live; each answer shows cited source excerpts, refusal reason, and latency. Set `APP_PASSWORD` to require an access code.
 
-Local demo and fallback. The hosted bonus UI is a vibe-coded chat front end on Replit calling a FastAPI `POST /ask` service (planned; see [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md#deployment)).
+Local demo and fallback for the hosted UI.
 
 ## Chunking strategies
 | Strategy | How | Hypothesis |
@@ -100,3 +108,7 @@ Record every change and its effect here; it becomes the "iterations + learnings"
 - C02 after fixes: BM25-only still misses the consolidated revenue tables (numbers-heavy, few matching words) but rerank scores rose 0.21 -> 0.66 and it now lands in Results of Operations; hybrid answers it (`eval/results/c02_hybrid_v2.txt`) -> ablation finding: keyword search alone fails table lookups, dense recovers them. New issue: the answer named LPL as higher while admitting RJF's company-wide total was not in context (only segment tables retrieved). Fix: prompt rule to compare only when both figures are present for comparable periods, and to flag differing fiscal year-ends (RJF Sep 30, LPL Dec 31).
 - C02 root cause confirmed: RJF's consolidated table exists (`RJF-table_aware-7-0036`, EXECUTIVE OVERVIEW > Summary results of operations) but RJF has 6 tables with a "Net revenues" row (consolidated + 5 segments); with 3 slots per company the segment tables outranked it -> ranking miss, not a chunking bug. Fix: comparison context budget of ~10 chunks shared across firms (2 firms: 5 each; 4 firms: 3 each) instead of a fixed 3 per firm.
 - Eval judge: switched from the answer model (DeepSeek) to an independent OpenAI judge to avoid self-grading bias; judge identity recorded in each LangSmith experiment's metadata and in the summary.
+- Comparison latency: per-firm focused queries doubled embedding calls (C02 took 7.2s). Per-firm retrieval now runs in parallel threads, with context propagated so LangSmith spans and stage timings still attach to the request.
+- Day 3 F01 diagnosis: "principal interest rate risks" refused in section and table_aware. The content is indexed (`1A-0012` "We are exposed to market risk, including interest rate risk"; Item 7 Risk Management > Market risk) but ranks 6th dense, outside BM25 top 10, 11th after rerank, even for a plain query. Cause: one long multi-topic risk factor (rates, equity, credit, FX) vs rate tables that score higher but don't describe risk. Generation correctly refused. Left as a documented failure.
+- Day 3 ground truth: system-drafted expected answers checked claim by claim against their source passages; unverifiable claims removed; F01, C04 (Schwab's chunks fell below the relevance threshold) and N04 (Institutional Group table not retrieved) written from filing text.
+- Day 3 full eval (22 Qs x 8 configs, `docs/EVALUATION.md`): structured chunking beats fixed on correctness (0.72 vs 0.56); table_aware wins numeric (0.92 vs 0.33 fixed), section wins cross-company (0.88), fixed wins narrative factual (0.67 vs 0.50 table_aware: tables crowd prose). Rerank adds 0.11-0.17 correctness for every retriever. All 32 unanswerable cases refused. Default chosen: table_aware/hybrid+rerank (refusal 0.95, faithfulness 0.92, correctness 0.72, p50 2.65s).
