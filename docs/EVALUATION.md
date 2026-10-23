@@ -38,7 +38,9 @@ Answers from DeepSeek V4.1 Flash; faithfulness and correctness graded by an inde
 | table_aware / BM25 | 1.00 | 0.86 | 0.93 | 0.42 | 2.11 | 3.79 | 100% |
 | table_aware / hybrid | 0.92 | 0.82 | 0.93 | 0.56 | 1.76 | 3.69 | 100% |
 
-\* `fixed` ran first, with 4 questions in parallel, and absorbed embedding-endpoint warm-up. Retrieval is the only step that differs between configs, and every other config ran at 2–3s p50, so its latency is not comparable.
+\* `fixed` ran first and absorbed embedding-endpoint warm-up. Re-run on its own (`run_eval --only "fixed/hybrid+rr"`) it averaged **2.74s** with 86% under 5s, in line with the other configs.
+
+**Run-to-run variance.** The same re-run scored correctness 0.53 (vs 0.56) and faithfulness 0.95 (vs 0.89). Differences under about 0.05 between configs are within noise; the findings below rely on larger gaps.
 
 ### Correctness by question type
 
