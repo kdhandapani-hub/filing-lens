@@ -76,9 +76,24 @@ Answers from DeepSeek V4.1 Flash; faithfulness and correctness graded by an inde
 
 Faithfulness counts statements about absence ("the segment margin is not disclosed in the context") as unsupported claims. N05 is fully correct (correctness 1.0) but scores 0.5 faithfulness for this reason. Reported faithfulness is therefore a slight underestimate for answers that flag missing data.
 
+## Threshold re-run (after live testing)
+
+On the live app, "What does LPL say about cybersecurity risk?" was refused at the retrieval gate. The content was indexed and retrieved: `LPLA-table_aware-1A-0029` ("Our information technology systems may be vulnerable to security risks") ranked 2nd and `1A-0031` ("A cyber-attack or other security breach…") 5th. But the best rerank score was 0.11, under the 0.15 threshold, because the filing's wording ("security risks", "cyber-attack") differs from the question's ("cybersecurity risk").
+
+The default configuration was re-run on the same 22 questions with `RELEVANCE_THRESHOLD=0.05` (`run_eval --only "table_aware/hybrid+rr"`; results in `eval/results/eval_summary_table_aware_hybrid_rr.md`):
+
+| Threshold | Retrieval hit | Refusal correct | Faithfulness | Correctness |
+|---|---|---|---|---|
+| 0.15 | 0.93 | 0.95 | 0.92 | 0.72 |
+| **0.05** | 0.94 | 0.955 | 0.917 | **0.81** |
+
+Correctness rose by 0.09, above the ±0.05 run-to-run noise; refusals and faithfulness didn't move. The generation gate still refuses all four unanswerable questions, so the retrieval gate can be looser. Latency in this run (4.9s average) isn't comparable: the eval sends 4 questions at once, which is exactly the concurrent-embedding pattern the shared Nebius endpoint slows down on.
+
+**0.05 is now the default** (`src/config.py`).
+
 ## Decisions
 
-- **Default: `table_aware / hybrid + rerank`.** It has the best refusal accuracy (0.95) and faithfulness (0.92, meeting the ≥ 0.90 target) and ties for best correctness.
+- **Default: `table_aware / hybrid + rerank`.** It has the best refusal accuracy (0.95) and faithfulness (0.92, meeting the ≥ 0.90 target) and ties for best correctness. With the relevance threshold lowered to 0.05, its correctness is 0.81.
 - **Latency:** p50 2.65s meets the ≤ 5s target; p95 6.54s does not, driven by comparison questions. Per-firm retrieval now runs in parallel (shipped after this run).
 
 ## Next iterations
@@ -90,4 +105,5 @@ Faithfulness counts statements about absence ("the segment margin is not disclos
 | Split long multi-topic risk factors; embed risk-factor titles separately | Makes "market risk, including interest rate risk" findable |
 | Per-firm minimum after the relevance threshold | Stops a firm silently disappearing from 4-firm answers |
 | Judge prompt: ignore statements about what the context lacks | Removes the faithfulness underestimate |
+| Calibrate the relevance threshold per question type, or replace it with a rank-based gate | Reranker scores vary with wording; a fixed cutoff refused a valid question |
 | Passage-level retrieval metric (expected chunk IDs) | `retrieval_hit` at company + Item level is too coarse: BM25 scores 1.0 on it with the worst correctness |

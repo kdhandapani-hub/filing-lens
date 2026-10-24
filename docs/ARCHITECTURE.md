@@ -4,7 +4,7 @@ Hybrid RAG over the latest 10-K filings of Raymond James (RJF), Charles Schwab (
 
 ![Filing Lens architecture](filing-lens-architecture.png)
 
-**Status:** the pipeline, evaluation and FastAPI service are built. The Replit chat UI and hosted deployment are *planned* (Friday).
+**Status:** built and live. The chat UI and API run as one Replit Autoscale deployment at [filing-lens.replit.app](https://filing-lens.replit.app) (access code required).
 
 ---
 
@@ -28,9 +28,9 @@ flowchart TB
 
   subgraph QUERY["② Query"]
     direction LR
-    UI["Chat UI · Replit<br/>(planned)"] -->|"POST /api/ask"| API["api.py · FastAPI"] --> PLAN
+    UI["Chat UI · Replit<br/>(live)"] -->|"POST /api/ask"| API["api.py · FastAPI"] --> PLAN
     LOCAL["app.py · ask.py"] --> PLAN
-    PLAN["plan"] --> RET["retrieve<br/>dense + BM25 → RRF → rerank"] --> GRADE{"grade<br/>≥ 0.15"}
+    PLAN["plan"] --> RET["retrieve<br/>dense + BM25 → RRF → rerank"] --> GRADE{"grade<br/>≥ 0.05"}
     GRADE -->|relevant| GEN["generate<br/>cited answer"]
     GRADE -->|weak| REF["refuse"]
     GEN -->|NOT_FOUND| REF
@@ -84,7 +84,7 @@ sequenceDiagram
     G->>G: BM25 top-10, fuse with RRF
     G->>P: rerank candidates
   end
-  G->>G: grade: best score ≥ 0.15?
+  G->>G: grade: best score ≥ 0.05?
   G->>N: generate with numbered context (thinking off)
   N-->>G: cited answer, or NOT_FOUND
   G-->>L: spans for every node (async)
@@ -114,7 +114,7 @@ sequenceDiagram
 
 | From → To | Interface | Payload | Status |
 |---|---|---|---|
-| Chat UI → `api.py` | HTTPS `POST /api/ask`, same origin, `X-Access-Code` header typed by the user | `{question, strategy?, retriever?, rerank?}` → `{answer, citations[] (with excerpt), refused, refusal_reason, companies, top_score, timings, config}` | API built · UI planned |
+| Chat UI → `api.py` | HTTPS `POST /api/ask`, same origin, `X-Access-Code` header typed by the user | `{question, strategy?, retriever?, rerank?}` → `{answer, citations[] (with excerpt), refused, refusal_reason, companies, top_score, timings, config}` | Built |
 | `api.py` / `app.py` / `ask.py` → `graph.py` | In-process `ask()` | Question + config in, `RAGState` out | Built |
 | retrieve → Nebius | OpenAI-compatible embeddings (`langchain-nebius`) | One 4096-d vector per (sub-)query | Built |
 | retrieve → Pinecone index | Vector query, top-10, `ticker` filter, namespace = strategy | Chunk text + `ticker`, `item`, `heading`, `kind`, `chunk_id` | Built |
@@ -130,7 +130,7 @@ sequenceDiagram
 | Piece | Where | Secrets |
 |---|---|---|
 | Source, chunk files, eval results | GitHub | none (`.env` is git-ignored) |
-| `api.py` + chat UI | Replit app imported from GitHub, Autoscale deployment ([setup](REPLIT_SETUP.md)) | Replit Secrets: Nebius, Pinecone, LangSmith keys, `APP_ACCESS_CODE` |
+| `api.py` + chat UI | Replit app imported from GitHub, Autoscale deployment with 1 machine at [filing-lens.replit.app](https://filing-lens.replit.app) ([setup](REPLIT_SETUP.md)) | Replit Secrets: Nebius, Pinecone, LangSmith keys, `APP_ACCESS_CODE` |
 | Vectors, rerank | Pinecone serverless, AWS us-east-1 | `PINECONE_API_KEY` |
 | Embeddings, generation, eval judge | Nebius Token Factory (embeddings served from eu-north1) | `NEBIUS_API_KEY` |
 | Traces, dataset, experiments | LangSmith | `LANGSMITH_API_KEY` |
@@ -145,7 +145,13 @@ sequenceDiagram
 
 **Hybrid over keyword-only.** BM25 alone failed the RJF vs LPL revenue question: numeric tables share few words with the question. Dense retrieval recovers them; BM25 still helps on exact terms such as program names.
 
-**Latency.** The chat model emitted hidden reasoning tokens even though the catalog lists none; disabling it (`chat_template_kwargs.thinking=false`) and warming clients at start-up brought demo questions to 1.9–6.4s end to end. The largest remaining cost is the cross-region embedding call (Nebius eu-north1, Pinecone us-east-1).
+**Latency.** The chat model emitted hidden reasoning tokens even though the catalog lists none; disabling it (`chat_template_kwargs.thinking=false`) brought demo questions to 1.9–6.4s end to end. On Replit three more fixes followed, each found from the per-step timings the API returns:
+
+- Warm-up runs one real retrieval per namespace, not just client set-up: the first live answer went from 37.1s to 2.8s.
+- Comparisons embed each firm's query one at a time before the parallel search: concurrent calls to the shared Nebius embedding endpoint took ~9s each. 17.9s → 4.6s.
+- Embedding calls are hedged: if Nebius hasn't answered in 2.5s, a backup request goes out and the first answer wins. LangSmith showed `embed_query` at 10.6s of a 12.9s question while Pinecone, rerank and generation stayed fast. When both requests stall, the spike remains; a dedicated endpoint would remove it.
+
+**Relevance threshold 0.05.** At 0.15, "What does LPL say about cybersecurity risk?" was refused although the right chunks ranked 2nd and 5th: the reranker scored them 0.11 because the filing says "security risks" and "cyber-attack". At 0.05 the eval's correctness rose from 0.72 to 0.81 with refusal accuracy unchanged, since the generation gate still refuses unanswerable questions.
 
 ---
 
