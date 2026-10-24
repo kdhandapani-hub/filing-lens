@@ -48,12 +48,19 @@ _ready = threading.Event()
 def _warm_up():
     """Load clients, BM25 corpora and the graph once, so the first user doesn't pay ~8s of cold start."""
     from src import graph
-    from src.retrieval import _bm25, _pc, _store, embed_query
+    from src.retrieval import _bm25, _pc, _store, embed_query, retrieve
     for s in STRATEGIES:
         _store(s)
         _bm25(s)
     _pc()
     embed_query("warm-up")
+    # One real retrieval per namespace: opens the Pinecone index connection and the rerank endpoint,
+    # which are otherwise cold on the first user question (~15-35s observed).
+    for s in STRATEGIES:
+        try:
+            retrieve("What are the main risk factors?", s, retriever="hybrid", use_rerank=True)
+        except Exception as e:  # warm-up must never block startup
+            print(f"warm-up retrieve failed for {s}: {type(e).__name__}: {e}")
     graph.GRAPH = graph.build_graph()
     _ready.set()
 
@@ -155,7 +162,7 @@ def ask_endpoint(body: AskRequest, request: Request, x_access_code: str | None =
     return AskResponse(
         answer=r["answer"], refused=bool(r.get("refused")), refusal_reason=r.get("refusal_reason"),
         citations=cites, companies=r.get("tickers") or [], top_score=r.get("max_score"),
-        timings={k: t.get(k) for k in ("total", "retrieve", "generate")},
+        timings={k: t.get(k) for k in ("total", "retrieve", "generate", "retrieve_breakdown")},
         config=f"{body.strategy}/{body.retriever}{'+rerank' if body.rerank else ''}")
 
 
