@@ -1,5 +1,6 @@
-import { FormEvent, KeyboardEvent, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { FormEvent, isValidElement, KeyboardEvent, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import ReactMarkdown, { Components } from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import type { AskResponse, Citation, Health, Message, Options, Retriever, Strategy } from './types';
 
 const ACCESS_KEY = 'filing-lens-access-code';
@@ -25,7 +26,46 @@ function CitationChip({ citation, onClick, compact = false }: { citation: Citati
   </button>;
 }
 
+function containsMarkdownTable(text: string): boolean {
+  const lines = text.split(/\r?\n/);
+  const stripOuterPipes = (line: string) => line.trim().replace(/^\|/, '').replace(/\|$/, '');
+
+  return lines.some((line, index) => {
+    const separator = lines[index + 1];
+    if (!separator || !line.includes('|') || !separator.includes('|')) return false;
+
+    const headers = stripOuterPipes(line).split('|');
+    const columns = stripOuterPipes(separator).split('|');
+    return headers.length >= 2
+      && headers.length === columns.length
+      && columns.every(column => /^:?-{3,}:?$/.test(column.trim()));
+  });
+}
+
+function textContent(node: ReactNode): string {
+  if (typeof node === 'string' || typeof node === 'number') return String(node);
+  if (Array.isArray(node)) return node.map(textContent).join('');
+  if (isValidElement<{ children?: ReactNode }>(node)) return textContent(node.props.children);
+  return '';
+}
+
+const excerptMarkdownComponents: Components = {
+  table: ({ children }) => (
+    <div className="excerpt-table-scroll" role="region" aria-label="Filing table" tabIndex={0}>
+      <table className="excerpt-table">{children}</table>
+    </div>
+  ),
+  th: ({ children }) => <th scope="col">{children}</th>,
+  td: ({ children, style }) => {
+    const numeric = /^\s*\(?[−-]?\s*\$?\s*\d[\d,]*(?:\.\d+)?%?\)?\s*$/.test(textContent(children));
+    return <td className={numeric ? 'excerpt-number' : undefined} style={numeric ? { ...style, textAlign: 'right' } : style}>{children}</td>;
+  },
+};
+
 function SourcePanel({ citation, onClose }: { citation: Citation; onClose: () => void }) {
+  const passage = citation.excerpt || 'No excerpt was returned for this source.';
+  const passageHasTable = containsMarkdownTable(passage);
+
   useEffect(() => {
     const handle = (event: globalThis.KeyboardEvent) => { if (event.key === 'Escape') onClose(); };
     window.addEventListener('keydown', handle);
@@ -44,7 +84,11 @@ function SourcePanel({ citation, onClose }: { citation: Citation; onClose: () =>
       <h4 className="source-heading">Section heading</h4>
       <div style={{ fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.45 }}>{citation.heading || 'Unlabeled section'}</div>
       <h4 className="source-heading">Passage</h4>
-      <div className="excerpt">{citation.excerpt || 'No excerpt was returned for this source.'}</div>
+      <div className={`excerpt${passageHasTable ? ' excerpt-with-table' : ''}`}>
+        {passageHasTable
+          ? <ReactMarkdown remarkPlugins={[remarkGfm]} components={excerptMarkdownComponents}>{passage}</ReactMarkdown>
+          : passage}
+      </div>
       <div className="source-heading">Chunk reference</div>
       <div style={{ font: '10px var(--mono)', color: 'var(--muted)', overflowWrap: 'anywhere' }}>{citation.chunk_id}</div>
     </aside>
