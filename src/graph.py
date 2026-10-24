@@ -27,7 +27,7 @@ import json
 
 from src.config import (CHAT_EXTRA_BODY, CHAT_MODEL, COMPANIES, COMPARISON_BUDGET, MAX_PER_COMPANY,
                         MIN_PER_COMPANY, REASONING_EFFORT, RELEVANCE_THRESHOLD, TOP_N)
-from src.retrieval import STAGE_TIMES, detect_tickers, focus_query, retrieve as run_retrieval
+from src.retrieval import STAGE_TIMES, detect_tickers, embed_query, focus_query, retrieve as run_retrieval
 
 REFUSAL = ("I can't answer that from the filings in this knowledge base "
            "(latest 10-Ks for Raymond James, Schwab, LPL Financial and Stifel; Items 1A and 7).")
@@ -106,9 +106,15 @@ def retrieve(state: RAGState) -> RAGState:
         per = max(MIN_PER_COMPANY, min(MAX_PER_COMPANY, COMPARISON_BUDGET // len(tickers)))
         # One focused search per firm, run in parallel. Each task gets a copy of the current
         # context so LangSmith parent spans and stage timings carry into the worker threads.
+        fqs = {t: focus_query(q, t) for t in tickers}
+        if kw["retriever"] != "bm25":
+            # Embed sequentially first: concurrent calls to the Nebius embedding endpoint took
+            # ~9s each on Replit vs ~0.5s one at a time. The worker threads then hit the cache.
+            for fq in fqs.values():
+                embed_query(fq)
         with ThreadPoolExecutor(max_workers=len(tickers)) as pool:
             futures = [pool.submit(contextvars.copy_context().run, run_retrieval,
-                                   focus_query(q, t), ticker=t, top_n=per, **kw) for t in tickers]
+                                   fqs[t], ticker=t, top_n=per, **kw) for t in tickers]
             docs = [d for f in futures for d in f.result()]
     else:
         docs = run_retrieval(q, ticker=tickers[0] if tickers else None, top_n=TOP_N, **kw)
