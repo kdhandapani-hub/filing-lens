@@ -18,3 +18,9 @@ streamlit
 fastapi
 uvicorn[standard]
 pydantic
+
+# security floors (Replit scan flagged older transitive versions)
+certifi>=2026.10.23
+requests>=2.34.2
+httpx2>=2.16.0
+httpcore2>=2.16.0
