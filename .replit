@@ -1,4 +1,4 @@
-modules = ["python-3.12", "nodejs-20"]
+modules = ["python-3.12", "bash"]
 run = "bash build.sh && bash start.sh"
 
 [deployment]
@@ -9,3 +9,6 @@ run = ["bash", "start.sh"]
 [[ports]]
 localPort = 8000
 externalPort = 80
+
+[nix]
+channel = "stable-25_05"
