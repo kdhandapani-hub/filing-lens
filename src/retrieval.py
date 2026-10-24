@@ -7,9 +7,12 @@
 
 Every function takes `ticker` so comparison questions can retrieve per company.
 """
+import os
 import pickle
 import re
 import time
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
+from concurrent.futures import TimeoutError as FuturesTimeout
 from contextlib import contextmanager
 from contextvars import ContextVar
 from functools import lru_cache
@@ -92,9 +95,30 @@ def _bm25(strategy: str):
     return docs, BM25Okapi([tokenize(d.page_content) for d in docs])
 
 
+# Hedged embedding: Nebius's shared embedding endpoint usually answers in ~0.5s but sometimes
+# takes ~10s (seen in LangSmith traces). If the first request hasn't returned after
+# EMBED_HEDGE_AFTER seconds, send one identical backup request and use whichever finishes first.
+EMBED_HEDGE_AFTER = float(os.getenv("EMBED_HEDGE_AFTER", "2.5"))
+_EMBED_POOL = ThreadPoolExecutor(max_workers=8, thread_name_prefix="embed")
+
+
 @lru_cache(maxsize=256)
 def _embed_cached(q: str) -> tuple[float, ...]:
-    return tuple(_embeddings().embed_query(q))
+    first = _EMBED_POOL.submit(_embeddings().embed_query, q)
+    try:
+        return tuple(first.result(timeout=EMBED_HEDGE_AFTER))
+    except FuturesTimeout:
+        pass
+    d = STAGE_TIMES.get()
+    if d is not None:
+        d["embed_hedged"] = d.get("embed_hedged", 0) + 1
+    backup = _EMBED_POOL.submit(_embeddings().embed_query, q)
+    done, _ = wait([first, backup], return_when=FIRST_COMPLETED)
+    winner = next(iter(done))
+    try:
+        return tuple(winner.result())
+    except Exception:  # the faster one failed: fall back to the other request
+        return tuple((backup if winner is first else first).result())
 
 
 @traceable(name="embed_query")
