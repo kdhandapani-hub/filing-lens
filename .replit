@@ -1,4 +1,4 @@
-modules = ["python-3.12", "bash"]
+modules = ["python-3.12", "nodejs-20", "bash"]
 run = "bash build.sh && bash start.sh"
 
 [deployment]
@@ -12,3 +12,4 @@ externalPort = 80
 
 [nix]
 channel = "stable-25_05"
+packages = ["cargo", "libiconv", "libxcrypt", "rustc", "xcodebuild", "zlib"]
